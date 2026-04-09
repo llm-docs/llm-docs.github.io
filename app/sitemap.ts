@@ -9,6 +9,7 @@ import {
   getProviderHubs,
   getTopicHubs,
 } from "@/lib/content";
+import { hardwareProfiles } from "@/data/hardware-profiles";
 
 export const dynamic = "force-static";
 
@@ -31,9 +32,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/models",
     "/agents",
     "/compare",
+    "/calculator",
     "/search",
     "/topics",
     "/providers",
+    "/hardware",
     "/insights",
     "/tools",
     "/trackers",
@@ -64,6 +67,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
     ...providers.map((provider) => ({
       url: `${baseUrl}/providers/${provider.slug}`,
+      lastModified: new Date(),
+    })),
+    ...hardwareProfiles.map((hardware) => ({
+      url: `${baseUrl}/hardware/${hardware.slug}`,
       lastModified: new Date(),
     })),
     ...topics.map((topic) => ({

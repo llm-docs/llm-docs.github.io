@@ -18,27 +18,29 @@ export default function ToolsPage() {
         <p className="eyebrow">Tools</p>
         <h1 className="text-4xl font-semibold tracking-tight text-slate-50">Utilities for AI model planning</h1>
         <p className="max-w-3xl text-lg leading-8 text-slate-300">
-          These utility pages add practical value beyond content browsing and are designed to be linkable, reusable resources.
+          Use calculators and hardware guides to estimate cost, context, and real deployment fit before you commit to a model stack.
         </p>
       </header>
+      <section className="surface-card space-y-4">
+        <div className="space-y-1">
+          <h2 className="text-2xl font-semibold text-slate-50">Deployment estimator</h2>
+          <p className="text-sm leading-6 text-slate-300">
+            Estimate VRAM, RAM, KV cache, runtime overhead, and likely fit for real hardware profiles.
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-3">
+          <Link href="/calculator" className="button-primary">
+            Open calculator
+          </Link>
+          <Link href="/hardware" className="button-secondary">
+            Browse hardware guides
+          </Link>
+        </div>
+      </section>
       <div className="grid gap-6 xl:grid-cols-2">
         <TokenCostCalculator />
         <ContextWindowCalculator />
       </div>
-      <section className="surface-card space-y-4">
-        <h2 className="text-2xl font-semibold text-slate-50">More utilities coming next</h2>
-        <div className="grid gap-3 md:grid-cols-3">
-          {[
-            "Model pricing estimator",
-            "Prompt budget calculator",
-            "RAG chunking helper",
-          ].map((item) => (
-            <div key={item} className="rounded-2xl border border-white/8 bg-[rgba(15,23,42,0.6)] px-4 py-3 text-sm text-slate-300">
-              {item}
-            </div>
-          ))}
-        </div>
-      </section>
       <FeedbackLinks context="tools" />
       <div>
         <Link href="/compare" className="text-sky-300 hover:text-sky-200">

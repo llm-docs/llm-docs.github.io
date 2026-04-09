@@ -7,6 +7,7 @@ import { JsonLd } from "@/components/content/JsonLd";
 import { Markdown } from "@/components/content/Markdown";
 import { RelatedLinks } from "@/components/content/RelatedLinks";
 import { FeedbackLinks } from "@/components/feedback/FeedbackLinks";
+import { getRecommendedHardwareForModel, getDeploymentModelByName, getQuantizationTable } from "@/lib/deployment";
 import {
   getModelBySlug,
   getModelComparisons,
@@ -69,6 +70,9 @@ export default async function ModelPage({ params }: PageProps) {
     getRelatedDocs("", model.metadata.tags || []),
     getRelatedNews("", model.metadata.tags || []),
   ]);
+  const deploymentProfile = getDeploymentModelByName(model.metadata.name, model.metadata.provider);
+  const deploymentHardware = deploymentProfile ? getRecommendedHardwareForModel(deploymentProfile).slice(0, 3) : [];
+  const quantizationTable = deploymentProfile ? getQuantizationTable(deploymentProfile).slice(0, 4) : [];
 
   return (
     <article className="space-y-8 px-6 pb-16 xl:px-0">
@@ -130,6 +134,54 @@ export default async function ModelPage({ params }: PageProps) {
             <p className="text-sm leading-6 text-slate-300">{model.metadata.pricing || "Pricing not added yet."}</p>
           </div>
         </div>
+        <section className="surface-card space-y-4">
+          <div className="space-y-2">
+            <p className="text-sm font-medium uppercase tracking-[0.18em] text-slate-400">Deployment planning</p>
+            <h2 className="text-2xl font-semibold tracking-tight text-slate-50">Can this model run on your machine?</h2>
+            <p className="text-sm leading-6 text-slate-300">
+              Use the estimator to check VRAM, RAM, KV cache, runtime overhead, and hardware fit before deployment.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/calculator" className="button-primary">
+              Open calculator
+            </Link>
+            <Link href="/hardware" className="button-secondary">
+              Browse hardware guides
+            </Link>
+          </div>
+          {deploymentProfile ? (
+            <div className="grid gap-4 xl:grid-cols-2">
+              <div className="rounded-[1.25rem] border border-white/8 bg-[rgba(15,23,42,0.55)] p-4">
+                <p className="text-xs font-medium uppercase tracking-[0.18em] text-slate-400">Weight memory snapshot</p>
+                <div className="mt-3 space-y-2">
+                  {quantizationTable.map((row) => (
+                    <div key={row.quantization} className="flex items-center justify-between text-sm text-slate-300">
+                      <span>{row.label}</span>
+                      <span>{row.weightMemoryGB} GB</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="rounded-[1.25rem] border border-white/8 bg-[rgba(15,23,42,0.55)] p-4">
+                <p className="text-xs font-medium uppercase tracking-[0.18em] text-slate-400">Recommended hardware</p>
+                <div className="mt-3 space-y-3">
+                  {deploymentHardware.map(({ hardware, estimate }) => (
+                    <div key={hardware.id} className="flex items-start justify-between gap-3 text-sm text-slate-300">
+                      <div>
+                        <p className="font-medium text-slate-100">{hardware.name}</p>
+                        <p>{estimate.totalRequiredGB} GB total at Q4 / 8k context</p>
+                      </div>
+                      <span className="rounded-full border border-white/10 px-2 py-1 text-xs capitalize text-slate-200">
+                        {estimate.fitTier}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ) : null}
+        </section>
       </header>
 
       {comparisons.length > 0 ? (
