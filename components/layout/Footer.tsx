@@ -44,9 +44,9 @@ export default function Footer() {
           </div>
 
           <div className="space-y-3">
-            <h4 className="font-medium text-slate-100">Source</h4>
+            <h4 className="font-medium text-slate-100">About</h4>
             <p className="text-sm leading-6 text-slate-400">
-              Maintain content in `content/docs`, `content/news`, `content/models`, and `content/agents`.
+              Independent coverage of LLM releases, model comparisons, documentation, and AI ecosystem updates.
             </p>
             <div className="flex gap-4">
               <a href="https://github.com/LLM-Docs" target="_blank" rel="noopener noreferrer" className="text-slate-400 transition-colors hover:text-white">

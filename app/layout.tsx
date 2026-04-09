@@ -10,14 +10,14 @@ export const metadata: Metadata = {
     default: "LLM-Docs",
     template: "%s | LLM-Docs",
   },
-  description: "Open documentation hub for LLMs, model releases, agent frameworks, and ecosystem updates.",
+  description: "LLM-Docs tracks AI models, release updates, comparisons, and practical research pages in one place.",
   icons: {
     icon: "/logo.png",
     apple: "/logo.png",
   },
   openGraph: {
     title: "LLM-Docs",
-    description: "Open documentation hub for LLMs, model releases, agent frameworks, and ecosystem updates.",
+    description: "LLM-Docs tracks AI models, release updates, comparisons, and practical research pages in one place.",
     images: [
       {
         url: "/logo.png",
@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased">
+    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
       <body className="min-h-full">
         <Layout>{children}</Layout>
       </body>

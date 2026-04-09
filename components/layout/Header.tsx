@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { BookOpenText, Bot, Code2, Newspaper, Sparkles } from 'lucide-react'
+import ThemeToggle from '@/components/theme/ThemeToggle'
 
 export default function Header() {
   return (
@@ -22,7 +23,7 @@ export default function Header() {
                   LLM-Docs
                 </span>
                 <span className="hidden text-xs font-medium uppercase tracking-[0.18em] text-slate-400 sm:block">
-                  LLM documentation hub
+                  AI Model Intelligence
                 </span>
               </div>
             </Link>
@@ -46,6 +47,7 @@ export default function Header() {
             </nav>
           </div>
           <div className="flex items-center gap-3">
+            <ThemeToggle />
             <a
               href="https://github.com/LLM-Docs"
               target="_blank"
