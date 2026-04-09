@@ -20,9 +20,6 @@ export default function Footer() {
                 LLM-Docs
               </h3>
             </div>
-            <p className="text-sm leading-6 text-slate-400">
-              The GitHub home for LLM documentation, model tracking, and ecosystem updates.
-            </p>
           </div>
 
           <div className="space-y-3">
