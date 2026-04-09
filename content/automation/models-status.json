@@ -1,13 +1,13 @@
 {
   "kind": "models",
-  "lastRunAt": "2026-04-09T21:24:22.270Z",
-  "totalWritten": 9,
+  "lastRunAt": "2026-04-09T21:27:19.621Z",
+  "totalWritten": 0,
   "sources": [
     {
       "sourceId": "openai-models",
       "sourceName": "OpenAI",
       "status": "success",
-      "written": 3,
+      "written": 0,
       "scanned": 8,
       "matched": 3,
       "error": ""
@@ -25,7 +25,7 @@
       "sourceId": "google-models",
       "sourceName": "Google DeepMind",
       "status": "success",
-      "written": 4,
+      "written": 0,
       "scanned": 8,
       "matched": 4,
       "error": ""
@@ -34,7 +34,7 @@
       "sourceId": "meta-models",
       "sourceName": "Meta AI",
       "status": "success",
-      "written": 1,
+      "written": 0,
       "scanned": 8,
       "matched": 1,
       "error": ""
@@ -43,7 +43,7 @@
       "sourceId": "hugging-face-models",
       "sourceName": "Hugging Face",
       "status": "success",
-      "written": 1,
+      "written": 0,
       "scanned": 8,
       "matched": 1,
       "error": ""
