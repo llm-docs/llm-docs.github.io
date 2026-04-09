@@ -139,25 +139,25 @@ function AutomationPanel({
   return (
     <div className="surface-card grid gap-6 lg:grid-cols-2">
       <div className="space-y-3">
-        <p className="text-sm font-medium uppercase tracking-[0.18em] text-slate-500">Automation Status</p>
-        <h2 className="text-2xl font-semibold tracking-tight text-slate-950">
+          <p className="text-sm font-medium uppercase tracking-[0.18em] text-slate-400">Automation Status</p>
+        <h2 className="text-2xl font-semibold tracking-tight text-slate-50">
           The site refreshes itself on GitHub every hour.
         </h2>
-        <p className="text-sm leading-6 text-slate-600">
+        <p className="text-sm leading-6 text-slate-300">
           News and model announcement feeds are imported automatically, committed by GitHub Actions,
           and deployed back to the site after each successful sync.
         </p>
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
-        <div className="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-4">
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-slate-500">News Sync</p>
-          <p className="mt-2 text-lg font-semibold text-slate-950">{newsHealthy}/{newsSources.length || 0} sources healthy</p>
-          <p className="mt-2 text-sm text-slate-600">Last run: {newsLastRun ? formatDateTime(newsLastRun) : "Not yet recorded"}</p>
+        <div className="rounded-[1.25rem] border border-white/8 bg-[rgba(15,23,42,0.65)] p-4">
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-slate-400">News Sync</p>
+          <p className="mt-2 text-lg font-semibold text-slate-50">{newsHealthy}/{newsSources.length || 0} sources healthy</p>
+          <p className="mt-2 text-sm text-slate-300">Last run: {newsLastRun ? formatDateTime(newsLastRun) : "Not yet recorded"}</p>
         </div>
-        <div className="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-4">
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-slate-500">Model Sync</p>
-          <p className="mt-2 text-lg font-semibold text-slate-950">{modelsHealthy}/{modelSources.length || 0} sources healthy</p>
-          <p className="mt-2 text-sm text-slate-600">Last run: {modelLastRun ? formatDateTime(modelLastRun) : "Not yet recorded"}</p>
+        <div className="rounded-[1.25rem] border border-white/8 bg-[rgba(15,23,42,0.65)] p-4">
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-slate-400">Model Sync</p>
+          <p className="mt-2 text-lg font-semibold text-slate-50">{modelsHealthy}/{modelSources.length || 0} sources healthy</p>
+          <p className="mt-2 text-sm text-slate-300">Last run: {modelLastRun ? formatDateTime(modelLastRun) : "Not yet recorded"}</p>
         </div>
       </div>
     </div>
@@ -175,9 +175,9 @@ function StatCard({
 }) {
   return (
     <article className="surface-card space-y-2">
-      <p className="text-sm font-medium uppercase tracking-[0.18em] text-slate-500">{label}</p>
-      <p className="text-3xl font-semibold text-slate-950">{value}</p>
-      <p className="text-sm leading-6 text-slate-600">{description}</p>
+      <p className="text-sm font-medium uppercase tracking-[0.18em] text-slate-400">{label}</p>
+      <p className="text-3xl font-semibold text-slate-50">{value}</p>
+      <p className="text-sm leading-6 text-slate-300">{description}</p>
     </article>
   );
 }
@@ -212,22 +212,22 @@ function ContentSection({
             {icon}
           </span>
           <div>
-            <h2 className="text-2xl font-semibold tracking-tight text-slate-950">{title}</h2>
+            <h2 className="text-2xl font-semibold tracking-tight text-slate-50">{title}</h2>
           </div>
         </div>
-        <Link href={href} className="inline-flex items-center gap-2 text-sm font-medium text-slate-700 transition hover:text-slate-950">
+        <Link href={href} className="inline-flex items-center gap-2 text-sm font-medium text-slate-300 transition hover:text-white">
           View all
           <ArrowRight className="h-4 w-4" />
         </Link>
       </div>
       <div className="grid gap-4 lg:grid-cols-3">
         {items.map((item) => (
-          <Link key={item.href} href={item.href} className="surface-card group space-y-3 transition hover:-translate-y-0.5 hover:border-slate-300">
+          <Link key={item.href} href={item.href} className="surface-card group space-y-3 transition hover:-translate-y-0.5 hover:border-white/16">
             <p className="text-xs font-medium uppercase tracking-[0.18em] text-amber-700">{item.meta}</p>
-            <h3 className="text-xl font-semibold tracking-tight text-slate-950 transition group-hover:text-slate-700">
+            <h3 className="text-xl font-semibold tracking-tight text-slate-50 transition group-hover:text-sky-200">
               {item.title}
             </h3>
-            <p className="text-sm leading-6 text-slate-600">{item.description}</p>
+            <p className="text-sm leading-6 text-slate-300">{item.description}</p>
           </Link>
         ))}
       </div>

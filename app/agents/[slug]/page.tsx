@@ -43,8 +43,8 @@ export default async function AgentPage({ params }: PageProps) {
       <header className="space-y-4">
         <div className="space-y-3">
           <p className="eyebrow">{agent.metadata.category}</p>
-          <h1 className="text-4xl font-semibold tracking-tight text-slate-950">{agent.metadata.name}</h1>
-          <p className="max-w-3xl text-lg leading-8 text-slate-600">{agent.metadata.description}</p>
+          <h1 className="text-4xl font-semibold tracking-tight text-slate-50">{agent.metadata.name}</h1>
+          <p className="max-w-3xl text-lg leading-8 text-slate-300">{agent.metadata.description}</p>
         </div>
         <div className="flex flex-wrap gap-3">
           {agent.metadata.url ? (

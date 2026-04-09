@@ -41,8 +41,8 @@ export default async function DocPage({ params }: PageProps) {
     <article className="space-y-8 px-6 pb-16 xl:px-0">
       <header className="space-y-3">
         <p className="eyebrow">{doc.metadata.category}</p>
-        <h1 className="text-4xl font-semibold tracking-tight text-slate-950">{doc.metadata.title}</h1>
-        <p className="max-w-3xl text-lg leading-8 text-slate-600">{doc.metadata.description}</p>
+        <h1 className="text-4xl font-semibold tracking-tight text-slate-50">{doc.metadata.title}</h1>
+        <p className="max-w-3xl text-lg leading-8 text-slate-300">{doc.metadata.description}</p>
       </header>
       <Markdown source={doc.content} />
     </article>

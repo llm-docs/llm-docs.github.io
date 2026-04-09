@@ -42,21 +42,21 @@ export default async function ModelPage({ params }: PageProps) {
       <header className="space-y-4">
         <div className="space-y-3">
           <p className="eyebrow">{model.metadata.provider}</p>
-          <h1 className="text-4xl font-semibold tracking-tight text-slate-950">{model.metadata.name}</h1>
-          <p className="max-w-3xl text-lg leading-8 text-slate-600">{model.metadata.description}</p>
+          <h1 className="text-4xl font-semibold tracking-tight text-slate-50">{model.metadata.name}</h1>
+          <p className="max-w-3xl text-lg leading-8 text-slate-300">{model.metadata.description}</p>
         </div>
-        <dl className="grid gap-3 rounded-[1.5rem] border border-slate-200 bg-white/80 p-5 sm:grid-cols-3">
+        <dl className="grid gap-3 rounded-[1.5rem] border border-white/8 bg-[rgba(9,15,32,0.8)] p-5 sm:grid-cols-3">
           <div>
-            <dt className="text-xs font-medium uppercase tracking-[0.18em] text-slate-500">Status</dt>
-            <dd className="mt-2 text-sm text-slate-900">{model.metadata.status}</dd>
+            <dt className="text-xs font-medium uppercase tracking-[0.18em] text-slate-400">Status</dt>
+            <dd className="mt-2 text-sm text-slate-100">{model.metadata.status}</dd>
           </div>
           <div>
-            <dt className="text-xs font-medium uppercase tracking-[0.18em] text-slate-500">Release date</dt>
-            <dd className="mt-2 text-sm text-slate-900">{model.metadata.releaseDate || "Not set"}</dd>
+            <dt className="text-xs font-medium uppercase tracking-[0.18em] text-slate-400">Release date</dt>
+            <dd className="mt-2 text-sm text-slate-100">{model.metadata.releaseDate || "Not set"}</dd>
           </div>
           <div>
-            <dt className="text-xs font-medium uppercase tracking-[0.18em] text-slate-500">Context window</dt>
-            <dd className="mt-2 text-sm text-slate-900">{model.metadata.contextWindow || "Not set"}</dd>
+            <dt className="text-xs font-medium uppercase tracking-[0.18em] text-slate-400">Context window</dt>
+            <dd className="mt-2 text-sm text-slate-100">{model.metadata.contextWindow || "Not set"}</dd>
           </div>
         </dl>
       </header>
