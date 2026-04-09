@@ -1,16 +1,16 @@
 {
   "kind": "models",
-  "lastRunAt": "2026-04-09T21:20:14.359Z",
-  "totalWritten": 0,
+  "lastRunAt": "2026-04-09T21:24:22.270Z",
+  "totalWritten": 9,
   "sources": [
     {
       "sourceId": "openai-models",
       "sourceName": "OpenAI",
-      "status": "failed",
-      "written": 0,
-      "scanned": 0,
-      "matched": 0,
-      "error": "fetch failed"
+      "status": "success",
+      "written": 3,
+      "scanned": 8,
+      "matched": 3,
+      "error": ""
     },
     {
       "sourceId": "anthropic-models",
@@ -19,34 +19,34 @@
       "written": 0,
       "scanned": 0,
       "matched": 0,
-      "error": "fetch failed"
+      "error": "Feed request failed: 404 Not Found"
     },
     {
       "sourceId": "google-models",
       "sourceName": "Google DeepMind",
-      "status": "failed",
-      "written": 0,
-      "scanned": 0,
-      "matched": 0,
-      "error": "fetch failed"
+      "status": "success",
+      "written": 4,
+      "scanned": 8,
+      "matched": 4,
+      "error": ""
     },
     {
       "sourceId": "meta-models",
       "sourceName": "Meta AI",
-      "status": "failed",
-      "written": 0,
-      "scanned": 0,
-      "matched": 0,
-      "error": "fetch failed"
+      "status": "success",
+      "written": 1,
+      "scanned": 8,
+      "matched": 1,
+      "error": ""
     },
     {
       "sourceId": "hugging-face-models",
       "sourceName": "Hugging Face",
-      "status": "failed",
-      "written": 0,
-      "scanned": 0,
-      "matched": 0,
-      "error": "fetch failed"
+      "status": "success",
+      "written": 1,
+      "scanned": 8,
+      "matched": 1,
+      "error": ""
     }
   ]
 }

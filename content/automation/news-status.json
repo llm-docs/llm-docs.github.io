@@ -1,23 +1,23 @@
 {
   "kind": "news",
-  "lastRunAt": "2026-04-09T21:20:14.359Z",
-  "totalWritten": 0,
+  "lastRunAt": "2026-04-09T21:24:15.827Z",
+  "totalWritten": 24,
   "sources": [
     {
       "sourceId": "hugging-face",
       "sourceName": "Hugging Face",
-      "status": "failed",
-      "written": 0,
-      "scanned": 0,
-      "error": "fetch failed"
+      "status": "success",
+      "written": 6,
+      "scanned": 6,
+      "error": ""
     },
     {
       "sourceId": "openai",
       "sourceName": "OpenAI",
-      "status": "failed",
-      "written": 0,
-      "scanned": 0,
-      "error": "fetch failed"
+      "status": "success",
+      "written": 6,
+      "scanned": 6,
+      "error": ""
     },
     {
       "sourceId": "anthropic",
@@ -25,23 +25,23 @@
       "status": "failed",
       "written": 0,
       "scanned": 0,
-      "error": "fetch failed"
+      "error": "Feed request failed: 404 Not Found"
     },
     {
       "sourceId": "google-deepmind",
       "sourceName": "Google DeepMind",
-      "status": "failed",
-      "written": 0,
-      "scanned": 0,
-      "error": "fetch failed"
+      "status": "success",
+      "written": 6,
+      "scanned": 6,
+      "error": ""
     },
     {
       "sourceId": "meta-ai",
       "sourceName": "Meta AI",
-      "status": "failed",
-      "written": 0,
-      "scanned": 0,
-      "error": "fetch failed"
+      "status": "success",
+      "written": 6,
+      "scanned": 6,
+      "error": ""
     }
   ]
 }
