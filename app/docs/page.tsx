@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { getDocs } from "@/lib/content";
+import { buildPageMetadata } from "@/lib/metadata";
 
 function formatDate(date: string) {
   if (!date) {
@@ -12,10 +13,11 @@ function formatDate(date: string) {
   }).format(new Date(date));
 }
 
-export const metadata = {
-  title: "Docs",
-  description: "LLM documentation and guides",
-};
+export const metadata = buildPageMetadata({
+  title: "Docs | LLM-Docs",
+  description: "LLM documentation, implementation guides, and practical references.",
+  path: "/docs",
+});
 
 export default async function DocsIndexPage() {
   const docs = await getDocs();

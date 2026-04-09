@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { BookOpenText, Bot, Code2, Newspaper, Sparkles } from 'lucide-react'
+import { BookOpenText, Bot, Code2, Newspaper, Search, Sparkles } from 'lucide-react'
 import ThemeToggle from '@/components/theme/ThemeToggle'
 
 export default function Header() {
@@ -39,10 +39,25 @@ export default function Header() {
                 <Bot className="h-4 w-4" />
                 Agents
               </Link>
+              <Link href="/compare" className="flex items-center gap-2 text-sm font-medium text-slate-300 transition-colors hover:text-white">
+                <Sparkles className="h-4 w-4" />
+                Compare
+              </Link>
+              <Link href="/topics" className="flex items-center gap-2 text-sm font-medium text-slate-300 transition-colors hover:text-white">
+                <BookOpenText className="h-4 w-4" />
+                Topics
+              </Link>
             </nav>
           </div>
           <div className="flex items-center gap-3">
             <ThemeToggle />
+            <Link
+              href="/search"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/12 text-slate-300 transition-colors hover:border-white/30 hover:text-white"
+              aria-label="Search"
+            >
+              <Search className="h-5 w-5" />
+            </Link>
             <a
               href="https://github.com/LLM-Docs"
               target="_blank"

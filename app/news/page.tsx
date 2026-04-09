@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { getNews } from "@/lib/content";
+import { buildPageMetadata } from "@/lib/metadata";
 
 function formatDate(date: string) {
   if (!date) {
@@ -12,10 +13,12 @@ function formatDate(date: string) {
   }).format(new Date(date));
 }
 
-export const metadata = {
-  title: "Updates",
-  description: "Latest LLM and AI ecosystem updates",
-};
+export const metadata = buildPageMetadata({
+  title: "AI Updates | LLM-Docs",
+  description: "Latest LLM, model, and AI ecosystem updates tracked by LLM-Docs.",
+  path: "/news",
+  type: "website",
+});
 
 export default async function NewsIndexPage() {
   const news = await getNews();

@@ -2,8 +2,19 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { Breadcrumbs } from "@/components/content/Breadcrumbs";
+import { JsonLd } from "@/components/content/JsonLd";
 import { Markdown } from "@/components/content/Markdown";
-import { getModelBySlug, getModelComparisons, getModels } from "@/lib/content";
+import { RelatedLinks } from "@/components/content/RelatedLinks";
+import {
+  getModelBySlug,
+  getModelComparisons,
+  getModels,
+  getRelatedDocs,
+  getRelatedNews,
+} from "@/lib/content";
+import { buildPageMetadata } from "@/lib/metadata";
+import { absoluteUrl } from "@/lib/site";
 
 type PageProps = {
   params: Promise<{ slug: string[] }>;
@@ -25,8 +36,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `${model.metadata.name} Model Overview`,
-    description: model.metadata.description,
+    ...buildPageMetadata({
+      title: `${model.metadata.name} Guide | LLM-Docs`,
+      description: model.metadata.description,
+      path: `/models/${slug.join("/")}`,
+      image: model.metadata.image,
+      type: "article",
+      publishedTime: model.metadata.releaseDate,
+      modifiedTime: model.metadata.updatedAt,
+      tags: model.metadata.tags,
+    }),
     keywords: [
       model.metadata.name,
       `${model.metadata.name} pricing`,
@@ -44,10 +63,32 @@ export default async function ModelPage({ params }: PageProps) {
     notFound();
   }
 
-  const comparisons = await getModelComparisons(slug.join("/"));
+  const [comparisons, relatedDocs, relatedNews] = await Promise.all([
+    getModelComparisons(slug.join("/")),
+    getRelatedDocs("", model.metadata.tags || []),
+    getRelatedNews("", model.metadata.tags || []),
+  ]);
 
   return (
     <article className="space-y-8 px-6 pb-16 xl:px-0">
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          headline: model.metadata.name,
+          description: model.metadata.description,
+          datePublished: model.metadata.releaseDate,
+          dateModified: model.metadata.updatedAt,
+          url: absoluteUrl(`/models/${slug.join("/")}`),
+        }}
+      />
+      <Breadcrumbs
+        items={[
+          { href: "/", label: "Home" },
+          { href: "/models", label: "Models" },
+          { href: `/models/${slug.join("/")}`, label: model.metadata.name },
+        ]}
+      />
       <header className="space-y-4">
         <div className="space-y-3">
           <p className="eyebrow">{model.metadata.provider}</p>
@@ -68,6 +109,18 @@ export default async function ModelPage({ params }: PageProps) {
             <dd className="mt-2 text-sm text-slate-100">{model.metadata.contextWindow || "Not set"}</dd>
           </div>
         </dl>
+        <div className="grid gap-4 md:grid-cols-2">
+          <div className="surface-card space-y-2">
+            <p className="text-xs font-medium uppercase tracking-[0.18em] text-slate-400">Main use cases</p>
+            <p className="text-sm leading-6 text-slate-300">
+              {model.metadata.useCases?.length ? model.metadata.useCases.join(", ") : "Not specified yet."}
+            </p>
+          </div>
+          <div className="surface-card space-y-2">
+            <p className="text-xs font-medium uppercase tracking-[0.18em] text-slate-400">Pricing</p>
+            <p className="text-sm leading-6 text-slate-300">{model.metadata.pricing || "Pricing not added yet."}</p>
+          </div>
+        </div>
       </header>
 
       {comparisons.length > 0 ? (
@@ -95,6 +148,22 @@ export default async function ModelPage({ params }: PageProps) {
       ) : null}
 
       <Markdown source={model.content} />
+      <RelatedLinks
+        title="Setup guides"
+        items={relatedDocs.map((doc) => ({
+          href: `/docs/${doc.slug}`,
+          label: doc.title,
+          description: doc.description,
+        }))}
+      />
+      <RelatedLinks
+        title="Related updates"
+        items={relatedNews.map((item) => ({
+          href: `/news/${item.slug}`,
+          label: item.title,
+          description: item.description,
+        }))}
+      />
     </article>
   );
 }

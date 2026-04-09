@@ -21,12 +21,13 @@ function formatDate(date: string) {
 }
 
 export default async function HomePage() {
-  const [docs, news, agents, models, comparisons] = await Promise.all([
+  const [docs, news, agents, models, comparisons, topics] = await Promise.all([
     getDocs(),
     getNews(),
     getAgents(),
     getModels(),
     getAllModelComparisons(),
+    import("@/lib/content").then((module) => module.getTopicHubs()),
   ]);
   const automation = await getAutomationStatus();
 
@@ -35,6 +36,8 @@ export default async function HomePage() {
   const featuredAgents = agents.slice(0, 3);
   const latestModels = models.slice(0, 3);
   const featuredComparisons = comparisons.slice(0, 4);
+  const popularGuides = docs.slice(0, 4);
+  const featuredTopics = topics.slice(0, 4);
 
   return (
     <div className="space-y-14 pb-16">
@@ -69,6 +72,17 @@ export default async function HomePage() {
         <StatCard label="Updates" value={news.length} description="Release notes and ecosystem news" />
         <StatCard label="Models" value={models.length} description="Structured model overview pages" />
         <StatCard label="Agents" value={agents.length} description="Tools and orchestration frameworks" />
+      </section>
+
+      <section className="surface-card space-y-4 px-6 xl:px-0">
+        <h2 className="text-2xl font-semibold tracking-tight text-slate-50">
+          LLM-Docs is built to organize fast-moving AI information into crawlable, linked collections.
+        </h2>
+        <p className="max-w-4xl text-sm leading-7 text-slate-300">
+          Instead of isolated posts, the site now groups documentation, news, model profiles, topic hubs,
+          and comparison pages into a connected knowledge graph. That gives users clearer navigation and gives
+          search engines stronger signals about topic authority.
+        </p>
       </section>
 
       <section className="px-6 xl:px-0">
@@ -107,6 +121,24 @@ export default async function HomePage() {
       <ComparisonSection comparisons={featuredComparisons} />
 
       <ContentSection
+        title="Popular guides"
+        href="/docs"
+        icon={<BookOpenText className="h-5 w-5" />}
+        items={popularGuides.map((item) => ({
+          href: `/docs/${item.slug}`,
+          title: item.title,
+          description: item.description,
+          meta: `${item.category} • ${formatDate(item.updatedAt || item.date)}`,
+        }))}
+      />
+
+      <TopicSection topics={featuredTopics.map((topic) => ({
+        href: `/topics/${topic.slug}`,
+        title: topic.label,
+        description: `${topic.count} connected pages across the site.`,
+      }))} />
+
+      <ContentSection
         title="Documentation"
         href="/docs"
         icon={<BookOpenText className="h-5 w-5" />}
@@ -130,6 +162,33 @@ export default async function HomePage() {
         }))}
       />
     </div>
+  );
+}
+
+function TopicSection({
+  topics,
+}: {
+  topics: { href: string; title: string; description: string }[];
+}) {
+  return (
+    <section className="space-y-5 px-6 xl:px-0">
+      <div className="flex items-center justify-between gap-4">
+        <h2 className="text-2xl font-semibold tracking-tight text-slate-50">Topic hubs</h2>
+        <Link href="/topics" className="inline-flex items-center gap-2 text-sm font-medium text-slate-300 transition hover:text-white">
+          Browse all
+          <ArrowRight className="h-4 w-4" />
+        </Link>
+      </div>
+      <div className="grid gap-4 lg:grid-cols-2">
+        {topics.map((topic) => (
+          <Link key={topic.href} href={topic.href} className="surface-card space-y-3 transition hover:border-white/16">
+            <p className="text-xs font-medium uppercase tracking-[0.18em] text-amber-700">Topic Cluster</p>
+            <h3 className="text-xl font-semibold tracking-tight text-slate-50">{topic.title}</h3>
+            <p className="text-sm leading-6 text-slate-300">{topic.description}</p>
+          </Link>
+        ))}
+      </div>
+    </section>
   );
 }
 

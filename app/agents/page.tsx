@@ -1,11 +1,13 @@
 import Link from "next/link";
 
 import { getAgents } from "@/lib/content";
+import { buildPageMetadata } from "@/lib/metadata";
 
-export const metadata = {
-  title: "Agents",
-  description: "Agent frameworks and orchestration tools",
-};
+export const metadata = buildPageMetadata({
+  title: "Agents | LLM-Docs",
+  description: "Agent frameworks, orchestration tools, and related implementation references.",
+  path: "/agents",
+});
 
 export default async function AgentsIndexPage() {
   const agents = await getAgents();

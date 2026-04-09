@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { getModels } from "@/lib/content";
+import { buildPageMetadata } from "@/lib/metadata";
 
 function formatDate(date: string) {
   if (!date) {
@@ -12,10 +13,11 @@ function formatDate(date: string) {
   }).format(new Date(date));
 }
 
-export const metadata = {
-  title: "Models",
-  description: "Track and document LLM models in markdown",
-};
+export const metadata = buildPageMetadata({
+  title: "Models | LLM-Docs",
+  description: "Track language models, releases, context windows, and provider updates.",
+  path: "/models",
+});
 
 export default async function ModelsIndexPage() {
   const models = await getModels();

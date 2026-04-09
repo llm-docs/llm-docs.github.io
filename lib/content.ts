@@ -14,34 +14,39 @@ import type {
 const contentDir = path.join(process.cwd(), "content");
 
 export async function getDocs(): Promise<(DocMetadata & { slug: string })[]> {
-  return getCollection("docs", (data, slug) => ({
+  return getCollection("docs", (data, slug, filePath) => ({
     slug,
     title: ensureString(data.title, "Untitled"),
     description: ensureString(data.description),
     date: ensureString(data.date),
+    updatedAt: ensureString(data.updatedAt, getFileDate(filePath)),
     category: ensureString(data.category, "General"),
     tags: ensureStringArray(data.tags),
     author: ensureString(data.author),
+    image: ensureString(data.image),
   }));
 }
 
 export async function getDocBySlug(slug: string): Promise<{ metadata: DocMetadata; content: string } | null> {
-  return getCollectionItem("docs", slug, (data) => ({
+  return getCollectionItem("docs", slug, (data, filePath) => ({
     title: ensureString(data.title, "Untitled"),
     description: ensureString(data.description),
     date: ensureString(data.date),
+    updatedAt: ensureString(data.updatedAt, getFileDate(filePath)),
     category: ensureString(data.category, "General"),
     tags: ensureStringArray(data.tags),
     author: ensureString(data.author),
+    image: ensureString(data.image),
   }));
 }
 
 export async function getNews(): Promise<(NewsMetadata & { slug: string })[]> {
-  return getCollection("news", (data, slug) => ({
+  return getCollection("news", (data, slug, filePath) => ({
     slug,
     title: ensureString(data.title, "Untitled"),
     description: ensureString(data.description),
     date: ensureString(data.date),
+    updatedAt: ensureString(data.updatedAt, getFileDate(filePath)),
     author: ensureString(data.author, "Anonymous"),
     image: ensureString(data.image),
     tags: ensureStringArray(data.tags),
@@ -50,10 +55,11 @@ export async function getNews(): Promise<(NewsMetadata & { slug: string })[]> {
 }
 
 export async function getNewsBySlug(slug: string): Promise<{ metadata: NewsMetadata; content: string } | null> {
-  return getCollectionItem("news", slug, (data) => ({
+  return getCollectionItem("news", slug, (data, filePath) => ({
     title: ensureString(data.title, "Untitled"),
     description: ensureString(data.description),
     date: ensureString(data.date),
+    updatedAt: ensureString(data.updatedAt, getFileDate(filePath)),
     author: ensureString(data.author, "Anonymous"),
     image: ensureString(data.image),
     tags: ensureStringArray(data.tags),
@@ -62,7 +68,7 @@ export async function getNewsBySlug(slug: string): Promise<{ metadata: NewsMetad
 }
 
 export async function getAgents(): Promise<(AgentMetadata & { slug: string })[]> {
-  return getCollection("agents", (data, slug) => ({
+  return getCollection("agents", (data, slug, filePath) => ({
     slug,
     name: ensureString(data.name, ensureString(data.title, "Unnamed Agent")),
     description: ensureString(data.description),
@@ -71,11 +77,14 @@ export async function getAgents(): Promise<(AgentMetadata & { slug: string })[]>
     github: ensureString(data.github),
     tags: ensureStringArray(data.tags),
     features: ensureStringArray(data.features),
+    useCases: ensureStringArray(data.useCases),
+    alternatives: ensureStringArray(data.alternatives),
+    updatedAt: ensureString(data.updatedAt, getFileDate(filePath)),
   }));
 }
 
 export async function getAgentBySlug(slug: string): Promise<{ metadata: AgentMetadata; content: string } | null> {
-  return getCollectionItem("agents", slug, (data) => ({
+  return getCollectionItem("agents", slug, (data, filePath) => ({
     name: ensureString(data.name, ensureString(data.title, "Unnamed Agent")),
     description: ensureString(data.description),
     category: ensureString(data.category, "General"),
@@ -83,33 +92,44 @@ export async function getAgentBySlug(slug: string): Promise<{ metadata: AgentMet
     github: ensureString(data.github),
     tags: ensureStringArray(data.tags),
     features: ensureStringArray(data.features),
+    useCases: ensureStringArray(data.useCases),
+    alternatives: ensureStringArray(data.alternatives),
+    updatedAt: ensureString(data.updatedAt, getFileDate(filePath)),
   }));
 }
 
 export async function getModels(): Promise<(ModelMetadata & { slug: string })[]> {
-  return getCollection("models", (data, slug) => ({
+  return getCollection("models", (data, slug, filePath) => ({
     slug,
     name: ensureString(data.name, "Untitled Model"),
     description: ensureString(data.description),
     provider: ensureString(data.provider, "Unknown Provider"),
     releaseDate: ensureString(data.releaseDate),
+    updatedAt: ensureString(data.updatedAt, getFileDate(filePath)),
     status: ensureString(data.status, "tracked"),
     contextWindow: ensureString(data.contextWindow),
     modalities: ensureStringArray(data.modalities),
     tags: ensureStringArray(data.tags),
+    useCases: ensureStringArray(data.useCases),
+    pricing: ensureString(data.pricing),
+    image: ensureString(data.image),
   }));
 }
 
 export async function getModelBySlug(slug: string): Promise<{ metadata: ModelMetadata; content: string } | null> {
-  return getCollectionItem("models", slug, (data) => ({
+  return getCollectionItem("models", slug, (data, filePath) => ({
     name: ensureString(data.name, "Untitled Model"),
     description: ensureString(data.description),
     provider: ensureString(data.provider, "Unknown Provider"),
     releaseDate: ensureString(data.releaseDate),
+    updatedAt: ensureString(data.updatedAt, getFileDate(filePath)),
     status: ensureString(data.status, "tracked"),
     contextWindow: ensureString(data.contextWindow),
     modalities: ensureStringArray(data.modalities),
     tags: ensureStringArray(data.tags),
+    useCases: ensureStringArray(data.useCases),
+    pricing: ensureString(data.pricing),
+    image: ensureString(data.image),
   }));
 }
 
@@ -147,6 +167,87 @@ export async function getModelComparisons(modelSlug: string): Promise<ModelCompa
   return comparisons.filter(
     (comparison) => comparison.left.slug === modelSlug || comparison.right.slug === modelSlug,
   );
+}
+
+export async function getRelatedDocs(slug: string, tags: string[], limit = 3) {
+  const docs = await getDocs();
+  return docs.filter((doc) => doc.slug !== slug && overlap(doc.tags, tags)).slice(0, limit);
+}
+
+export async function getRelatedNews(slug: string, tags: string[], limit = 3) {
+  const news = await getNews();
+  return news.filter((item) => item.slug !== slug && overlap(item.tags, tags)).slice(0, limit);
+}
+
+export async function getRelatedModels(slug: string, tags: string[], limit = 3) {
+  const models = await getModels();
+  return models.filter((model) => model.slug !== slug && overlap(model.tags, tags)).slice(0, limit);
+}
+
+export async function getRelatedAgents(slug: string, tags: string[], limit = 3) {
+  const agents = await getAgents();
+  return agents.filter((agent) => agent.slug !== slug && overlap(agent.tags, tags)).slice(0, limit);
+}
+
+export async function getDocsNavigation(slug: string) {
+  const docs = await getDocs();
+  const index = docs.findIndex((doc) => doc.slug === slug);
+
+  return {
+    previous: index > 0 ? docs[index - 1] : null,
+    next: index >= 0 && index < docs.length - 1 ? docs[index + 1] : null,
+  };
+}
+
+export async function getTopicHubs() {
+  const all = getAllContentForSearch();
+  const items = [...(await all.docs), ...(await all.news), ...(await all.agents), ...(await all.models)];
+  const buckets = new Map<string, { slug: string; label: string; count: number; items: typeof items }>();
+
+  for (const item of items) {
+    for (const tag of item.tags || []) {
+      const slug = slugifyComparisonPart(tag);
+      const existing = buckets.get(slug);
+      if (existing) {
+        existing.count += 1;
+        existing.items.push(item);
+      } else {
+        buckets.set(slug, {
+          slug,
+          label: toTitleCase(tag),
+          count: 1,
+          items: [item],
+        });
+      }
+    }
+  }
+
+  return [...buckets.values()]
+    .filter((topic) => topic.count >= 2)
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 24);
+}
+
+export async function getTopicHubBySlug(slug: string) {
+  if (!slug) {
+    return null;
+  }
+
+  const topics = await getTopicHubs();
+  const topic = topics.find((item) => item.slug === slug);
+  if (!topic) {
+    return null;
+  }
+
+  return {
+    ...topic,
+    items: topic.items.map((item) => ({
+      href: item.url,
+      label: item.title,
+      description: item.description,
+      type: item.type,
+    })),
+  };
 }
 
 export function getAllFiles(dir: string, ext: string): string[] {
@@ -217,7 +318,7 @@ export function getAllContentForSearch() {
 
 function getCollection<T extends { slug: string }>(
   collection: string,
-  mapper: (data: Record<string, unknown>, slug: string) => T,
+  mapper: (data: Record<string, unknown>, slug: string, filePath: string) => T,
 ): T[] {
   const collectionDir = path.join(contentDir, collection);
 
@@ -233,7 +334,7 @@ function getCollection<T extends { slug: string }>(
       const { data } = matter(fileContents);
       const slug = file.replace(`${collectionDir}/`, "").replace(".md", "");
 
-      return mapper(data, slug);
+      return mapper(data, slug, file);
     })
     .sort((a, b) => getSortTimestamp(b) - getSortTimestamp(a));
 }
@@ -241,7 +342,7 @@ function getCollection<T extends { slug: string }>(
 function getCollectionItem<T>(
   collection: string,
   slug: string,
-  mapper: (data: Record<string, unknown>) => T,
+  mapper: (data: Record<string, unknown>, filePath: string) => T,
 ): { metadata: T; content: string } | null {
   const fullPath = path.join(contentDir, collection, `${slug}.md`);
 
@@ -253,7 +354,7 @@ function getCollectionItem<T>(
   const { data, content } = matter(fileContents);
 
   return {
-    metadata: mapper(data),
+    metadata: mapper(data, fullPath),
     content,
   };
 }
@@ -318,6 +419,22 @@ function slugifyComparisonPart(value: string) {
     .replace(/&/g, " and ")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
+}
+
+function overlap(left: string[] = [], right: string[] = []) {
+  return left.some((item) => right.includes(item));
+}
+
+function getFileDate(filePath: string) {
+  return fs.statSync(filePath).mtime.toISOString().slice(0, 10);
+}
+
+function toTitleCase(value: string) {
+  return value
+    .split(/[-\s]+/)
+    .filter(Boolean)
+    .map((part) => part[0]?.toUpperCase() + part.slice(1))
+    .join(" ");
 }
 
 function readAutomationStatus(fileName: string): AutomationStatus | null {
