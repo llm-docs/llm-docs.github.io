@@ -12,8 +12,11 @@ export const metadata: Metadata = {
   },
   description: "LLM-Docs tracks AI models, release updates, comparisons, and practical research pages in one place.",
   icons: {
-    icon: "/logo.png",
-    apple: "/logo.png",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    apple: "/apple-icon.png",
   },
   openGraph: {
     title: "LLM-Docs",
