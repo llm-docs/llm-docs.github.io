@@ -250,6 +250,88 @@ export async function getTopicHubBySlug(slug: string) {
   };
 }
 
+export async function getProviderHubs() {
+  const [models, news, docs, agents, comparisons] = await Promise.all([
+    getModels(),
+    getNews(),
+    getDocs(),
+    getAgents(),
+    getAllModelComparisons(),
+  ]);
+
+  const providers = new Map<
+    string,
+    {
+      slug: string;
+      label: string;
+      models: Awaited<ReturnType<typeof getModels>>;
+      news: Awaited<ReturnType<typeof getNews>>;
+      docs: Awaited<ReturnType<typeof getDocs>>;
+      agents: Awaited<ReturnType<typeof getAgents>>;
+      comparisons: Awaited<ReturnType<typeof getAllModelComparisons>>;
+    }
+  >();
+
+  for (const model of models) {
+    const slug = slugifyComparisonPart(model.provider);
+    const existing =
+      providers.get(slug) ??
+      {
+        slug,
+        label: model.provider,
+        models: [],
+        news: [],
+        docs: [],
+        agents: [],
+        comparisons: [],
+      };
+    existing.models.push(model);
+    providers.set(slug, existing);
+  }
+
+  for (const provider of providers.values()) {
+    provider.news = news.filter((item) => matchesProvider(item, provider.label));
+    provider.docs = docs.filter((item) => matchesProvider(item, provider.label));
+    provider.agents = agents.filter((item) => matchesProvider(item, provider.label));
+    provider.comparisons = comparisons.filter(
+      (comparison) =>
+        comparison.left.provider === provider.label || comparison.right.provider === provider.label,
+    );
+  }
+
+  return [...providers.values()].sort((a, b) => b.models.length - a.models.length);
+}
+
+export async function getProviderHubBySlug(slug: string) {
+  const hubs = await getProviderHubs();
+  return hubs.find((hub) => hub.slug === slug) ?? null;
+}
+
+export async function getReleaseTimeline() {
+  const [models, news] = await Promise.all([getModels(), getNews()]);
+
+  return [
+    ...models.map((model) => ({
+      type: "model" as const,
+      title: model.name,
+      date: model.releaseDate || model.updatedAt || "",
+      href: `/models/${model.slug}`,
+      provider: model.provider,
+      description: model.description,
+    })),
+    ...news.map((item) => ({
+      type: "news" as const,
+      title: item.title,
+      date: item.date || item.updatedAt || "",
+      href: `/news/${item.slug}`,
+      provider: item.author,
+      description: item.description,
+    })),
+  ]
+    .filter((item) => item.date)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+
 export function getAllFiles(dir: string, ext: string): string[] {
   const files = fs.readdirSync(dir, { withFileTypes: true });
   let result: string[] = [];
@@ -435,6 +517,15 @@ function toTitleCase(value: string) {
     .filter(Boolean)
     .map((part) => part[0]?.toUpperCase() + part.slice(1))
     .join(" ");
+}
+
+function matchesProvider(
+  item: { title?: string; description?: string; tags?: string[]; provider?: string; author?: string; name?: string },
+  provider: string,
+) {
+  const slug = slugifyComparisonPart(provider);
+  const haystack = `${item.title || item.name || ""} ${item.description || ""} ${item.provider || ""} ${item.author || ""} ${(item.tags || []).join(" ")}`.toLowerCase();
+  return haystack.includes(slug.replace(/-/g, " ")) || haystack.includes(slug);
 }
 
 function readAutomationStatus(fileName: string): AutomationStatus | null {

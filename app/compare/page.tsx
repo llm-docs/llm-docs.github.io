@@ -1,14 +1,23 @@
 import Link from "next/link";
 
-import { getAllModelComparisons } from "@/lib/content";
+import AgentComparisonExplorer from "@/components/compare/AgentComparisonExplorer";
+import ModelComparisonExplorer from "@/components/compare/ModelComparisonExplorer";
+import { FeedbackLinks } from "@/components/feedback/FeedbackLinks";
+import { getAgents, getAllModelComparisons, getModels } from "@/lib/content";
+import { buildPageMetadata } from "@/lib/metadata";
 
-export const metadata = {
-  title: "LLM Comparisons",
+export const metadata = buildPageMetadata({
+  title: "LLM Comparisons | LLM-Docs",
   description: "Programmatic comparison pages for leading AI models, providers, and use cases.",
-};
+  path: "/compare",
+});
 
 export default async function CompareIndexPage() {
-  const comparisons = await getAllModelComparisons();
+  const [comparisons, models, agents] = await Promise.all([
+    getAllModelComparisons(),
+    getModels(),
+    getAgents(),
+  ]);
 
   return (
     <section className="space-y-8 px-6 pb-16 xl:px-0">
@@ -19,6 +28,10 @@ export default async function CompareIndexPage() {
           Structured head-to-head pages designed for pricing, benchmark, and use-case research.
         </p>
       </header>
+
+      <ModelComparisonExplorer models={models} />
+      <AgentComparisonExplorer agents={agents} />
+      <FeedbackLinks context="comparison tooling" />
 
       <div className="grid gap-4 lg:grid-cols-2">
         {comparisons.map((comparison) => (

@@ -1,17 +1,6 @@
-import Link from "next/link";
-
+import NewsExplorer from "@/components/explore/NewsExplorer";
 import { getNews } from "@/lib/content";
 import { buildPageMetadata } from "@/lib/metadata";
-
-function formatDate(date: string) {
-  if (!date) {
-    return "Undated";
-  }
-
-  return new Intl.DateTimeFormat("en", {
-    dateStyle: "medium",
-  }).format(new Date(date));
-}
 
 export const metadata = buildPageMetadata({
   title: "AI Updates | LLM-Docs",
@@ -33,19 +22,7 @@ export default async function NewsIndexPage() {
         </p>
       </header>
 
-      <div className="space-y-4">
-        {news.map((item) => (
-          <Link key={item.slug} href={`/news/${item.slug}`} className="surface-card group block space-y-3 transition hover:-translate-y-0.5 hover:border-white/16">
-            <p className="text-xs font-medium uppercase tracking-[0.18em] text-amber-700">
-              {formatDate(item.date)} • {item.author}
-            </p>
-            <h2 className="text-2xl font-semibold tracking-tight text-slate-50 group-hover:text-sky-200">
-              {item.title}
-            </h2>
-            <p className="text-sm leading-6 text-slate-300">{item.description}</p>
-          </Link>
-        ))}
-      </div>
+      <NewsExplorer items={news} />
     </section>
   );
 }

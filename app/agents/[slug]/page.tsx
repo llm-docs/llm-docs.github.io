@@ -6,6 +6,7 @@ import { Breadcrumbs } from "@/components/content/Breadcrumbs";
 import { JsonLd } from "@/components/content/JsonLd";
 import { Markdown } from "@/components/content/Markdown";
 import { RelatedLinks } from "@/components/content/RelatedLinks";
+import { FeedbackLinks } from "@/components/feedback/FeedbackLinks";
 import { getAgentBySlug, getAgents, getRelatedAgents, getRelatedDocs, getRelatedModels } from "@/lib/content";
 import { buildPageMetadata } from "@/lib/metadata";
 import { absoluteUrl } from "@/lib/site";
@@ -130,6 +131,7 @@ export default async function AgentPage({ params }: PageProps) {
           description: item.description,
         }))}
       />
+      <FeedbackLinks context={agent.metadata.name} />
     </article>
   );
 }

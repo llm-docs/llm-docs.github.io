@@ -5,6 +5,7 @@ import { Breadcrumbs } from "@/components/content/Breadcrumbs";
 import { JsonLd } from "@/components/content/JsonLd";
 import { Markdown } from "@/components/content/Markdown";
 import { RelatedLinks } from "@/components/content/RelatedLinks";
+import { FeedbackLinks } from "@/components/feedback/FeedbackLinks";
 import { getNews, getNewsBySlug, getRelatedDocs, getRelatedModels, getRelatedNews } from "@/lib/content";
 import { buildPageMetadata } from "@/lib/metadata";
 import { absoluteUrl } from "@/lib/site";
@@ -79,6 +80,19 @@ export default async function NewsPage({ params }: PageProps) {
         <p className="eyebrow">Update</p>
         <h1 className="text-4xl font-semibold tracking-tight text-slate-50">{item.metadata.title}</h1>
         <p className="max-w-3xl text-lg leading-8 text-slate-300">{item.metadata.description}</p>
+        <div className="flex flex-wrap gap-2">
+          <span className="rounded-full border border-white/10 px-3 py-1 text-xs uppercase tracking-[0.18em] text-slate-300">
+            Last updated {item.metadata.updatedAt || item.metadata.date || "unknown"}
+          </span>
+          <span className="rounded-full border border-white/10 px-3 py-1 text-xs uppercase tracking-[0.18em] text-slate-300">
+            Source linked
+          </span>
+          {item.metadata.tags?.includes("auto-imported") ? (
+            <span className="rounded-full border border-amber-500/30 px-3 py-1 text-xs uppercase tracking-[0.18em] text-amber-300">
+              Auto-imported, review recommended
+            </span>
+          ) : null}
+        </div>
         <p className="text-sm text-slate-400">
           Published: {item.metadata.date || "Unknown"} · Source: {item.metadata.source || "Editorial"}
         </p>
@@ -108,6 +122,7 @@ export default async function NewsPage({ params }: PageProps) {
           description: doc.description,
         }))}
       />
+      <FeedbackLinks context={item.metadata.title} />
     </article>
   );
 }

@@ -6,6 +6,7 @@ import { Breadcrumbs } from "@/components/content/Breadcrumbs";
 import { JsonLd } from "@/components/content/JsonLd";
 import { Markdown } from "@/components/content/Markdown";
 import { RelatedLinks } from "@/components/content/RelatedLinks";
+import { FeedbackLinks } from "@/components/feedback/FeedbackLinks";
 import {
   getModelBySlug,
   getModelComparisons,
@@ -95,6 +96,14 @@ export default async function ModelPage({ params }: PageProps) {
           <h1 className="text-4xl font-semibold tracking-tight text-slate-50">{model.metadata.name}</h1>
           <p className="max-w-3xl text-lg leading-8 text-slate-300">{model.metadata.description}</p>
         </div>
+        <div className="flex flex-wrap gap-2">
+          <span className="rounded-full border border-white/10 px-3 py-1 text-xs uppercase tracking-[0.18em] text-slate-300">
+            Last updated {model.metadata.updatedAt || model.metadata.releaseDate || "unknown"}
+          </span>
+          <span className="rounded-full border border-white/10 px-3 py-1 text-xs uppercase tracking-[0.18em] text-slate-300">
+            Confidence: editorial summary
+          </span>
+        </div>
         <dl className="grid gap-3 rounded-[1.5rem] border border-white/8 bg-[rgba(9,15,32,0.8)] p-5 sm:grid-cols-3">
           <div>
             <dt className="text-xs font-medium uppercase tracking-[0.18em] text-slate-400">Status</dt>
@@ -164,6 +173,7 @@ export default async function ModelPage({ params }: PageProps) {
           description: item.description,
         }))}
       />
+      <FeedbackLinks context={model.metadata.name} />
     </article>
   );
 }
