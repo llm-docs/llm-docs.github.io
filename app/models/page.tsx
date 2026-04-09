@@ -17,7 +17,7 @@ export default async function ModelsIndexPage() {
         <p className="eyebrow">Models</p>
         <h1 className="text-4xl font-semibold tracking-tight text-slate-50">Model tracker</h1>
         <p className="max-w-2xl text-lg leading-8 text-slate-300">
-          Use frontmatter in `content/models` to organize providers, release dates, context windows, and status.
+          Track leading models by provider, capabilities, release history, and practical use cases.
         </p>
       </header>
 

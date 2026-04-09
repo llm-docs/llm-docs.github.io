@@ -17,7 +17,7 @@ export default async function AgentsIndexPage() {
         <p className="eyebrow">Agents</p>
         <h1 className="text-4xl font-semibold tracking-tight text-slate-50">Agent framework directory</h1>
         <p className="max-w-2xl text-lg leading-8 text-slate-300">
-          Keep orchestration tools in a separate markdown collection so they can evolve independently from docs and updates.
+          Explore agent frameworks, orchestration tools, and implementation options for real-world AI systems.
         </p>
       </header>
 

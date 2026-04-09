@@ -18,7 +18,7 @@ export default async function TopicsPage() {
         <p className="eyebrow">Topics</p>
         <h1 className="text-4xl font-semibold tracking-tight text-slate-50">Topic clusters</h1>
         <p className="max-w-2xl text-lg leading-8 text-slate-300">
-          Explore the library by recurring themes, tags, and product areas.
+          Browse major AI themes, provider ecosystems, and core subject areas in one place.
         </p>
       </header>
       <div className="grid gap-4 lg:grid-cols-2">
@@ -27,7 +27,7 @@ export default async function TopicsPage() {
             <p className="text-xs font-medium uppercase tracking-[0.18em] text-amber-700">{topic.count} pages</p>
             <h2 className="text-2xl font-semibold text-slate-50">{topic.label}</h2>
             <p className="text-sm leading-6 text-slate-300">
-              Hub page for documents, news, models, and agents tagged with {topic.label}.
+              Curated links, updates, and references connected to {topic.label}.
             </p>
           </Link>
         ))}

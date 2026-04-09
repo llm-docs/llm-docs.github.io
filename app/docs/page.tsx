@@ -17,7 +17,7 @@ export default async function DocsIndexPage() {
         <p className="eyebrow">Docs</p>
         <h1 className="text-4xl font-semibold tracking-tight text-slate-50">Documentation library</h1>
         <p className="max-w-2xl text-lg leading-8 text-slate-300">
-          Markdown files in `content/docs` become documentation pages automatically.
+          Clear guides, references, and practical documentation for working with modern AI models.
         </p>
       </header>
 

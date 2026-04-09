@@ -25,7 +25,7 @@ export default async function CompareIndexPage() {
         <p className="eyebrow">Compare</p>
         <h1 className="text-4xl font-semibold tracking-tight text-slate-50">LLM comparison library</h1>
         <p className="max-w-2xl text-lg leading-8 text-slate-300">
-          Structured head-to-head pages designed for pricing, benchmark, and use-case research.
+          Compare models and frameworks side by side for pricing, capabilities, and deployment fit.
         </p>
       </header>
 

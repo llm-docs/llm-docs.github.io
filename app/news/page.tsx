@@ -18,7 +18,7 @@ export default async function NewsIndexPage() {
         <p className="eyebrow">Updates</p>
         <h1 className="text-4xl font-semibold tracking-tight text-slate-50">Latest LLM updates</h1>
         <p className="max-w-2xl text-lg leading-8 text-slate-300">
-          The feed blends curated markdown entries with automatically imported updates from tracked AI sources.
+          Follow the latest model launches, product changes, and major moves across the AI ecosystem.
         </p>
       </header>
 
