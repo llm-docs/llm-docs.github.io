@@ -7,7 +7,9 @@
     "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint",
-    "sync:news": "node scripts/sync-news.mjs"
+    "sync:news": "node scripts/sync-news.mjs",
+    "sync:models": "node scripts/sync-models.mjs",
+    "sync:content": "npm run sync:news && npm run sync:models"
   },
   "dependencies": {
     "date-fns": "^4.1.0",

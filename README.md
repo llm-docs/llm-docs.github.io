@@ -27,6 +27,8 @@ npm run dev
 npm run build
 npm run lint
 npm run sync:news
+npm run sync:models
+npm run sync:content
 ```
 
 Open `http://localhost:3000`.
@@ -43,6 +45,8 @@ Open `http://localhost:3000`.
 - Markdown rendering uses `next-mdx-remote/rsc` with GFM and code highlighting.
 - Branding assets live in `public/`, including `public/logo.png`.
 - Automatic news syncing is configured in `.github/workflows/sync-news.yml`.
+- Automatic model-announcement syncing is also configured in `.github/workflows/sync-news.yml`.
 - News sources can be adjusted in `config/news-sources.mjs`.
+- Model sources can be adjusted in `config/model-sources.mjs`.
 - GitHub Pages deployment is configured in `.github/workflows/deploy-pages.yml`.
 - The current config assumes this repository is the org site: `LLM-Docs.github.io`.

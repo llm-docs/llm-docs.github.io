@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, BookOpenText, Bot, Newspaper, Sparkles } from "lucide-react";
 
-import { getAgents, getDocs, getModels, getNews } from "@/lib/content";
+import { getAgents, getAutomationStatus, getDocs, getModels, getNews } from "@/lib/content";
 
 function formatDate(date: string) {
   if (!date) {
@@ -20,6 +20,7 @@ export default async function HomePage() {
     getAgents(),
     getModels(),
   ]);
+  const automation = await getAutomationStatus();
 
   const latestDocs = docs.slice(0, 3);
   const latestNews = news.slice(0, 3);
@@ -59,6 +60,15 @@ export default async function HomePage() {
         <StatCard label="Updates" value={news.length} description="Release notes and ecosystem news" />
         <StatCard label="Models" value={models.length} description="Structured model overview pages" />
         <StatCard label="Agents" value={agents.length} description="Tools and orchestration frameworks" />
+      </section>
+
+      <section className="px-6 xl:px-0">
+        <AutomationPanel
+          newsLastRun={automation.news?.lastRunAt ?? ""}
+          newsSources={automation.news?.sources ?? []}
+          modelLastRun={automation.models?.lastRunAt ?? ""}
+          modelSources={automation.models?.sources ?? []}
+        />
       </section>
 
       <ContentSection
@@ -112,6 +122,48 @@ export default async function HomePage() {
   );
 }
 
+function AutomationPanel({
+  newsLastRun,
+  newsSources,
+  modelLastRun,
+  modelSources,
+}: {
+  newsLastRun: string;
+  newsSources: { status: string; sourceName: string }[];
+  modelLastRun: string;
+  modelSources: { status: string; sourceName: string }[];
+}) {
+  const newsHealthy = newsSources.filter((source) => source.status === "success").length;
+  const modelsHealthy = modelSources.filter((source) => source.status === "success").length;
+
+  return (
+    <div className="surface-card grid gap-6 lg:grid-cols-2">
+      <div className="space-y-3">
+        <p className="text-sm font-medium uppercase tracking-[0.18em] text-slate-500">Automation Status</p>
+        <h2 className="text-2xl font-semibold tracking-tight text-slate-950">
+          The site refreshes itself on GitHub every hour.
+        </h2>
+        <p className="text-sm leading-6 text-slate-600">
+          News and model announcement feeds are imported automatically, committed by GitHub Actions,
+          and deployed back to the site after each successful sync.
+        </p>
+      </div>
+      <div className="grid gap-4 sm:grid-cols-2">
+        <div className="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-4">
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-slate-500">News Sync</p>
+          <p className="mt-2 text-lg font-semibold text-slate-950">{newsHealthy}/{newsSources.length || 0} sources healthy</p>
+          <p className="mt-2 text-sm text-slate-600">Last run: {newsLastRun ? formatDateTime(newsLastRun) : "Not yet recorded"}</p>
+        </div>
+        <div className="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-4">
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-slate-500">Model Sync</p>
+          <p className="mt-2 text-lg font-semibold text-slate-950">{modelsHealthy}/{modelSources.length || 0} sources healthy</p>
+          <p className="mt-2 text-sm text-slate-600">Last run: {modelLastRun ? formatDateTime(modelLastRun) : "Not yet recorded"}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function StatCard({
   label,
   value,
@@ -128,6 +180,17 @@ function StatCard({
       <p className="text-sm leading-6 text-slate-600">{description}</p>
     </article>
   );
+}
+
+function formatDateTime(date: string) {
+  if (!date) {
+    return "Unknown";
+  }
+
+  return new Intl.DateTimeFormat("en", {
+    dateStyle: "medium",
+    timeStyle: "short",
+  }).format(new Date(date));
 }
 
 function ContentSection({

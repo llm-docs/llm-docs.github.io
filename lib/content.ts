@@ -2,7 +2,13 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-import type { AgentMetadata, DocMetadata, ModelMetadata, NewsMetadata } from "@/types";
+import type {
+  AgentMetadata,
+  AutomationStatus,
+  DocMetadata,
+  ModelMetadata,
+  NewsMetadata,
+} from "@/types";
 
 const contentDir = path.join(process.cwd(), "content");
 
@@ -104,6 +110,16 @@ export async function getModelBySlug(slug: string): Promise<{ metadata: ModelMet
     modalities: ensureStringArray(data.modalities),
     tags: ensureStringArray(data.tags),
   }));
+}
+
+export async function getAutomationStatus(): Promise<{
+  news: AutomationStatus | null;
+  models: AutomationStatus | null;
+}> {
+  return {
+    news: readAutomationStatus("news-status.json"),
+    models: readAutomationStatus("models-status.json"),
+  };
 }
 
 export function getAllFiles(dir: string, ext: string): string[] {
@@ -241,4 +257,19 @@ function ensureStringArray(value: unknown): string[] {
 
 function ensureString(value: unknown, fallback = ""): string {
   return typeof value === "string" ? value : fallback;
+}
+
+function readAutomationStatus(fileName: string): AutomationStatus | null {
+  const filePath = path.join(contentDir, "automation", fileName);
+
+  if (!fs.existsSync(filePath)) {
+    return null;
+  }
+
+  try {
+    const parsed = JSON.parse(fs.readFileSync(filePath, "utf8")) as AutomationStatus;
+    return parsed;
+  } catch {
+    return null;
+  }
 }

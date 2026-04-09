@@ -47,3 +47,20 @@ export interface ModelMetadata {
   modalities?: string[]
   tags?: string[]
 }
+
+export interface AutomationSourceStatus {
+  sourceId: string
+  sourceName: string
+  status: string
+  written: number
+  scanned?: number
+  matched?: number
+  error?: string
+}
+
+export interface AutomationStatus {
+  kind: string
+  lastRunAt: string
+  totalWritten: number
+  sources: AutomationSourceStatus[]
+}

@@ -1,24 +1,24 @@
 import fs from "fs";
 import path from "path";
 
-import { NEWS_SOURCES } from "../config/news-sources.mjs";
+import { MODEL_SOURCES } from "../config/model-sources.mjs";
 import { fetchFeed, parseFeed, sanitizeQuotes, slugify, summarizeText } from "./feed-utils.mjs";
 
-const AUTO_NEWS_DIR = path.join(process.cwd(), "content", "news", "auto");
+const AUTO_MODELS_DIR = path.join(process.cwd(), "content", "models", "auto");
 const AUTOMATION_DIR = path.join(process.cwd(), "content", "automation");
-const STATUS_FILE = path.join(AUTOMATION_DIR, "news-status.json");
-const MAX_ITEMS_PER_SOURCE = Number(process.env.NEWS_SYNC_LIMIT ?? "6");
+const STATUS_FILE = path.join(AUTOMATION_DIR, "models-status.json");
+const MAX_ITEMS_PER_SOURCE = Number(process.env.MODEL_SYNC_LIMIT ?? "8");
 const USER_AGENT =
-  process.env.NEWS_SYNC_USER_AGENT ??
-  "LLM-Docs News Sync (+https://github.com/LLM-Docs)";
+  process.env.MODEL_SYNC_USER_AGENT ??
+  "LLM-Docs Model Sync (+https://github.com/LLM-Docs)";
 
 async function main() {
-  fs.mkdirSync(AUTO_NEWS_DIR, { recursive: true });
+  fs.mkdirSync(AUTO_MODELS_DIR, { recursive: true });
   fs.mkdirSync(AUTOMATION_DIR, { recursive: true });
 
   const existingSlugs = new Set(
     fs
-      .readdirSync(AUTO_NEWS_DIR, { withFileTypes: true })
+      .readdirSync(AUTO_MODELS_DIR, { withFileTypes: true })
       .filter((entry) => entry.isFile() && entry.name.endsWith(".md"))
       .map((entry) => entry.name.replace(/\.md$/, "")),
   );
@@ -26,13 +26,14 @@ async function main() {
   const results = [];
   let totalWritten = 0;
 
-  for (const source of NEWS_SOURCES) {
+  for (const source of MODEL_SOURCES) {
     const result = {
       sourceId: source.id,
       sourceName: source.name,
       status: "success",
       written: 0,
       scanned: 0,
+      matched: 0,
       error: "",
     };
 
@@ -42,17 +43,18 @@ async function main() {
       result.scanned = items.length;
 
       for (const item of items) {
-        if (!item.title || !item.link) {
+        if (!item.title || !item.link || !matchesKeywords(item, source.keywords)) {
           continue;
         }
 
+        result.matched += 1;
         const slug = `${source.id}-${slugify(item.title).slice(0, 80)}`;
 
         if (existingSlugs.has(slug)) {
           continue;
         }
 
-        const filePath = path.join(AUTO_NEWS_DIR, `${slug}.md`);
+        const filePath = path.join(AUTO_MODELS_DIR, `${slug}.md`);
         fs.writeFileSync(filePath, toMarkdown(source, item), "utf8");
         existingSlugs.add(slug);
         result.written += 1;
@@ -61,7 +63,7 @@ async function main() {
     } catch (error) {
       result.status = "failed";
       result.error = error instanceof Error ? error.message : String(error);
-      console.error(`[news-sync] ${source.name}:`, error);
+      console.error(`[model-sync] ${source.name}:`, error);
     }
 
     results.push(result);
@@ -71,7 +73,7 @@ async function main() {
     STATUS_FILE,
     JSON.stringify(
       {
-        kind: "news",
+        kind: "models",
         lastRunAt: new Date().toISOString(),
         totalWritten,
         sources: results,
@@ -85,44 +87,48 @@ async function main() {
   console.log(
     results
       .map((result) =>
-        result.status === "failed" ? `${result.sourceName}: failed` : `${result.sourceName}: +${result.written}`
+        result.status === "failed"
+          ? `${result.sourceName}: failed`
+          : `${result.sourceName}: +${result.written} (${result.matched} matched)`
       )
       .join("\n"),
   );
 }
 
+function matchesKeywords(item, keywords) {
+  const haystack = `${item.title} ${item.description}`.toLowerCase();
+  return keywords.some((keyword) => haystack.includes(keyword.toLowerCase()));
+}
+
 function toMarkdown(source, item) {
   const title = sanitizeQuotes(item.title);
   const description = sanitizeQuotes(
-    summarizeText(item.description || `Latest update from ${source.name}.`),
+    summarizeText(item.description || `Automatic model update from ${source.name}.`),
   );
-  const tags = [...source.tags, "auto-imported"];
-  const body = [
-    `# ${item.title}`,
-    "",
-    description,
-    "",
-    "## Source",
-    "",
-    `- Publisher: ${source.name}`,
-    `- Original link: ${item.link}`,
-    "",
-    "## Summary",
-    "",
-    "This entry was generated automatically from an external source feed. Open the original link for the full article.",
-  ].join("\n");
 
   return `---
-title: "${title}"
+name: "${title}"
 description: "${description}"
-date: "${item.date}"
-author: "${sanitizeQuotes(source.name)}"
-tags: [${tags.map((tag) => `"${tag}"`).join(", ")}]
-source: "${item.link}"
-automation: "generated"
+provider: "${sanitizeQuotes(source.name)}"
+releaseDate: "${item.date}"
+status: "auto-detected"
+contextWindow: ""
+modalities: []
+tags: [${[...source.tags, "auto-imported", "announcement"].map((tag) => `"${tag}"`).join(", ")}]
 ---
 
-${body}
+# ${item.title}
+
+${item.description || `Latest model-related update from ${source.name}.`}
+
+## Source
+
+- Provider: ${source.name}
+- Original link: ${item.link}
+
+## Notes
+
+This page was generated automatically from a tracked source feed because the entry looked model-related based on title and summary keywords. Review and enrich it if you want fuller specs such as pricing, context window, benchmarks, or modalities.
 `;
 }
 

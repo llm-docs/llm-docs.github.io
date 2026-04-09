@@ -1,0 +1,52 @@
+{
+  "kind": "models",
+  "lastRunAt": "2026-04-09T21:20:14.359Z",
+  "totalWritten": 0,
+  "sources": [
+    {
+      "sourceId": "openai-models",
+      "sourceName": "OpenAI",
+      "status": "failed",
+      "written": 0,
+      "scanned": 0,
+      "matched": 0,
+      "error": "fetch failed"
+    },
+    {
+      "sourceId": "anthropic-models",
+      "sourceName": "Anthropic",
+      "status": "failed",
+      "written": 0,
+      "scanned": 0,
+      "matched": 0,
+      "error": "fetch failed"
+    },
+    {
+      "sourceId": "google-models",
+      "sourceName": "Google DeepMind",
+      "status": "failed",
+      "written": 0,
+      "scanned": 0,
+      "matched": 0,
+      "error": "fetch failed"
+    },
+    {
+      "sourceId": "meta-models",
+      "sourceName": "Meta AI",
+      "status": "failed",
+      "written": 0,
+      "scanned": 0,
+      "matched": 0,
+      "error": "fetch failed"
+    },
+    {
+      "sourceId": "hugging-face-models",
+      "sourceName": "Hugging Face",
+      "status": "failed",
+      "written": 0,
+      "scanned": 0,
+      "matched": 0,
+      "error": "fetch failed"
+    }
+  ]
+}
