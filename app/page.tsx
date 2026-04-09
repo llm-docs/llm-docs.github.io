@@ -1,0 +1,173 @@
+import Link from "next/link";
+import { ArrowRight, BookOpenText, Bot, Newspaper, Sparkles } from "lucide-react";
+
+import { getAgents, getDocs, getModels, getNews } from "@/lib/content";
+
+function formatDate(date: string) {
+  if (!date) {
+    return "Undated";
+  }
+
+  return new Intl.DateTimeFormat("en", {
+    dateStyle: "medium",
+  }).format(new Date(date));
+}
+
+export default async function HomePage() {
+  const [docs, news, agents, models] = await Promise.all([
+    getDocs(),
+    getNews(),
+    getAgents(),
+    getModels(),
+  ]);
+
+  const latestDocs = docs.slice(0, 3);
+  const latestNews = news.slice(0, 3);
+  const featuredAgents = agents.slice(0, 3);
+  const latestModels = models.slice(0, 3);
+
+  return (
+    <div className="space-y-14 pb-16">
+      <section className="hero-shell overflow-hidden px-6 py-14 sm:px-8 sm:py-16">
+        <div className="max-w-3xl space-y-6">
+          <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-white/80">
+            <Sparkles className="h-3.5 w-3.5" />
+            Trusted AI intelligence
+          </p>
+          <div className="space-y-4">
+            <h1 className="max-w-2xl text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+              The business reference for LLM documentation, model intelligence, and market updates.
+            </h1>
+            <p className="max-w-2xl text-lg leading-8 text-slate-200">
+              Follow the latest models, compare providers, discover agent frameworks,
+              and access structured documentation built for teams, researchers, and decision-makers.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/docs" className="button-primary">
+              View Documentation
+            </Link>
+            <Link href="/news" className="button-secondary">
+              See Latest Updates
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="grid gap-4 px-6 sm:grid-cols-2 xl:grid-cols-4 xl:px-0">
+        <StatCard label="Docs" value={docs.length} description="Foundational guides and references" />
+        <StatCard label="Updates" value={news.length} description="Release notes and ecosystem news" />
+        <StatCard label="Models" value={models.length} description="Structured model overview pages" />
+        <StatCard label="Agents" value={agents.length} description="Tools and orchestration frameworks" />
+      </section>
+
+      <ContentSection
+        title="Latest updates"
+        href="/news"
+        icon={<Newspaper className="h-5 w-5" />}
+        items={latestNews.map((item) => ({
+          href: `/news/${item.slug}`,
+          title: item.title,
+          description: item.description,
+          meta: formatDate(item.date),
+        }))}
+      />
+
+      <ContentSection
+        title="Newest model pages"
+        href="/models"
+        icon={<Sparkles className="h-5 w-5" />}
+        items={latestModels.map((item) => ({
+          href: `/models/${item.slug}`,
+          title: item.name,
+          description: item.description,
+          meta: `${item.provider} • ${item.releaseDate ? formatDate(item.releaseDate) : item.status}`,
+        }))}
+      />
+
+      <ContentSection
+        title="Documentation"
+        href="/docs"
+        icon={<BookOpenText className="h-5 w-5" />}
+        items={latestDocs.map((item) => ({
+          href: `/docs/${item.slug}`,
+          title: item.title,
+          description: item.description,
+          meta: `${item.category} • ${formatDate(item.date)}`,
+        }))}
+      />
+
+      <ContentSection
+        title="Agent frameworks"
+        href="/agents"
+        icon={<Bot className="h-5 w-5" />}
+        items={featuredAgents.map((item) => ({
+          href: `/agents/${item.slug}`,
+          title: item.name,
+          description: item.description,
+          meta: item.category,
+        }))}
+      />
+    </div>
+  );
+}
+
+function StatCard({
+  label,
+  value,
+  description,
+}: {
+  label: string;
+  value: number;
+  description: string;
+}) {
+  return (
+    <article className="surface-card space-y-2">
+      <p className="text-sm font-medium uppercase tracking-[0.18em] text-slate-500">{label}</p>
+      <p className="text-3xl font-semibold text-slate-950">{value}</p>
+      <p className="text-sm leading-6 text-slate-600">{description}</p>
+    </article>
+  );
+}
+
+function ContentSection({
+  title,
+  href,
+  icon,
+  items,
+}: {
+  title: string;
+  href: string;
+  icon: React.ReactNode;
+  items: { href: string; title: string; description: string; meta: string }[];
+}) {
+  return (
+    <section className="space-y-5 px-6 xl:px-0">
+      <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
+          <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-900 text-white">
+            {icon}
+          </span>
+          <div>
+            <h2 className="text-2xl font-semibold tracking-tight text-slate-950">{title}</h2>
+          </div>
+        </div>
+        <Link href={href} className="inline-flex items-center gap-2 text-sm font-medium text-slate-700 transition hover:text-slate-950">
+          View all
+          <ArrowRight className="h-4 w-4" />
+        </Link>
+      </div>
+      <div className="grid gap-4 lg:grid-cols-3">
+        {items.map((item) => (
+          <Link key={item.href} href={item.href} className="surface-card group space-y-3 transition hover:-translate-y-0.5 hover:border-slate-300">
+            <p className="text-xs font-medium uppercase tracking-[0.18em] text-amber-700">{item.meta}</p>
+            <h3 className="text-xl font-semibold tracking-tight text-slate-950 transition group-hover:text-slate-700">
+              {item.title}
+            </h3>
+            <p className="text-sm leading-6 text-slate-600">{item.description}</p>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+}
