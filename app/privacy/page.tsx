@@ -17,6 +17,18 @@ export default function PrivacyPage() {
       <section className="surface-card space-y-4 text-sm leading-7 text-slate-300">
         <p>If analytics or third-party services are added later, this page should be updated to disclose what is collected and why.</p>
         <p>When you follow external links, you leave this website and become subject to the privacy policies of those third-party sites.</p>
+        <p>
+          We encourage open-source projects. The full source code for this website is available on GitHub at{" "}
+          <a
+            href="https://github.com/llm-docs/llm-docs.github.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sky-300 transition-colors hover:text-sky-200"
+          >
+            github.com/llm-docs/llm-docs.github.io
+          </a>
+          .
+        </p>
       </section>
     </article>
   );
