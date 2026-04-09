@@ -18,14 +18,9 @@ export default function Header() {
                 className="h-10 w-10 rounded-2xl object-cover ring-1 ring-white/12"
                 priority
               />
-              <div className="flex flex-col">
-                <span className="text-lg font-semibold tracking-tight text-slate-50">
-                  LLM-Docs
-                </span>
-                <span className="hidden text-xs font-medium uppercase tracking-[0.18em] text-slate-400 sm:block">
-                  AI Model Intelligence
-                </span>
-              </div>
+              <span className="text-lg font-semibold tracking-tight text-slate-50">
+                LLM-Docs
+              </span>
             </Link>
             <nav className="hidden md:flex items-center gap-5">
               <Link href="/docs" className="flex items-center gap-2 text-sm font-medium text-slate-300 transition-colors hover:text-white">
