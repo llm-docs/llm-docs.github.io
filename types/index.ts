@@ -64,3 +64,29 @@ export interface AutomationStatus {
   totalWritten: number
   sources: AutomationSourceStatus[]
 }
+
+export interface ModelComparison {
+  slug: string
+  title: string
+  description: string
+  category: string
+  keywords: string[]
+  left: {
+    slug: string
+    name: string
+    provider: string
+    description: string
+    status: string
+    contextWindow?: string
+    modalities?: string[]
+  }
+  right: {
+    slug: string
+    name: string
+    provider: string
+    description: string
+    status: string
+    contextWindow?: string
+    modalities?: string[]
+  }
+}

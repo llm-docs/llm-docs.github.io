@@ -6,6 +6,7 @@ import type {
   AgentMetadata,
   AutomationStatus,
   DocMetadata,
+  ModelComparison,
   ModelMetadata,
   NewsMetadata,
 } from "@/types";
@@ -120,6 +121,32 @@ export async function getAutomationStatus(): Promise<{
     news: readAutomationStatus("news-status.json"),
     models: readAutomationStatus("models-status.json"),
   };
+}
+
+export async function getAllModelComparisons(): Promise<ModelComparison[]> {
+  const models = await getModels();
+  const topLevelModels = models.filter((model) => !model.slug.startsWith("auto/"));
+  const comparisons: ModelComparison[] = [];
+
+  for (let index = 0; index < topLevelModels.length; index += 1) {
+    for (let nextIndex = index + 1; nextIndex < topLevelModels.length; nextIndex += 1) {
+      comparisons.push(buildComparison(topLevelModels[index], topLevelModels[nextIndex]));
+    }
+  }
+
+  return comparisons;
+}
+
+export async function getComparisonBySlug(slug: string): Promise<ModelComparison | null> {
+  const comparisons = await getAllModelComparisons();
+  return comparisons.find((comparison) => comparison.slug === slug) ?? null;
+}
+
+export async function getModelComparisons(modelSlug: string): Promise<ModelComparison[]> {
+  const comparisons = await getAllModelComparisons();
+  return comparisons.filter(
+    (comparison) => comparison.left.slug === modelSlug || comparison.right.slug === modelSlug,
+  );
 }
 
 export function getAllFiles(dir: string, ext: string): string[] {
@@ -257,6 +284,40 @@ function ensureStringArray(value: unknown): string[] {
 
 function ensureString(value: unknown, fallback = ""): string {
   return typeof value === "string" ? value : fallback;
+}
+
+function buildComparison(
+  left: ModelMetadata & { slug: string },
+  right: ModelMetadata & { slug: string },
+): ModelComparison {
+  const ordered = [left, right].sort((a, b) => a.name.localeCompare(b.name));
+  const first = ordered[0];
+  const second = ordered[1];
+
+  return {
+    slug: `${slugifyComparisonPart(first.name)}-vs-${slugifyComparisonPart(second.name)}`,
+    title: `${first.name} vs ${second.name} (2026): Features, Benchmarks, Pricing, and Verdict`,
+    description: `Compare ${first.name} and ${second.name} across provider positioning, release timing, context windows, and practical evaluation criteria.`,
+    category: "Model Comparison",
+    keywords: [
+      `${first.name} vs ${second.name}`,
+      `${first.name} comparison`,
+      `${second.name} comparison`,
+      `${first.name} vs ${second.name} pricing`,
+      `${first.name} vs ${second.name} benchmarks`,
+    ],
+    left: first,
+    right: second,
+  };
+}
+
+function slugifyComparisonPart(value: string) {
+  return value
+    .toLowerCase()
+    .trim()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
 }
 
 function readAutomationStatus(fileName: string): AutomationStatus | null {

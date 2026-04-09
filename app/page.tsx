@@ -1,7 +1,14 @@
 import Link from "next/link";
 import { ArrowRight, BookOpenText, Bot, Newspaper, Sparkles } from "lucide-react";
 
-import { getAgents, getAutomationStatus, getDocs, getModels, getNews } from "@/lib/content";
+import {
+  getAgents,
+  getAllModelComparisons,
+  getAutomationStatus,
+  getDocs,
+  getModels,
+  getNews,
+} from "@/lib/content";
 
 function formatDate(date: string) {
   if (!date) {
@@ -14,11 +21,12 @@ function formatDate(date: string) {
 }
 
 export default async function HomePage() {
-  const [docs, news, agents, models] = await Promise.all([
+  const [docs, news, agents, models, comparisons] = await Promise.all([
     getDocs(),
     getNews(),
     getAgents(),
     getModels(),
+    getAllModelComparisons(),
   ]);
   const automation = await getAutomationStatus();
 
@@ -26,6 +34,7 @@ export default async function HomePage() {
   const latestNews = news.slice(0, 3);
   const featuredAgents = agents.slice(0, 3);
   const latestModels = models.slice(0, 3);
+  const featuredComparisons = comparisons.slice(0, 4);
 
   return (
     <div className="space-y-14 pb-16">
@@ -95,6 +104,8 @@ export default async function HomePage() {
         }))}
       />
 
+      <ComparisonSection comparisons={featuredComparisons} />
+
       <ContentSection
         title="Documentation"
         href="/docs"
@@ -119,6 +130,46 @@ export default async function HomePage() {
         }))}
       />
     </div>
+  );
+}
+
+function ComparisonSection({
+  comparisons,
+}: {
+  comparisons: { slug: string; title: string; description: string }[];
+}) {
+  return (
+    <section className="space-y-5 px-6 xl:px-0">
+      <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
+          <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-900 text-white">
+            <ArrowRight className="h-5 w-5" />
+          </span>
+          <div>
+            <h2 className="text-2xl font-semibold tracking-tight text-slate-50">Comparison pages</h2>
+          </div>
+        </div>
+        <Link href="/compare" className="inline-flex items-center gap-2 text-sm font-medium text-slate-300 transition hover:text-white">
+          View all
+          <ArrowRight className="h-4 w-4" />
+        </Link>
+      </div>
+      <div className="grid gap-4 lg:grid-cols-2">
+        {comparisons.map((comparison) => (
+          <Link
+            key={comparison.slug}
+            href={`/compare/${comparison.slug}`}
+            className="surface-card group space-y-3 transition hover:-translate-y-0.5 hover:border-white/16"
+          >
+            <p className="text-xs font-medium uppercase tracking-[0.18em] text-amber-700">Programmatic SEO</p>
+            <h3 className="text-xl font-semibold tracking-tight text-slate-50 transition group-hover:text-sky-200">
+              {comparison.title}
+            </h3>
+            <p className="text-sm leading-6 text-slate-300">{comparison.description}</p>
+          </Link>
+        ))}
+      </div>
+    </section>
   );
 }
 
