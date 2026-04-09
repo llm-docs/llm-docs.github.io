@@ -2,10 +2,20 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { BookOpenText, Newspaper, Sparkles } from 'lucide-react'
 
+import NewsletterSubscribe from '@/components/newsletter/NewsletterSubscribe'
+
 export default function Footer() {
   return (
     <footer className="mt-10 border-t border-white/8 bg-[rgba(4,8,20,0.72)]">
       <div className="page-shell py-12">
+        <div className="mb-10">
+          <NewsletterSubscribe
+            title="Get the weekly digest"
+            description="A concise roundup of the biggest LLM releases and AI news — straight to your inbox."
+            variant="footer"
+          />
+        </div>
+
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="space-y-3">
             <div className="flex items-center gap-3">

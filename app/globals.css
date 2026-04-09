@@ -251,6 +251,16 @@ a {
   border-color: rgba(148, 163, 184, 0.24) !important;
 }
 
+:root[data-theme="light"] input[type="email"] {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #0f172a !important;
+  border-color: rgba(148, 163, 184, 0.32) !important;
+}
+
+:root[data-theme="light"] input[type="email"]::placeholder {
+  color: #94a3b8 !important;
+}
+
 @media (max-width: 640px) {
   .page-shell {
     width: min(100% - 1rem, 1120px);
