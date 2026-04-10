@@ -42,6 +42,14 @@ export default function DocsExplorer({ docs }: { docs: DocItem[] }) {
           </Link>
         ))}
       </div>
+      {!filtered.length ? (
+        <div className="surface-card">
+          <h2 className="text-xl font-semibold text-slate-50">No matching docs</h2>
+          <p className="mt-2 text-sm leading-6 text-slate-300">
+            Try a broader search term or clear the category filter.
+          </p>
+        </div>
+      ) : null}
     </section>
   );
 }

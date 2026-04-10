@@ -25,15 +25,16 @@ export function buildPageMetadata({
 }: PageMetadataInput): Metadata {
   const canonical = absoluteUrl(path);
   const ogImage = image ? absoluteUrl(image) : DEFAULT_OG_IMAGE;
+  const normalizedTitle = normalizePageTitle(title);
 
   return {
-    title,
+    title: normalizedTitle,
     description,
     alternates: {
       canonical,
     },
     openGraph: {
-      title,
+      title: normalizedTitle,
       description,
       url: canonical,
       siteName: SITE_NAME,
@@ -50,9 +51,14 @@ export function buildPageMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: normalizedTitle,
       description,
       images: [ogImage],
     },
   };
+}
+
+function normalizePageTitle(title: string) {
+  const suffix = `| ${SITE_NAME}`;
+  return title.endsWith(` ${suffix}`) ? title.slice(0, -(` ${suffix}`.length)) : title;
 }

@@ -22,9 +22,8 @@ export default function NewsletterSubscribe({
   buttonText?: string;
   variant?: "section" | "footer";
 }) {
-  // TODO: Replace with your Buttondown referral ID or embed endpoint.
-  // Example: https://buttondown.email/yourusername
-  const formAction = "https://buttondown.email/api/emails/embed-subscribe/YOUR_BUTTONDOWN_REFERRAL_ID";
+  const formAction = process.env.NEXT_PUBLIC_NEWSLETTER_ACTION?.trim() || "";
+  const isConfigured = Boolean(formAction);
 
   if (variant === "footer") {
     return (
@@ -42,10 +41,9 @@ export default function NewsletterSubscribe({
         <p className="max-w-xl text-sm leading-7 text-slate-300">{description}</p>
 
         <form
-          action={formAction}
+          action={isConfigured ? formAction : undefined}
           method="POST"
           target="_blank"
-          rel="noopener noreferrer"
           className="flex max-w-md flex-col gap-3 sm:flex-row"
         >
           <label htmlFor="newsletter-footer" className="sr-only">
@@ -57,15 +55,22 @@ export default function NewsletterSubscribe({
             name="email"
             placeholder={placeholder}
             required
+            disabled={!isConfigured}
             className="min-w-0 flex-1 rounded-full border border-white/12 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-slate-500 focus:border-sky-400/60 focus:outline-none focus:ring-1 focus:ring-sky-400/30"
           />
           <button
             type="submit"
+            disabled={!isConfigured}
             className="shrink-0 rounded-full bg-sky-500 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-400/40"
           >
             {buttonText}
           </button>
         </form>
+        {!isConfigured ? (
+          <p className="text-xs text-slate-500">
+            Newsletter signup is not configured yet. Set `NEXT_PUBLIC_NEWSLETTER_ACTION` to enable this form.
+          </p>
+        ) : null}
       </div>
     );
   }
@@ -85,10 +90,9 @@ export default function NewsletterSubscribe({
       <p className="max-w-2xl text-base leading-7 text-slate-300">{description}</p>
 
       <form
-        action={formAction}
+        action={isConfigured ? formAction : undefined}
         method="POST"
         target="_blank"
-        rel="noopener noreferrer"
         className="flex max-w-md flex-col gap-3 sm:flex-row"
       >
         <label htmlFor="newsletter-hero" className="sr-only">
@@ -100,10 +104,12 @@ export default function NewsletterSubscribe({
           name="email"
           placeholder={placeholder}
           required
+          disabled={!isConfigured}
           className="min-w-0 flex-1 rounded-full border border-white/12 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-slate-500 focus:border-sky-400/60 focus:outline-none focus:ring-1 focus:ring-sky-400/30"
         />
         <button
           type="submit"
+          disabled={!isConfigured}
           className="button-primary shrink-0"
         >
           {buttonText}
@@ -111,7 +117,9 @@ export default function NewsletterSubscribe({
       </form>
 
       <p className="text-xs text-slate-500">
-        No spam, ever. Unsubscribe anytime.
+        {isConfigured
+          ? "No spam, ever. Unsubscribe anytime."
+          : "Set NEXT_PUBLIC_NEWSLETTER_ACTION to enable newsletter signup."}
       </p>
     </section>
   );

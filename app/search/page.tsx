@@ -3,10 +3,15 @@ import { getAllContentForSearch } from "@/lib/content";
 import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
-  title: "Search | LLM-Docs",
+  title: "Search",
   description: "Search documentation, models, agents, and news across LLM-Docs.",
   path: "/search",
 });
+
+metadata.robots = {
+  index: false,
+  follow: true,
+};
 
 export default async function SearchPage() {
   const all = getAllContentForSearch();
