@@ -1,13 +1,13 @@
 {
   "kind": "models",
-  "lastRunAt": "2026-04-10T18:56:22.700Z",
-  "totalWritten": 8,
+  "lastRunAt": "2026-04-10T19:47:41.748Z",
+  "totalWritten": 0,
   "sources": [
     {
       "sourceId": "openai-models",
       "sourceName": "OpenAI",
       "status": "success",
-      "written": 8,
+      "written": 0,
       "scanned": 8,
       "matched": 8,
       "error": ""
