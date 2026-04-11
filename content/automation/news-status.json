@@ -1,7 +1,7 @@
 {
   "kind": "news",
-  "lastRunAt": "2026-04-11T02:25:02.000Z",
-  "totalWritten": 3,
+  "lastRunAt": "2026-04-11T04:56:40.462Z",
+  "totalWritten": 0,
   "sources": [
     {
       "sourceId": "hugging-face",
@@ -15,7 +15,7 @@
       "sourceId": "openai",
       "sourceName": "OpenAI",
       "status": "success",
-      "written": 3,
+      "written": 0,
       "scanned": 6,
       "error": ""
     },
