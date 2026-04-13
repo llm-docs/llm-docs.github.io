@@ -17,7 +17,8 @@ export const NEWS_SOURCES = [
     id: "anthropic",
     name: "Anthropic",
     homepage: "https://www.anthropic.com/news",
-    feedUrl: "https://www.anthropic.com/news/rss.xml",
+    feedUrl: "https://www.anthropic.com/news",
+    format: "anthropic-newsroom",
     tags: ["anthropic", "claude", "api"],
   },
   {

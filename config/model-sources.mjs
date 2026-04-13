@@ -9,7 +9,8 @@ export const MODEL_SOURCES = [
   {
     id: "anthropic-models",
     name: "Anthropic",
-    feedUrl: "https://www.anthropic.com/news/rss.xml",
+    feedUrl: "https://www.anthropic.com/news",
+    format: "anthropic-newsroom",
     tags: ["anthropic", "claude", "models"],
     keywords: ["claude", "model", "api"],
   },

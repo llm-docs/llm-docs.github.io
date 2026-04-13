@@ -1,7 +1,7 @@
 {
   "kind": "news",
-  "lastRunAt": "2026-04-13T12:04:08.723Z",
-  "totalWritten": 0,
+  "lastRunAt": "2026-04-13T13:06:36.542Z",
+  "totalWritten": 5,
   "sources": [
     {
       "sourceId": "hugging-face",
@@ -22,10 +22,10 @@
     {
       "sourceId": "anthropic",
       "sourceName": "Anthropic",
-      "status": "failed",
-      "written": 0,
-      "scanned": 0,
-      "error": "Feed request failed: 404 Not Found"
+      "status": "success",
+      "written": 5,
+      "scanned": 5,
+      "error": ""
     },
     {
       "sourceId": "google-deepmind",

@@ -38,7 +38,7 @@ async function main() {
 
     try {
       const xml = await fetchFeed(source.feedUrl, USER_AGENT);
-      const items = parseFeed(xml).slice(0, MAX_ITEMS_PER_SOURCE);
+      const items = parseFeed(xml, source.format).slice(0, MAX_ITEMS_PER_SOURCE);
       result.scanned = items.length;
 
       for (const item of items) {

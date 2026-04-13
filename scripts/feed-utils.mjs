@@ -14,7 +14,11 @@ export async function fetchFeed(feedUrl, userAgent) {
   return response.text();
 }
 
-export function parseFeed(xml) {
+export function parseFeed(xml, format = "xml") {
+  if (format === "anthropic-newsroom") {
+    return parseAnthropicNewsroom(xml);
+  }
+
   const normalized = stripCdata(xml);
   const rssItems = collectMatches(normalized, /<item\b[\s\S]*?<\/item>/gi).map((itemXml) =>
     parseRssItem(itemXml),
@@ -121,4 +125,36 @@ function decodeXml(value) {
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
     .replace(/&#x27;/g, "'");
+}
+
+function parseAnthropicNewsroom(html) {
+  const normalized = stripCdata(html);
+  const items = [];
+  const seen = new Set();
+  const cardPattern =
+    /<a href="(\/(?:news\/)?[^"#?]+)"[^>]*?(?:FeaturedGrid|PublicationList)[^>]*>([\s\S]*?)<\/a>/gi;
+
+  for (const match of normalized.matchAll(cardPattern)) {
+    const [, href, cardHtml] = match;
+    const title = decodeXml(
+      stripHtml(getTagValue(cardHtml, "h4") || getTagValue(cardHtml, "h3") || getTagValue(cardHtml, "h2")),
+    );
+    const description = decodeXml(stripHtml(getTagValue(cardHtml, "p")));
+    const date = decodeXml(stripHtml(getTagValue(cardHtml, "time")));
+    const link = new URL(href, "https://www.anthropic.com").toString();
+
+    if (!title || !date || seen.has(link)) {
+      continue;
+    }
+
+    seen.add(link);
+    items.push({
+      title,
+      link,
+      description,
+      date: normalizeDate(date),
+    });
+  }
+
+  return items;
 }

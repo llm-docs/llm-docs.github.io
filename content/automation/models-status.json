@@ -1,7 +1,7 @@
 {
   "kind": "models",
-  "lastRunAt": "2026-04-13T12:04:10.786Z",
-  "totalWritten": 0,
+  "lastRunAt": "2026-04-13T13:06:38.520Z",
+  "totalWritten": 4,
   "sources": [
     {
       "sourceId": "openai-models",
@@ -9,17 +9,17 @@
       "status": "success",
       "written": 0,
       "scanned": 8,
-      "matched": 8,
+      "matched": 7,
       "error": ""
     },
     {
       "sourceId": "anthropic-models",
       "sourceName": "Anthropic",
-      "status": "failed",
-      "written": 0,
-      "scanned": 0,
-      "matched": 0,
-      "error": "Feed request failed: 404 Not Found"
+      "status": "success",
+      "written": 4,
+      "scanned": 5,
+      "matched": 4,
+      "error": ""
     },
     {
       "sourceId": "google-models",
