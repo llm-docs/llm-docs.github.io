@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { BookOpenText, Bot, Calculator, Code2, Newspaper, Search, Sparkles, Tags } from 'lucide-react'
+import { BookOpenText, Bot, Calculator, Code2, Cpu, Newspaper, Search, Sparkles, Tags } from 'lucide-react'
 import ThemeToggle from '@/components/theme/ThemeToggle'
 
 export default function Header() {
@@ -46,6 +46,10 @@ export default function Header() {
               <Link href="/calculator" className="flex items-center gap-2 text-sm font-medium text-slate-300 transition-colors hover:text-white">
                 <Calculator className="h-4 w-4" />
                 Calculator
+              </Link>
+              <Link href="/training" className="flex items-center gap-2 text-sm font-medium text-slate-300 transition-colors hover:text-white">
+                <Cpu className="h-4 w-4" />
+                Training
               </Link>
               <Link href="/topics" className="flex items-center gap-2 text-sm font-medium text-slate-300 transition-colors hover:text-white">
                 <Tags className="h-4 w-4" />
