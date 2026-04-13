@@ -10,8 +10,6 @@ import {
   getNews,
 } from "@/lib/content";
 
-import NewsletterSubscribe from "@/components/newsletter/NewsletterSubscribe";
-
 function formatDate(date: string) {
   if (!date) {
     return "Undated";
@@ -94,10 +92,6 @@ export default async function HomePage() {
           modelLastRun={automation.models?.lastRunAt ?? ""}
           modelSources={automation.models?.sources ?? []}
         />
-      </section>
-
-      <section className="px-6 xl:px-0">
-        <NewsletterSubscribe />
       </section>
 
       <ContentSection
