@@ -2,23 +2,11 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import type { RankedModel } from "@/lib/model-ranking";
 
-type ModelItem = {
-  slug: string;
-  name: string;
-  provider: string;
-  description: string;
-  status: string;
-  contextWindow?: string;
-  modalities?: string[];
-  pricing?: string;
-  tags?: string[];
-  releaseDate?: string;
-};
-
-export default function ModelExplorer({ models }: { models: ModelItem[] }) {
+export default function ModelExplorer({ models }: { models: RankedModel[] }) {
   const [provider, setProvider] = useState("all");
-  const [sortBy, setSortBy] = useState("release");
+  const [sortBy, setSortBy] = useState("rank");
   const [query, setQuery] = useState("");
 
   const providers = [...new Set(models.map((model) => model.provider))].sort();
@@ -32,6 +20,7 @@ export default function ModelExplorer({ models }: { models: ModelItem[] }) {
       return haystack.includes(normalized);
     })
     .sort((left, right) => {
+      if (sortBy === "rank") return right.ranking.score - left.ranking.score;
       if (sortBy === "name") return left.name.localeCompare(right.name);
       return new Date(right.releaseDate || 0).getTime() - new Date(left.releaseDate || 0).getTime();
     });
@@ -45,6 +34,7 @@ export default function ModelExplorer({ models }: { models: ModelItem[] }) {
           {providers.map((item) => <option key={item} value={item}>{item}</option>)}
         </select>
         <select value={sortBy} onChange={(event) => setSortBy(event.target.value)} className="rounded-2xl border border-white/10 bg-[rgba(15,23,42,0.6)] px-4 py-3 text-slate-50">
+          <option value="rank">Highest rank</option>
           <option value="release">Newest first</option>
           <option value="name">Name A-Z</option>
         </select>
@@ -52,14 +42,19 @@ export default function ModelExplorer({ models }: { models: ModelItem[] }) {
       <div className="grid gap-4 lg:grid-cols-2">
         {filtered.map((model) => (
           <Link key={model.slug} href={`/models/${model.slug}`} className="surface-card group space-y-4 transition hover:border-white/16">
-            <div className="flex flex-wrap gap-2 text-xs font-medium uppercase tracking-[0.18em] text-amber-700">
+            <div className="flex flex-wrap items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-amber-700">
               <span>{model.provider}</span>
               <span>•</span>
               <span>{model.status}</span>
+              <span>•</span>
+              <span className="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-2 py-1 text-[11px] text-emerald-200">
+                {model.ranking.grade} · {model.ranking.score}
+              </span>
             </div>
             <h2 className="text-2xl font-semibold text-slate-50 group-hover:text-sky-200">{model.name}</h2>
             <p className="text-sm leading-6 text-slate-300">{model.description}</p>
             <p className="text-sm text-slate-400">Context window: {model.contextWindow || "Not set"}</p>
+            <p className="text-sm leading-6 text-slate-300">{model.ranking.summary}</p>
           </Link>
         ))}
       </div>
