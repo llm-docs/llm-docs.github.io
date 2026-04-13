@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { BookOpenText, Bot, Calculator, Code2, Newspaper, Search, Sparkles } from 'lucide-react'
+import { BookOpenText, Bot, Calculator, Code2, Newspaper, Search, Sparkles, Tags } from 'lucide-react'
 import ThemeToggle from '@/components/theme/ThemeToggle'
 
 export default function Header() {
@@ -48,7 +48,7 @@ export default function Header() {
                 Calculator
               </Link>
               <Link href="/topics" className="flex items-center gap-2 text-sm font-medium text-slate-300 transition-colors hover:text-white">
-                <BookOpenText className="h-4 w-4" />
+                <Tags className="h-4 w-4" />
                 Topics
               </Link>
             </nav>
