@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-developer-productivity-evaluator-agent", "engineering", "developer-tools", "productivity", "evaluation", "scoring", "testing"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Developer Productivity Evaluator Agent Implementation Guide

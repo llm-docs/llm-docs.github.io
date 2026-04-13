@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-legal-compliance-router-agent", "legal", "compliance", "risk", "routing", "classification", "orchestration"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Legal Compliance Router Agent Implementation Guide

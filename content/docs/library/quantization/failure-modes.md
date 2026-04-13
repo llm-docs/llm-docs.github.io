@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Optimization / Reliability"
 tags: ["quantization", "optimization", "memory", "serving", "failure-modes", "optimization"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Quantization Failure Modes
 

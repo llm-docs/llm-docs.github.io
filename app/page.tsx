@@ -76,7 +76,7 @@ export default async function HomePage() {
 
       <section className="surface-card space-y-4 px-6 xl:px-0">
         <h2 className="text-2xl font-semibold tracking-tight text-slate-50">
-          IntuiVortex is built to organize fast-moving AI information into crawlable, linked collections.
+          LLM-Docs is built to organize fast-moving AI information into crawlable, linked collections.
         </h2>
         <p className="max-w-4xl text-sm leading-7 text-slate-300">
           Instead of isolated posts, the site now groups documentation, news, model profiles, topic hubs,

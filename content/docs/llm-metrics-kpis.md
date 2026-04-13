@@ -4,7 +4,7 @@ description: "Defining and tracking LLM success metrics — quality KPIs, cost K
 date: "2026-04-27"
 category: "Evaluation & Safety"
 tags: ["metrics", "kpis", "monitoring", "quality", "cost", "dashboards", "observability"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # LLM Metrics & KPIs

@@ -4,7 +4,7 @@ description: "Building complex LLM applications with multi-step workflows — ch
 date: "2026-04-16"
 category: "Best Practices"
 tags: ["chaining", "workflows", "pipelines", "orchestration", "patterns", "automation"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Prompt Chaining and Workflow Patterns

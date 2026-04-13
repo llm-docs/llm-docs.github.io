@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-security-operations-reviewer-agent", "security", "soc", "incident-response", "review", "quality", "governance"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Security Operations Reviewer Agent Implementation Guide

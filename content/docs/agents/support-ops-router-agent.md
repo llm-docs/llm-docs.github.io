@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-support-ops-router-agent", "support", "customer-service", "triage", "routing", "classification", "orchestration"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Support Operations Router Agent Implementation Guide

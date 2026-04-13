@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-legal-compliance-memory-agent", "legal", "compliance", "risk", "memory", "state", "context-management"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Legal Compliance Memory Agent Implementation Guide

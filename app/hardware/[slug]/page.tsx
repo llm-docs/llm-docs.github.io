@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return buildPageMetadata({
-    title: `${hardware.name} Guide | IntuiVortex`,
+    title: `${hardware.name} Guide | LLM-Docs`,
     description: `Hardware fit guide for ${hardware.name}, including model recommendations and deployment notes.`,
     path: `/hardware/${hardware.slug}`,
   });

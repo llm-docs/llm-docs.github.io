@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Evaluation / Evaluation"
 tags: ["benchmarks", "evaluation", "comparison", "measurement", "evaluation-metrics", "evaluation"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # LLM Benchmarking Evaluation Metrics
 

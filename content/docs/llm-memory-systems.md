@@ -4,7 +4,7 @@ description: "Building persistent memory for LLM applications — short-term vs 
 date: "2026-04-23"
 category: "Advanced Technical"
 tags: ["memory", "persistence", "vector-database", "summarization", "context-management", "personalization"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # LLM Memory Systems

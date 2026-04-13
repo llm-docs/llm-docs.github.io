@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Agents / Market Intelligence"
 tags: ["agents", "automation", "planning", "tool-use", "vendor-landscape", "agents"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # AI Agents Vendor Landscape
 

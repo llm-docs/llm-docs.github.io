@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Governance / Evaluation"
 tags: ["governance", "policy", "risk", "compliance", "evaluation-metrics", "governance"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # AI Governance Evaluation Metrics
 

@@ -4,7 +4,7 @@ description: "A deep technical survey of attention variants — from scaled dot-
 date: "2026-04-16"
 category: "Advanced Technical"
 tags: ["attention", "flashattention", "linear-attention", "optimization", "research", "architecture"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Attention Mechanisms Variants

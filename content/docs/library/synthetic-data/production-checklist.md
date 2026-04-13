@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Data / Operations"
 tags: ["synthetic-data", "data-generation", "training", "evaluation", "production-checklist", "data"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Synthetic Data Production Checklist
 

@@ -4,7 +4,7 @@ description: "Transforming pre-trained models into helpful assistants — SFT, R
 date: "2026-04-09"
 category: "Architecture & Training"
 tags: ["alignment", "rlhf", "dpo", "sft", "preference-learning", "safety"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Supervised Fine-tuning and Alignment

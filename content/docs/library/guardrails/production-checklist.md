@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Safety / Operations"
 tags: ["guardrails", "safety", "policy", "compliance", "production-checklist", "safety"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Guardrails Production Checklist
 

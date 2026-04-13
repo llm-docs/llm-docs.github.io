@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Context / Market Intelligence"
 tags: ["long-context", "context-window", "retrieval", "optimization", "vendor-landscape", "context"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Long-Context Systems Vendor Landscape
 

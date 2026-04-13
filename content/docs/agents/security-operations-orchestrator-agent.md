@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-security-operations-orchestrator-agent", "security", "soc", "incident-response", "orchestration", "multi-agent", "coordination"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Security Operations Orchestrator Agent Implementation Guide

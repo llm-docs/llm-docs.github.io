@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Agents / Economics"
 tags: ["agents", "automation", "planning", "tool-use", "cost-performance", "agents"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # AI Agents Cost and Performance
 

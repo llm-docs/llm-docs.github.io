@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-research-intelligence-monitor-agent", "research", "analysis", "monitoring", "observability", "alerts"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Research Intelligence Monitor Agent Implementation Guide

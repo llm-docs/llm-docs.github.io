@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Optimization / Architecture"
 tags: ["quantization", "optimization", "memory", "serving", "architecture-patterns", "optimization"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Quantization Architecture Patterns
 

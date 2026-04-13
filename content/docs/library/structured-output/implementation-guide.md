@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Application Design / Implementation"
 tags: ["structured-output", "json", "schema", "tooling", "implementation-guide", "application-design"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Structured Output Implementation Guide
 

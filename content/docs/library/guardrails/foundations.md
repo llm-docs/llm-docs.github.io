@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Safety / Foundations"
 tags: ["guardrails", "safety", "policy", "compliance", "foundations", "safety"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Guardrails Foundations
 

@@ -5,7 +5,7 @@ date: "2026-04-22"
 updatedAt: "2026-04-22"
 category: "Evaluation & Safety"
 tags: ["prompt-security", "injection", "jailbreak", "red-teaming", "testing", "safety", "llm-security"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Prompt Security Testing

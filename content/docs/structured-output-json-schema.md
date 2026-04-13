@@ -4,7 +4,7 @@ description: "Enforcing exact output formats from LLMs — JSON schema validatio
 date: "2026-04-08"
 category: "Best Practices"
 tags: ["structured-output", "json", "schema", "data-extraction", "validation", "grammar-constrained"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Structured Outputs and JSON Schema

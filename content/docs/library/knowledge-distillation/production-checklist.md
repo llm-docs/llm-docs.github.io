@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Optimization / Operations"
 tags: ["distillation", "compression", "student-models", "optimization", "production-checklist", "optimization"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Knowledge Distillation Production Checklist
 

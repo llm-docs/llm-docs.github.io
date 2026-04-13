@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Optimization / Implementation"
 tags: ["quantization", "optimization", "memory", "serving", "implementation-guide", "optimization"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Quantization Implementation Guide
 

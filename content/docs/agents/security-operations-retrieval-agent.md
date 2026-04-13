@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-security-operations-retrieval-agent", "security", "soc", "incident-response", "retrieval", "rag", "knowledge"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Security Operations Retrieval Agent Implementation Guide

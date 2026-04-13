@@ -4,7 +4,7 @@ description: "Achieving sub-second LLM latency — speculative decoding, model p
 date: "2026-04-25"
 category: "Deployment & Infrastructure"
 tags: ["latency", "performance", "speculative-decoding", "serving", "optimization", "parallelism"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # LLM Latency Optimization

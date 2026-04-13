@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Applications / Reliability"
 tags: ["workflows", "orchestration", "state-machines", "automation", "failure-modes", "applications"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Workflow Orchestration Failure Modes
 

@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Applications / Market Intelligence"
 tags: ["workflows", "orchestration", "state-machines", "automation", "vendor-landscape", "applications"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Workflow Orchestration Vendor Landscape
 

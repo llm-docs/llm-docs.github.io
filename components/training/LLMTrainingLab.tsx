@@ -72,17 +72,6 @@ export default function LLMTrainingLab() {
   const loss = estimateLoss(stage, trainingStep, parameterB);
   const updateStrength = estimateUpdateStrength(stage, trainingStep);
   const attentionSpread = estimateAttentionSpread(stage, trainingStep);
-  const cacheTokens = Math.max(4, Math.min(24, Math.round(sequenceLength / 1536)));
-  const memorySegments = [
-    { label: "Weights", value: activeWeightGB, color: "bg-sky-400" },
-    { label: "Optimizer", value: optimizerGB, color: "bg-amber-400" },
-    { label: "Gradients", value: gradientGB, color: "bg-rose-400" },
-    { label: "Activations", value: activationGB, color: "bg-emerald-400" },
-    { label: "KV cache", value: kvCacheGB, color: "bg-fuchsia-400" },
-  ].filter((item) => item.value > 0);
-  const computeMix = getComputeMix(stage, trainingStep);
-  const parameterDelta = parameterIndex === 0 ? 1 : round(parameterB / parameterOptions[parameterIndex - 1].value);
-  const tokenFlow = buildTokenFlow(stage, cacheTokens, attentionSpread);
 
   const growthCards = parameterOptions.map((option) => {
     const weights = round(option.value * precisionSpec.bytesPerParam);
@@ -124,69 +113,6 @@ export default function LLMTrainingLab() {
   return (
     <section className="space-y-8">
       <div className="surface-card space-y-6">
-        <div className="grid gap-4 xl:grid-cols-[1.15fr,0.85fr]">
-          <section className="rounded-[1.75rem] border border-white/10 bg-[rgba(255,255,255,0.04)] p-5">
-            <div className="space-y-2">
-              <p className="text-sm font-medium uppercase tracking-[0.18em] text-slate-400">Process map</p>
-              <h2 className="text-2xl font-semibold text-slate-50">How tokens move through the lifecycle</h2>
-            </div>
-            <div className="mt-5 grid gap-3 md:grid-cols-3">
-              {stageOptions.map((option, index) => {
-                const active = option.id === stage;
-                const complete = stageOptions.findIndex((item) => item.id === stage) > index;
-                return (
-                  <div
-                    key={option.id}
-                    className={`rounded-[1.5rem] border p-4 ${
-                      active
-                        ? "border-sky-400/50 bg-sky-500/12"
-                        : complete
-                          ? "border-emerald-400/30 bg-emerald-500/8"
-                          : "border-white/10 bg-white/5"
-                    }`}
-                  >
-                    <div className="flex items-center gap-3">
-                      <div
-                        className={`flex h-10 w-10 items-center justify-center rounded-full text-sm font-semibold ${
-                          active
-                            ? "bg-sky-400 text-slate-950"
-                            : complete
-                              ? "bg-emerald-400 text-slate-950"
-                              : "bg-white/10 text-slate-200"
-                        }`}
-                      >
-                        {index + 1}
-                      </div>
-                      <div>
-                        <p className="text-xs uppercase tracking-[0.18em] text-slate-400">{option.eyebrow}</p>
-                        <h3 className="text-lg font-semibold text-slate-50">{option.label}</h3>
-                      </div>
-                    </div>
-                    <p className="mt-3 text-sm leading-6 text-slate-300">{option.description}</p>
-                  </div>
-                );
-              })}
-            </div>
-          </section>
-
-          <section className="rounded-[1.75rem] border border-white/10 bg-[rgba(255,255,255,0.04)] p-5">
-            <div className="space-y-2">
-              <p className="text-sm font-medium uppercase tracking-[0.18em] text-slate-400">Parameter jump</p>
-              <h2 className="text-2xl font-semibold text-slate-50">{parameterOptions[parameterIndex]?.label} is a physical scale change</h2>
-            </div>
-            <div className="mt-5 grid gap-3 sm:grid-cols-2">
-              <MiniStat label="Current size" value={parameterOptions[parameterIndex]?.label ?? "7B"} />
-              <MiniStat label="Jump vs previous tier" value={`${parameterDelta}x`} />
-              <MiniStat label="Estimated total matrices" value={`${layers} x ${hiddenSize}`} />
-              <MiniStat label="Serving precision" value={precisionSpec.label} />
-            </div>
-            <p className="mt-4 text-sm leading-6 text-slate-300">
-              Bigger parameter counts mean more learned scalar values, wider hidden states, and usually more layers. The result is not
-              abstract growth. It is larger memory residency, heavier matrix multiplies, and bigger training state.
-            </p>
-          </section>
-        </div>
-
         <div className="grid gap-5 xl:grid-cols-[0.95fr,1.05fr]">
           <div className="space-y-4">
             <div className="space-y-2">
@@ -349,60 +275,6 @@ export default function LLMTrainingLab() {
           <ValueTile label="Training-only state" value={`${round(optimizerGB + gradientGB)} GB`} helper="Optimizer + gradients." />
           <ValueTile label="Current working set" value={`${totalWorkingSetGB} GB`} helper="Weights + activations + cache + updates." />
         </div>
-
-        <div className="grid gap-6 xl:grid-cols-[1fr,1fr]">
-          <section className="rounded-[1.75rem] border border-white/10 bg-[rgba(255,255,255,0.04)] p-5">
-            <div className="space-y-2">
-              <p className="text-sm font-medium uppercase tracking-[0.18em] text-slate-400">Memory composition</p>
-              <h2 className="text-2xl font-semibold text-slate-50">What occupies memory right now</h2>
-            </div>
-            <div className="mt-5 h-5 overflow-hidden rounded-full bg-white/8">
-              <div className="flex h-full w-full">
-                {memorySegments.map((segment) => (
-                  <div
-                    key={segment.label}
-                    className={segment.color}
-                    style={{ width: `${(segment.value / Math.max(totalWorkingSetGB, 1)) * 100}%` }}
-                    title={`${segment.label}: ${segment.value} GB`}
-                  />
-                ))}
-              </div>
-            </div>
-            <div className="mt-4 space-y-3">
-              {memorySegments.map((segment) => (
-                <LegendRow
-                  key={segment.label}
-                  color={segment.color}
-                  label={segment.label}
-                  value={`${segment.value} GB`}
-                  share={`${round((segment.value / Math.max(totalWorkingSetGB, 1)) * 100)}%`}
-                />
-              ))}
-            </div>
-          </section>
-
-          <section className="rounded-[1.75rem] border border-white/10 bg-[rgba(255,255,255,0.04)] p-5">
-            <div className="space-y-2">
-              <p className="text-sm font-medium uppercase tracking-[0.18em] text-slate-400">Compute mix</p>
-              <h2 className="text-2xl font-semibold text-slate-50">Which operation dominates</h2>
-            </div>
-            <div className="mt-5 space-y-3">
-              {computeMix.map((item) => (
-                <GrowthBar
-                  key={item.label}
-                  label={item.label}
-                  value={item.value}
-                  ceiling={100}
-                  color={item.color}
-                />
-              ))}
-            </div>
-            <p className="mt-4 text-sm leading-6 text-slate-300">
-              Pretraining spends more effort on backpropagation and optimizer updates. Inference drops those entirely and shifts the
-              runtime burden toward forward compute plus cache management.
-            </p>
-          </section>
-        </div>
       </div>
 
       <div className="grid gap-6 xl:grid-cols-[1.1fr,0.9fr]">
@@ -438,34 +310,6 @@ export default function LLMTrainingLab() {
         </section>
 
         <section className="surface-card space-y-4">
-          <div className="rounded-[1.5rem] border border-white/10 bg-[rgba(255,255,255,0.04)] p-4">
-            <div className="space-y-2">
-              <p className="text-sm font-medium uppercase tracking-[0.18em] text-slate-400">Token flow</p>
-              <h3 className="text-xl font-semibold text-slate-50">What the model sees token by token</h3>
-            </div>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {tokenFlow.map((token) => (
-                <div
-                  key={token.id}
-                  className={`rounded-2xl border px-3 py-2 text-sm ${
-                    token.kind === "input"
-                      ? "border-sky-400/30 bg-sky-500/10 text-sky-100"
-                      : token.kind === "cache"
-                        ? "border-fuchsia-400/30 bg-fuchsia-500/10 text-fuchsia-100"
-                        : "border-emerald-400/30 bg-emerald-500/10 text-emerald-100"
-                  }`}
-                >
-                  {token.label}
-                </div>
-              ))}
-            </div>
-            <div className="mt-4 grid gap-3 sm:grid-cols-3">
-              <MiniStat label="Visible tokens" value={String(tokenFlow.filter((item) => item.kind !== "generated").length)} />
-              <MiniStat label="Generated token" value={tokenFlow[tokenFlow.length - 1]?.label ?? "T+1"} />
-              <MiniStat label="Cache growth feel" value={stage === "inference" ? "Fast" : "Moderate"} />
-            </div>
-          </div>
-
           <div className="space-y-2">
             <p className="text-sm font-medium uppercase tracking-[0.18em] text-slate-400">Live explanation</p>
             <h2 className="text-2xl font-semibold text-slate-50">What changes between stages</h2>
@@ -572,31 +416,6 @@ function ValueTile({ label, value, helper }: { label: string; value: string; hel
       <p className="text-xs uppercase tracking-[0.18em] text-slate-400">{label}</p>
       <p className="mt-2 text-2xl font-semibold text-slate-50">{value}</p>
       <p className="mt-2 text-sm leading-6 text-slate-300">{helper}</p>
-    </div>
-  );
-}
-
-function LegendRow({
-  color,
-  label,
-  value,
-  share,
-}: {
-  color: string;
-  label: string;
-  value: string;
-  share: string;
-}) {
-  return (
-    <div className="flex items-center justify-between gap-3 text-sm text-slate-300">
-      <div className="flex items-center gap-3">
-        <span className={`h-3 w-3 rounded-full ${color}`} />
-        <span>{label}</span>
-      </div>
-      <div className="flex items-center gap-3">
-        <span>{share}</span>
-        <span className="text-slate-100">{value}</span>
-      </div>
     </div>
   );
 }
@@ -713,51 +532,6 @@ function getWeightCell(index: number, stage: StageId, parameterB: number, step: 
     b: Math.round(150 + magnitude * 55),
     a: 0.28 + magnitude * 0.58,
   };
-}
-
-function getComputeMix(stage: StageId, progress: number) {
-  if (stage === "pretraining") {
-    return [
-      { label: "Forward pass", value: Math.max(18, 34 - Math.round(progress * 0.08)), color: "bg-sky-400" },
-      { label: "Backward pass", value: Math.min(46, 34 + Math.round(progress * 0.06)), color: "bg-amber-400" },
-      { label: "Optimizer update", value: 100 - (Math.max(18, 34 - Math.round(progress * 0.08)) + Math.min(46, 34 + Math.round(progress * 0.06))), color: "bg-rose-400" },
-    ];
-  }
-
-  if (stage === "finetuning") {
-    return [
-      { label: "Forward pass", value: 41, color: "bg-sky-400" },
-      { label: "Backward pass", value: 36, color: "bg-amber-400" },
-      { label: "Optimizer update", value: 23, color: "bg-rose-400" },
-    ];
-  }
-
-  return [
-    { label: "Forward pass", value: 68, color: "bg-sky-400" },
-    { label: "KV cache reads/writes", value: 22, color: "bg-fuchsia-400" },
-    { label: "Sampling/output logic", value: 10, color: "bg-emerald-400" },
-  ];
-}
-
-function buildTokenFlow(stage: StageId, cacheTokens: number, attentionSpread: number) {
-  const visible = Math.max(6, Math.min(cacheTokens, 16));
-  const items: Array<{ id: string; label: string; kind: "input" | "cache" | "generated" }> = [];
-
-  for (let index = 0; index < visible; index += 1) {
-    items.push({
-      id: `input-${index}`,
-      label: `t${index + 1}`,
-      kind: stage === "inference" && index < visible - 2 ? "cache" : "input",
-    });
-  }
-
-  items.push({
-    id: "generated",
-    label: attentionSpread > 75 ? "next token*" : "candidate",
-    kind: "generated",
-  });
-
-  return items;
 }
 
 function round(value: number) {

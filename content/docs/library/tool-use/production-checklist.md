@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Agents / Operations"
 tags: ["tools", "function-calling", "agents", "automation", "production-checklist", "agents"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Tool Use Production Checklist
 

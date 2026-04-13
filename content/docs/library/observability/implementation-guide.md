@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Operations / Implementation"
 tags: ["observability", "monitoring", "tracing", "operations", "implementation-guide", "operations"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # LLM Observability Implementation Guide
 

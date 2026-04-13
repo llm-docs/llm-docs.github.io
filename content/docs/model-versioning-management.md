@@ -5,7 +5,7 @@ date: "2026-04-23"
 updatedAt: "2026-04-23"
 category: "Deployment & Infrastructure"
 tags: ["model-versioning", "deployment", "rollback", "ab-testing", "canary", "ml-ops", "production"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Model Versioning Management

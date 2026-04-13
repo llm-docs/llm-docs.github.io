@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Multimodal / Foundations"
 tags: ["multimodal", "vision", "audio", "documents", "foundations", "multimodal"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Multimodal AI Foundations
 

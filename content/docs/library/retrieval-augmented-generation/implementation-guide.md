@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "RAG / Implementation"
 tags: ["rag", "retrieval", "grounding", "knowledge", "implementation-guide", "rag"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Retrieval-Augmented Generation Implementation Guide
 

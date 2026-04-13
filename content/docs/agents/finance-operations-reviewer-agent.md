@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-finance-operations-reviewer-agent", "finance", "operations", "reconciliation", "review", "quality", "governance"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Finance Operations Reviewer Agent Implementation Guide

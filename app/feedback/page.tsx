@@ -2,7 +2,7 @@ import { FeedbackLinks } from "@/components/feedback/FeedbackLinks";
 import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
-  title: "Feedback | IntuiVortex",
+  title: "Feedback | LLM-Docs",
   description: "Suggest updates, request comparison pages, and report outdated information.",
   path: "/feedback",
 });

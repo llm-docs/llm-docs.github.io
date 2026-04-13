@@ -5,7 +5,7 @@ date: "2026-04-01"
 updatedAt: "2026-04-10"
 category: "Fundamentals"
 tags: ["llm", "introduction", "basics", "ai", "transformers", "deep-learning"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Getting Started with Large Language Models

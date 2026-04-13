@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Safety / Market Intelligence"
 tags: ["guardrails", "safety", "policy", "compliance", "vendor-landscape", "safety"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Guardrails Vendor Landscape
 

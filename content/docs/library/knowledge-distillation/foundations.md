@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Optimization / Foundations"
 tags: ["distillation", "compression", "student-models", "optimization", "foundations", "optimization"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Knowledge Distillation Foundations
 

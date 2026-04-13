@@ -4,7 +4,7 @@ description: "Speeding up LLM generation — speculative decoding, cache optimiz
 date: "2026-04-10"
 category: "Architecture & Training"
 tags: ["speculative-decoding", "optimization", "inference", "throughput", "generation", "caching"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Speculative Decoding and Generation Optimization

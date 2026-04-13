@@ -4,7 +4,7 @@ description: "Compressing large models into smaller ones — teacher-student tra
 date: "2026-04-09"
 category: "Architecture & Training"
 tags: ["distillation", "compression", "teacher-student", "model-size", "efficiency", "knowledge-transfer"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Knowledge Distillation for LLMs

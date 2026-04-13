@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-security-operations-router-agent", "security", "soc", "incident-response", "routing", "classification", "orchestration"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Security Operations Router Agent Implementation Guide

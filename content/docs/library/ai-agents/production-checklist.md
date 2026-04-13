@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Agents / Operations"
 tags: ["agents", "automation", "planning", "tool-use", "production-checklist", "agents"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # AI Agents Production Checklist
 

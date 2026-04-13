@@ -4,7 +4,7 @@ description: "Models that process text, images, audio, and video — architectur
 date: "2026-04-10"
 category: "Architecture & Training"
 tags: ["multimodal", "vision", "image", "audio", "video", "vlm"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Multi-Modal LLMs

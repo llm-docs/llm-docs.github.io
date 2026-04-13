@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Strategy / Market Intelligence"
 tags: ["model-selection", "comparison", "procurement", "strategy", "vendor-landscape", "strategy"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Model Selection Vendor Landscape
 

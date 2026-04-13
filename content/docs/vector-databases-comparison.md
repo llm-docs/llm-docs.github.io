@@ -5,7 +5,7 @@ date: "2026-04-21"
 updatedAt: "2026-04-21"
 category: "Deployment & Infrastructure"
 tags: ["vector-database", "faiss", "pinecone", "weaviate", "milvus", "chroma", "pgvector", "rag", "embeddings"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Vector Databases Comparison

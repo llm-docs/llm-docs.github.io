@@ -4,7 +4,7 @@ description: "Ground LLM outputs in your own data — vector databases, embeddin
 date: "2026-04-07"
 category: "Best Practices"
 tags: ["rag", "retrieval", "embeddings", "vector-database", "knowledge-base", "grounding"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # RAG — Retrieval-Augmented Generation

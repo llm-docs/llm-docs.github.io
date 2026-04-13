@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-finance-operations-router-agent", "finance", "operations", "reconciliation", "routing", "classification", "orchestration"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Finance Operations Router Agent Implementation Guide

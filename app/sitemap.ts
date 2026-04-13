@@ -14,7 +14,7 @@ import { hardwareProfiles } from "@/data/hardware-profiles";
 export const dynamic = "force-static";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://intuivortex.github.io";
+  const baseUrl = "https://llm-docs.github.io";
   const [docs, news, agents, models, comparisons, providers, topics] = await Promise.all([
     getDocs(),
     getNews(),

@@ -4,7 +4,7 @@ description: "Understanding the mathematical relationships between model size, d
 date: "2026-04-04"
 category: "Fundamentals"
 tags: ["scaling-laws", "compute", "training", "research", "performance", "optimization"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Model Scaling Laws

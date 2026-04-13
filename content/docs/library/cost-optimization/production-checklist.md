@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Economics / Operations"
 tags: ["cost", "optimization", "efficiency", "budgeting", "production-checklist", "economics"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Cost Optimization Production Checklist
 

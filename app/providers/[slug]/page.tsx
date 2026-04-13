@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const provider = await getProviderHubBySlug(slug);
   if (!provider) return {};
   return buildPageMetadata({
-    title: `${provider.label} | IntuiVortex`,
+    title: `${provider.label} | LLM-Docs`,
     description: `${provider.label} overview page with models, guides, news, comparisons, and FAQs.`,
     path: `/providers/${provider.slug}`,
   });

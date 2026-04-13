@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Governance / Operations"
 tags: ["governance", "policy", "risk", "compliance", "production-checklist", "governance"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # AI Governance Production Checklist
 

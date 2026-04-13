@@ -5,7 +5,7 @@ date: "2026-04-24"
 updatedAt: "2026-04-24"
 category: "Evaluation & Safety"
 tags: ["bias", "fairness", "debiasing", "evaluation", "safety", "ethics", "demographic-bias", "cultural-bias"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # LLM Bias Mitigation

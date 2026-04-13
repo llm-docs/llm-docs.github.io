@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Data / Evaluation"
 tags: ["synthetic-data", "data-generation", "training", "evaluation", "evaluation-metrics", "data"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Synthetic Data Evaluation Metrics
 

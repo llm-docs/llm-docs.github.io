@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "RAG / Economics"
 tags: ["rag", "retrieval", "grounding", "knowledge", "cost-performance", "rag"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Retrieval-Augmented Generation Cost and Performance
 

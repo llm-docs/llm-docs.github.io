@@ -3,8 +3,8 @@ import { getNews } from "@/lib/content";
 import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
-  title: "AI Updates | IntuiVortex",
-  description: "Latest LLM, model, and AI ecosystem updates tracked by IntuiVortex.",
+  title: "AI Updates | LLM-Docs",
+  description: "Latest LLM, model, and AI ecosystem updates tracked by LLM-Docs.",
   path: "/news",
   type: "website",
 });

@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-support-ops-executor-agent", "support", "customer-service", "triage", "execution", "tools", "automation"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Support Operations Executor Agent Implementation Guide

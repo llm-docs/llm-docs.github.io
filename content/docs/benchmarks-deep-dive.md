@@ -4,7 +4,7 @@ description: "Critical analysis of LLM benchmarks — their design, limitations,
 date: "2026-04-17"
 category: "Advanced Technical"
 tags: ["benchmarks", "evaluation", "gaming", "contamination", "validity", "research"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Language Model Benchmarks Deep Dive

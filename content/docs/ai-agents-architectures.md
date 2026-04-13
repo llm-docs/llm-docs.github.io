@@ -4,7 +4,7 @@ description: "Designing and building agent systems — ReAct, Plan-and-Execute, 
 date: "2026-04-20"
 category: "Architecture & Training"
 tags: ["agents", "react", "multi-agent", "tool-use", "planning", "architecture"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # AI Agent Architectures

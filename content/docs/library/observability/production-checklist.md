@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Operations / Operations"
 tags: ["observability", "monitoring", "tracing", "operations", "production-checklist", "operations"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # LLM Observability Production Checklist
 

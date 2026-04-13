@@ -4,7 +4,7 @@ description: "The complete LLM training pipeline — data preparation, distribut
 date: "2026-04-08"
 category: "Architecture & Training"
 tags: ["training", "pre-training", "distributed", "optimization", "checkpoints", "deep-learning"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Model Training and Pre-training

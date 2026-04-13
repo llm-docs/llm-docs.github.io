@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Retrieval / Architecture"
 tags: ["vector-database", "retrieval", "search", "embeddings", "architecture-patterns", "retrieval"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Vector Databases Architecture Patterns
 

@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-data-platform-router-agent", "data", "analytics", "pipelines", "routing", "classification", "orchestration"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Data Platform Router Agent Implementation Guide

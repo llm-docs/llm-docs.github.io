@@ -4,7 +4,7 @@ description: "How LLMs are trained on massive datasets — data sources, cleanin
 date: "2026-04-04"
 category: "Fundamentals"
 tags: ["training-data", "curation", "datasets", "preprocessing", "deduplication", "data-quality"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Training Data and Curation

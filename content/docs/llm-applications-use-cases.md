@@ -4,7 +4,7 @@ description: "A survey of real-world LLM applications — from chatbots and code
 date: "2026-04-06"
 category: "Fundamentals"
 tags: ["applications", "use-cases", "industry", "chatbots", "automation", "ai"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # LLM Applications and Use Cases

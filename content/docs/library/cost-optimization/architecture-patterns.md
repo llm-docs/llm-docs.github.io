@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Economics / Architecture"
 tags: ["cost", "optimization", "efficiency", "budgeting", "architecture-patterns", "economics"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Cost Optimization Architecture Patterns
 

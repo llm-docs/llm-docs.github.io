@@ -4,7 +4,7 @@ import { buildPageMetadata } from "@/lib/metadata";
 import { getReleaseTimeline } from "@/lib/content";
 
 export const metadata = buildPageMetadata({
-  title: "Release Tracker | IntuiVortex",
+  title: "Release Tracker | LLM-Docs",
   description: "Track LLM release history, provider activity, and major ecosystem changes over time.",
   path: "/trackers/releases",
 });
@@ -38,7 +38,7 @@ export default async function ReleaseTrackerPage() {
         </p>
         <a
           href={`data:text/csv;charset=utf-8,${encodeURIComponent(csv)}`}
-          download="intuivortex-release-tracker.csv"
+          download="llm-docs-release-tracker.csv"
           className="inline-flex rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300 transition hover:border-white/20 hover:text-white"
         >
           Download tracker CSV
@@ -60,7 +60,7 @@ export default async function ReleaseTrackerPage() {
           </p>
         </section>
       </div>
-      <EmbedSnippet src="https://intuivortex.github.io/trackers/releases" title="IntuiVortex release tracker" />
+      <EmbedSnippet src="https://llm-docs.github.io/trackers/releases" title="LLM-Docs release tracker" />
     </section>
   );
 }

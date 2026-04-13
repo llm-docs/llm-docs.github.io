@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Terminal Agents"
 tags: ["agents", "terminal", "coding-agent", "openai", "codex", "cli"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Codex CLI Guide

@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Safety / Economics"
 tags: ["guardrails", "safety", "policy", "compliance", "cost-performance", "safety"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Guardrails Cost and Performance
 

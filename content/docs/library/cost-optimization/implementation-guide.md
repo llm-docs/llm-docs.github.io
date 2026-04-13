@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Economics / Implementation"
 tags: ["cost", "optimization", "efficiency", "budgeting", "implementation-guide", "economics"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Cost Optimization Implementation Guide
 

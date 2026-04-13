@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Optimization / Architecture"
 tags: ["distillation", "compression", "student-models", "optimization", "architecture-patterns", "optimization"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Knowledge Distillation Architecture Patterns
 

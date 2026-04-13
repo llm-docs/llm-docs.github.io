@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-research-intelligence-researcher-agent", "research", "analysis", "monitoring", "evidence", "synthesis"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Research Intelligence Researcher Agent Implementation Guide

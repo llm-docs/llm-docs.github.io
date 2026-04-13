@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-healthcare-ops-planner-agent", "healthcare", "operations", "coordination", "planning", "decomposition", "workflow-design"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Healthcare Operations Planner Agent Implementation Guide

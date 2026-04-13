@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://intuivortex.github.io/sitemap.xml",
+    sitemap: "https://llm-docs.github.io/sitemap.xml",
   };
 }

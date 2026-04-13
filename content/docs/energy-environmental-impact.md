@@ -5,7 +5,7 @@ date: "2026-04-25"
 updatedAt: "2026-04-25"
 category: "Advanced Technical"
 tags: ["environmental-impact", "carbon-footprint", "energy", "sustainability", "green-ai", "water-usage", "training-cost", "inference-cost"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Energy & Environmental Impact of LLMs

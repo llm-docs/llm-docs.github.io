@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-finance-operations-monitor-agent", "finance", "operations", "reconciliation", "monitoring", "observability", "alerts"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Finance Operations Monitor Agent Implementation Guide

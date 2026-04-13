@@ -4,7 +4,7 @@ description: "Code-specific LLM techniques — code tokenization, repository-lev
 date: "2026-04-24"
 category: "Architecture & Training"
 tags: ["code", "code-generation", "fine-tuning", "tokenization", "repository-context", "program-synthesis"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Code LLM Specialization

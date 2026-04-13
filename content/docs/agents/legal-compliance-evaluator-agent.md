@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-legal-compliance-evaluator-agent", "legal", "compliance", "risk", "evaluation", "scoring", "testing"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Legal Compliance Evaluator Agent Implementation Guide

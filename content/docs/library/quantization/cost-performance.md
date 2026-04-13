@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Optimization / Economics"
 tags: ["quantization", "optimization", "memory", "serving", "cost-performance", "optimization"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Quantization Cost and Performance
 

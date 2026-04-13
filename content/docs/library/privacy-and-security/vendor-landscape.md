@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Security / Market Intelligence"
 tags: ["privacy", "security", "prompt-injection", "controls", "vendor-landscape", "security"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Privacy and Security Vendor Landscape
 

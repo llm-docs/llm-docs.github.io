@@ -4,7 +4,7 @@ description: "Systematic approaches to testing and debugging LLM applications â€
 date: "2026-04-19"
 category: "Advanced Technical"
 tags: ["testing", "debugging", "quality-assurance", "regression", "evaluations", "production"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # LLM Testing & Debugging

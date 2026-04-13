@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-support-ops-reviewer-agent", "support", "customer-service", "triage", "review", "quality", "governance"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Support Operations Reviewer Agent Implementation Guide

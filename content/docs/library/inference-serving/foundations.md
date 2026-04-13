@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Infrastructure / Foundations"
 tags: ["inference", "serving", "latency", "gpu", "foundations", "infrastructure"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Inference Serving Foundations
 

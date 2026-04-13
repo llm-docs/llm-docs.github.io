@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-legal-compliance-retrieval-agent", "legal", "compliance", "risk", "retrieval", "rag", "knowledge"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Legal Compliance Retrieval Agent Implementation Guide

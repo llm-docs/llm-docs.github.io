@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Evaluation / Operations"
 tags: ["benchmarks", "evaluation", "comparison", "measurement", "production-checklist", "evaluation"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # LLM Benchmarking Production Checklist
 

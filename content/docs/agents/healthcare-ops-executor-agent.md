@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-healthcare-ops-executor-agent", "healthcare", "operations", "coordination", "execution", "tools", "automation"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Healthcare Operations Executor Agent Implementation Guide

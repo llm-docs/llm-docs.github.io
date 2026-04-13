@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Evaluation / Operations"
 tags: ["evaluation", "testing", "quality", "benchmarks", "production-checklist", "evaluation"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Evaluation Systems Production Checklist
 

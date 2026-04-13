@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-growth-marketing-planner-agent", "marketing", "growth", "campaigns", "planning", "decomposition", "workflow-design"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Growth Marketing Planner Agent Implementation Guide

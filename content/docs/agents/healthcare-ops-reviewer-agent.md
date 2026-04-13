@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-healthcare-ops-reviewer-agent", "healthcare", "operations", "coordination", "review", "quality", "governance"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Healthcare Operations Reviewer Agent Implementation Guide

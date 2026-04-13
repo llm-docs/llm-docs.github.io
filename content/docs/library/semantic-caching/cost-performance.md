@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Performance / Economics"
 tags: ["caching", "latency", "cost", "performance", "cost-performance", "performance"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Semantic Caching Cost and Performance
 

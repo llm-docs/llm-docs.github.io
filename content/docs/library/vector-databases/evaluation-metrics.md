@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Retrieval / Evaluation"
 tags: ["vector-database", "retrieval", "search", "embeddings", "evaluation-metrics", "retrieval"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Vector Databases Evaluation Metrics
 

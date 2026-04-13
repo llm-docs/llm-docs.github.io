@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Retrieval / Market Intelligence"
 tags: ["vector-database", "retrieval", "search", "embeddings", "vendor-landscape", "retrieval"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Vector Databases Vendor Landscape
 

@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Economics / Evaluation"
 tags: ["cost", "optimization", "efficiency", "budgeting", "evaluation-metrics", "economics"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Cost Optimization Evaluation Metrics
 

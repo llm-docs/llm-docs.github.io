@@ -1,6 +1,6 @@
-## IntuiVortex
+## LLM-Docs
 
-A maintainable Next.js site for the `IntuiVortex` GitHub organization.
+A maintainable Next.js site for the `LLM-Docs` GitHub organization.
 
 It is designed to publish:
 
@@ -68,4 +68,4 @@ Open `http://localhost:3000`.
 - Model sources can be adjusted in `config/model-sources.mjs`.
 - The generated docs library is created by `scripts/generate-docs-library.mjs`.
 - GitHub Pages deployment is configured in `.github/workflows/deploy-pages.yml`.
-- The current config assumes this repository is the org site: `IntuiVortex.github.io`.
+- The current config assumes this repository is the org site: `LLM-Docs.github.io`.

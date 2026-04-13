@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-growth-marketing-orchestrator-agent", "marketing", "growth", "campaigns", "orchestration", "multi-agent", "coordination"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Growth Marketing Orchestrator Agent Implementation Guide

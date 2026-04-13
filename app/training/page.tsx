@@ -2,7 +2,7 @@ import LLMTrainingLab from "@/components/training/LLMTrainingLab";
 import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
-  title: "LLM Training Lab | IntuiVortex",
+  title: "LLM Training Lab | LLM-Docs",
   description:
     "Interactive simulation of LLM pretraining, fine-tuning, inference, weight behavior, KV-cache growth, and parameter scaling.",
   path: "/training",

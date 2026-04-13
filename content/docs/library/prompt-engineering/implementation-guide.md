@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Prompting / Implementation"
 tags: ["prompting", "prompts", "instruction-design", "reliability", "implementation-guide", "prompting"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Prompt Engineering Implementation Guide
 

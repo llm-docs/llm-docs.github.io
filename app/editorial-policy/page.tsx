@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Editorial Policy",
-  description: "Editorial standards and update policy for IntuiVortex.",
+  description: "Editorial standards and update policy for LLM-Docs.",
 };
 
 export default function EditorialPolicyPage() {
@@ -10,7 +10,7 @@ export default function EditorialPolicyPage() {
         <p className="eyebrow">Editorial Policy</p>
         <h1 className="text-4xl font-semibold tracking-tight text-slate-50">Editorial Policy</h1>
         <p className="max-w-3xl text-lg leading-8 text-slate-300">
-          IntuiVortex combines manually curated content with automated feed ingestion for timely publication.
+          LLM-Docs combines manually curated content with automated feed ingestion for timely publication.
         </p>
       </header>
 

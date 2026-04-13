@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Security / Reliability"
 tags: ["privacy", "security", "prompt-injection", "controls", "failure-modes", "security"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Privacy and Security Failure Modes
 

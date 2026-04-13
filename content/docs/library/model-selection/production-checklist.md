@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Strategy / Operations"
 tags: ["model-selection", "comparison", "procurement", "strategy", "production-checklist", "strategy"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Model Selection Production Checklist
 

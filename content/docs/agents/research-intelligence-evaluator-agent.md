@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-research-intelligence-evaluator-agent", "research", "analysis", "monitoring", "evaluation", "scoring", "testing"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Research Intelligence Evaluator Agent Implementation Guide

@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Performance / Architecture"
 tags: ["caching", "latency", "cost", "performance", "architecture-patterns", "performance"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Semantic Caching Architecture Patterns
 

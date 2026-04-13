@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-support-ops-monitor-agent", "support", "customer-service", "triage", "monitoring", "observability", "alerts"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Support Operations Monitor Agent Implementation Guide

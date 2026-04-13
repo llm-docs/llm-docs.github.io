@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Retrieval / Implementation"
 tags: ["embeddings", "semantic-search", "ranking", "retrieval", "implementation-guide", "retrieval"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Embeddings Implementation Guide
 

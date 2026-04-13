@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Security / Foundations"
 tags: ["privacy", "security", "prompt-injection", "controls", "foundations", "security"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Privacy and Security Foundations
 

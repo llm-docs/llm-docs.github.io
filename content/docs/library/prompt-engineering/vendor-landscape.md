@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Prompting / Market Intelligence"
 tags: ["prompting", "prompts", "instruction-design", "reliability", "vendor-landscape", "prompting"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Prompt Engineering Vendor Landscape
 

@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Performance / Reliability"
 tags: ["caching", "latency", "cost", "performance", "failure-modes", "performance"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Semantic Caching Failure Modes
 

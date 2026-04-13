@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-data-platform-retrieval-agent", "data", "analytics", "pipelines", "retrieval", "rag", "knowledge"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Data Platform Retrieval Agent Implementation Guide

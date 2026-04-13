@@ -4,7 +4,7 @@ description: "Understanding and defending against adversarial attacks — jailbr
 date: "2026-04-17"
 category: "Advanced Technical"
 tags: ["adversarial", "attacks", "jailbreak", "injection", "security", "defense"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Adversarial Attacks on LLMs

@@ -4,7 +4,7 @@ description: "Designing robust APIs for LLM services — request/response schema
 date: "2026-04-15"
 category: "Evaluation & Safety"
 tags: ["api-design", "networking", "streaming", "error-handling", "gateway", "microservices"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # LLM Networking and API Design

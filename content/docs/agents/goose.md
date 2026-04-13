@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Terminal Agents"
 tags: ["agents", "terminal", "coding-agent", "goose", "open-source", "extensions", "cli"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Goose Guide

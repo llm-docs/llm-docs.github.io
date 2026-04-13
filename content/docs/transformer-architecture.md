@@ -4,7 +4,7 @@ description: "A technical exploration of the Transformer architecture — attent
 date: "2026-04-03"
 category: "Fundamentals"
 tags: ["transformers", "architecture", "attention", "deep-learning", "neural-networks", "llm"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Transformer Architecture Deep Dive

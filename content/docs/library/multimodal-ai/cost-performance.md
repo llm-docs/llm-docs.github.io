@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Multimodal / Economics"
 tags: ["multimodal", "vision", "audio", "documents", "cost-performance", "multimodal"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Multimodal AI Cost and Performance
 

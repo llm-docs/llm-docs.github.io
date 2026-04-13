@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Retrieval / Operations"
 tags: ["vector-database", "retrieval", "search", "embeddings", "production-checklist", "retrieval"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Vector Databases Production Checklist
 

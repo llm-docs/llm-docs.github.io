@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Data / Market Intelligence"
 tags: ["synthetic-data", "data-generation", "training", "evaluation", "vendor-landscape", "data"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Synthetic Data Vendor Landscape
 

@@ -4,7 +4,7 @@ description: "Understanding why LLMs hallucinate, how to detect fabricated infor
 date: "2026-04-14"
 category: "Evaluation & Safety"
 tags: ["hallucination", "factuality", "detection", "mitigation", "grounding", "reliability"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Hallucination Detection and Mitigation

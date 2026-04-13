@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Operations / Economics"
 tags: ["observability", "monitoring", "tracing", "operations", "cost-performance", "operations"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # LLM Observability Cost and Performance
 

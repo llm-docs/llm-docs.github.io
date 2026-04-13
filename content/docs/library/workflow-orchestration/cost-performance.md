@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Applications / Economics"
 tags: ["workflows", "orchestration", "state-machines", "automation", "cost-performance", "applications"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Workflow Orchestration Cost and Performance
 

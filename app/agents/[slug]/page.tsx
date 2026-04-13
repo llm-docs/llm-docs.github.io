@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return buildPageMetadata({
-    title: `${agent.metadata.name} Guide | IntuiVortex`,
+    title: `${agent.metadata.name} Guide | LLM-Docs`,
     description: agent.metadata.description,
     path: `/agents/${slug}`,
     type: "article",

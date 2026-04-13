@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Data / Reliability"
 tags: ["synthetic-data", "data-generation", "training", "evaluation", "failure-modes", "data"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Synthetic Data Failure Modes
 

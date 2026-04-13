@@ -6,7 +6,7 @@ import TokenCostCalculator from "@/components/tools/TokenCostCalculator";
 import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
-  title: "Tools | IntuiVortex",
+  title: "Tools | LLM-Docs",
   description: "LLM utilities including token cost estimation and context-window planning.",
   path: "/tools",
 });

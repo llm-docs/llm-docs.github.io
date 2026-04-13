@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-legal-compliance-reviewer-agent", "legal", "compliance", "risk", "review", "quality", "governance"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Legal Compliance Reviewer Agent Implementation Guide

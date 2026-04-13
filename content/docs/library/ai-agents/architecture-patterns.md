@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Agents / Architecture"
 tags: ["agents", "automation", "planning", "tool-use", "architecture-patterns", "agents"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # AI Agents Architecture Patterns
 

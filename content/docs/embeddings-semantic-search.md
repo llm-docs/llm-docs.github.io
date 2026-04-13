@@ -4,7 +4,7 @@ description: "Building production semantic search systems — embedding model se
 date: "2026-04-18"
 category: "Best Practices"
 tags: ["embeddings", "semantic-search", "vector-database", "retrieval", "ranking", "search"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Embeddings & Semantic Search

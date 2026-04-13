@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Strategy / Architecture"
 tags: ["model-selection", "comparison", "procurement", "strategy", "architecture-patterns", "strategy"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Model Selection Architecture Patterns
 

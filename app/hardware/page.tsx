@@ -4,7 +4,7 @@ import { hardwareProfiles } from "@/data/hardware-profiles";
 import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
-  title: "Hardware Guides | IntuiVortex",
+  title: "Hardware Guides | LLM-Docs",
   description: "Hardware profiles for local and server LLM inference, including VRAM, unified memory, and backend fit.",
   path: "/hardware",
 });

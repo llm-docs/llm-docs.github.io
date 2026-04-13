@@ -4,7 +4,7 @@ description: "Understanding how LLMs convert text into numerical representations
 date: "2026-04-02"
 category: "Fundamentals"
 tags: ["tokenization", "embeddings", "basics", "nlp", "representation", "vocabulary"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Tokenization and Embeddings

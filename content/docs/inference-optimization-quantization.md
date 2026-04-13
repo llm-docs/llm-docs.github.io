@@ -4,7 +4,7 @@ description: "Comprehensive guide to running LLMs efficiently — quantization m
 date: "2026-04-11"
 category: "Deployment & Infrastructure"
 tags: ["quantization", "inference", "optimization", "memory", "throughput", "gguf"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Inference Optimization and Quantization

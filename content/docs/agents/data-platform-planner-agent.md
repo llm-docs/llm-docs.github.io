@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-data-platform-planner-agent", "data", "analytics", "pipelines", "planning", "decomposition", "workflow-design"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Data Platform Planner Agent Implementation Guide

@@ -4,7 +4,7 @@ import path from "path";
 const root = process.cwd();
 const docsRoot = path.join(root, "content", "docs", "library");
 const today = "2026-04-10";
-const author = "IntuiVortex Team";
+const author = "LLM Hub Team";
 
 const pageTypes = [
   {

@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-finance-operations-researcher-agent", "finance", "operations", "reconciliation", "research", "evidence", "synthesis"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Finance Operations Researcher Agent Implementation Guide

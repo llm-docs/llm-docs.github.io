@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Agents / Foundations"
 tags: ["agents", "automation", "planning", "tool-use", "foundations", "agents"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # AI Agents Foundations
 

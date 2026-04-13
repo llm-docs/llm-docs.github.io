@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     default: SITE_NAME,
     template: `%s | ${SITE_NAME}`,
   },
-  description: "IntuiVortex tracks AI models, release updates, comparisons, and practical research pages in one place.",
+  description: "LLM-Docs tracks AI models, release updates, comparisons, and practical research pages in one place.",
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     siteName: SITE_NAME,
     title: SITE_NAME,
-    description: "IntuiVortex tracks AI models, release updates, comparisons, and practical research pages in one place.",
+    description: "LLM-Docs tracks AI models, release updates, comparisons, and practical research pages in one place.",
     url: SITE_URL,
     type: "website",
     images: [{ url: DEFAULT_OG_IMAGE, alt: `${SITE_NAME} logo` }],
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: SITE_NAME,
-    description: "IntuiVortex tracks AI models, release updates, comparisons, and practical research pages in one place.",
+    description: "LLM-Docs tracks AI models, release updates, comparisons, and practical research pages in one place.",
     images: [DEFAULT_OG_IMAGE],
   },
   verification: {

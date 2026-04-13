@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Evaluation / Implementation"
 tags: ["benchmarks", "evaluation", "comparison", "measurement", "implementation-guide", "evaluation"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # LLM Benchmarking Implementation Guide
 

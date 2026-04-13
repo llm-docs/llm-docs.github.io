@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "RAG / Architecture"
 tags: ["rag", "retrieval", "grounding", "knowledge", "architecture-patterns", "rag"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Retrieval-Augmented Generation Architecture Patterns
 

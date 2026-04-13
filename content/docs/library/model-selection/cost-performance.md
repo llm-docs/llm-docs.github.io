@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Strategy / Economics"
 tags: ["model-selection", "comparison", "procurement", "strategy", "cost-performance", "strategy"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Model Selection Cost and Performance
 

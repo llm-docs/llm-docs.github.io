@@ -5,7 +5,7 @@ date: "2026-04-19"
 updatedAt: "2026-04-19"
 category: "Fundamentals"
 tags: ["open-source", "closed-models", "api", "self-hosting", "comparison", "decision-framework"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Open Source vs Closed Models

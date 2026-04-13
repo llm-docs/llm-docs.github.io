@@ -4,8 +4,8 @@ import { getTopicHubs } from "@/lib/content";
 import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
-  title: "Topic Hubs | IntuiVortex",
-  description: "Topic clusters across models, docs, agents, and news on IntuiVortex.",
+  title: "Topic Hubs | LLM-Docs",
+  description: "Topic clusters across models, docs, agents, and news on LLM-Docs.",
   path: "/topics",
 });
 

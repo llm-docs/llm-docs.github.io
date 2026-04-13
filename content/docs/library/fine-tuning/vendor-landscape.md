@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Training / Market Intelligence"
 tags: ["fine-tuning", "training", "adaptation", "specialization", "vendor-landscape", "training"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 # Fine-Tuning Vendor Landscape
 

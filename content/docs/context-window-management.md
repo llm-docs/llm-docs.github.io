@@ -4,7 +4,7 @@ description: "How context windows work, techniques for extending them, and strat
 date: "2026-04-05"
 category: "Fundamentals"
 tags: ["context-window", "long-context", "attention", "rope", "memory", "retrieval"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Context Window and Long-Context Understanding

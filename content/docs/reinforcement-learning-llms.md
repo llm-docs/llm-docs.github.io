@@ -4,7 +4,7 @@ description: "Using RL to improve LLM behavior — PPO, GRPO, reward modeling, p
 date: "2026-04-26"
 category: "Advanced Technical"
 tags: ["reinforcement-learning", "PPO", "GRPO", "reward-modeling", "alignment", "RLHF"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Reinforcement Learning for LLMs

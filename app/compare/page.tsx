@@ -7,7 +7,7 @@ import { getAgents, getAllModelComparisons, getModels } from "@/lib/content";
 import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
-  title: "LLM Comparisons | IntuiVortex",
+  title: "LLM Comparisons | LLM-Docs",
   description: "Programmatic comparison pages for leading AI models, providers, and use cases.",
   path: "/compare",
 });

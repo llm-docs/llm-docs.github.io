@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-support-ops-evaluator-agent", "support", "customer-service", "triage", "evaluation", "scoring", "testing"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Support Operations Evaluator Agent Implementation Guide

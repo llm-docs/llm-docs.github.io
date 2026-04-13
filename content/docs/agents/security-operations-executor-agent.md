@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-security-operations-executor-agent", "security", "soc", "incident-response", "execution", "tools", "automation"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Security Operations Executor Agent Implementation Guide

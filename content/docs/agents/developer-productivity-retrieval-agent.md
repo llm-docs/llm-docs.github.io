@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-developer-productivity-retrieval-agent", "engineering", "developer-tools", "productivity", "retrieval", "rag", "knowledge"]
-author: "IntuiVortex Team"
+author: "LLM Hub Team"
 ---
 
 # Developer Productivity Retrieval Agent Implementation Guide

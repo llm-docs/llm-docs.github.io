@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     ...buildPageMetadata({
-      title: `${model.metadata.name} Guide | IntuiVortex`,
+      title: `${model.metadata.name} Guide | LLM-Docs`,
       description: model.metadata.description,
       path: `/models/${slug.join("/")}`,
       image: model.metadata.image,

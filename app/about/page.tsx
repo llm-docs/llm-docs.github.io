@@ -1,6 +1,6 @@
 export const metadata = {
   title: "About",
-  description: "About IntuiVortex and how the website is structured.",
+  description: "About LLM-Docs and how the website is structured.",
 };
 
 export default function AboutPage() {
@@ -8,9 +8,9 @@ export default function AboutPage() {
     <article className="space-y-8 px-6 pb-16 xl:px-0">
       <header className="space-y-3">
         <p className="eyebrow">About</p>
-        <h1 className="text-4xl font-semibold tracking-tight text-slate-50">About IntuiVortex</h1>
+        <h1 className="text-4xl font-semibold tracking-tight text-slate-50">About LLM-Docs</h1>
         <p className="max-w-3xl text-lg leading-8 text-slate-300">
-          IntuiVortex is a structured website for tracking language models, AI releases, comparisons, documentation, and ecosystem changes.
+          LLM-Docs is a structured website for tracking language models, AI releases, comparisons, documentation, and ecosystem changes.
         </p>
       </header>
 
