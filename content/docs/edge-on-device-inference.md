@@ -4,7 +4,7 @@ description: "Running LLMs on phones, laptops, and IoT devices — model selecti
 date: "2026-04-13"
 category: "Deployment & Infrastructure"
 tags: ["edge", "on-device", "mobile", "iot", "local-inference", "optimization"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Edge and On-Device LLM Inference

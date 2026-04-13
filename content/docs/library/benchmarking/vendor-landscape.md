@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Evaluation / Market Intelligence"
 tags: ["benchmarks", "evaluation", "comparison", "measurement", "vendor-landscape", "evaluation"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # LLM Benchmarking Vendor Landscape
 

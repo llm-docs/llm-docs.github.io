@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Data / Implementation"
 tags: ["synthetic-data", "data-generation", "training", "evaluation", "implementation-guide", "data"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Synthetic Data Implementation Guide
 

@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-legal-compliance-monitor-agent", "legal", "compliance", "risk", "monitoring", "observability", "alerts"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Legal Compliance Monitor Agent Implementation Guide

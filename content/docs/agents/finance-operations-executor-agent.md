@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-finance-operations-executor-agent", "finance", "operations", "reconciliation", "execution", "tools", "automation"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Finance Operations Executor Agent Implementation Guide

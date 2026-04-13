@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Applications / Implementation"
 tags: ["workflows", "orchestration", "state-machines", "automation", "implementation-guide", "applications"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Workflow Orchestration Implementation Guide
 

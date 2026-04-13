@@ -5,7 +5,7 @@ date: "2026-04-18"
 updatedAt: "2026-04-18"
 category: "Best Practices"
 tags: ["model-comparison", "benchmarks", "evaluation", "selection", "cost-analysis", "methodology"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Model Comparison Guide

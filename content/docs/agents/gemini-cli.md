@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Terminal Agents"
 tags: ["agents", "terminal", "coding-agent", "google", "gemini", "cli", "mcp"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Gemini CLI Guide

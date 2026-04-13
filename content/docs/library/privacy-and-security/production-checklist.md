@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Security / Operations"
 tags: ["privacy", "security", "prompt-injection", "controls", "production-checklist", "security"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Privacy and Security Production Checklist
 

@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Governance / Market Intelligence"
 tags: ["governance", "policy", "risk", "compliance", "vendor-landscape", "governance"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # AI Governance Vendor Landscape
 

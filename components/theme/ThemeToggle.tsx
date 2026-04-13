@@ -5,7 +5,7 @@ import { Moon, Sun } from "lucide-react";
 
 type Theme = "dark" | "light";
 
-const STORAGE_KEY = "llm-docs-theme";
+const STORAGE_KEY = "intuivortex-theme";
 
 export default function ThemeToggle() {
   const [theme, setTheme] = useState<Theme>(() => {

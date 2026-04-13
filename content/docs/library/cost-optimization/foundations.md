@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Economics / Foundations"
 tags: ["cost", "optimization", "efficiency", "budgeting", "foundations", "economics"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Cost Optimization Foundations
 

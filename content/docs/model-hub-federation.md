@@ -4,7 +4,7 @@ description: "Managing collections of models across providers — unified APIs, 
 date: "2026-04-21"
 category: "Deployment & Infrastructure"
 tags: ["model-hub", "multi-provider", "routing", "failover", "unified-api", "cost-optimization"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Model Hub & Federation

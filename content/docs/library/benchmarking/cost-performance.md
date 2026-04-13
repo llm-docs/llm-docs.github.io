@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Evaluation / Economics"
 tags: ["benchmarks", "evaluation", "comparison", "measurement", "cost-performance", "evaluation"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # LLM Benchmarking Cost and Performance
 

@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Prompting / Evaluation"
 tags: ["prompting", "prompts", "instruction-design", "reliability", "evaluation-metrics", "prompting"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Prompt Engineering Evaluation Metrics
 

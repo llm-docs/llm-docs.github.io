@@ -5,7 +5,7 @@ date: "2026-04-20"
 updatedAt: "2026-04-20"
 category: "Architecture & Training"
 tags: ["fine-tuning", "data-preparation", "datasets", "data-quality", "sft", "training-data"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # LLM Fine-Tuning Data Preparation

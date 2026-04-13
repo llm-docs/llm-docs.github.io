@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Data / Architecture"
 tags: ["synthetic-data", "data-generation", "training", "evaluation", "architecture-patterns", "data"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Synthetic Data Architecture Patterns
 

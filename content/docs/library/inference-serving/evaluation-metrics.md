@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Infrastructure / Evaluation"
 tags: ["inference", "serving", "latency", "gpu", "evaluation-metrics", "infrastructure"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Inference Serving Evaluation Metrics
 

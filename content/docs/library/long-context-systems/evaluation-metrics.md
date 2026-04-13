@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Context / Evaluation"
 tags: ["long-context", "context-window", "retrieval", "optimization", "evaluation-metrics", "context"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Long-Context Systems Evaluation Metrics
 

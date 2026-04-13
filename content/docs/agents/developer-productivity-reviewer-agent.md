@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-developer-productivity-reviewer-agent", "engineering", "developer-tools", "productivity", "review", "quality", "governance"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Developer Productivity Reviewer Agent Implementation Guide

@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Applications / Operations"
 tags: ["workflows", "orchestration", "state-machines", "automation", "production-checklist", "applications"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Workflow Orchestration Production Checklist
 

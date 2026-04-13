@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-research-intelligence-planner-agent", "research", "analysis", "monitoring", "planning", "decomposition", "workflow-design"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Research Intelligence Planner Agent Implementation Guide

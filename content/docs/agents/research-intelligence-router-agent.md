@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-research-intelligence-router-agent", "research", "analysis", "monitoring", "routing", "classification", "orchestration"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Research Intelligence Router Agent Implementation Guide

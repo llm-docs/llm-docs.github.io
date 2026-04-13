@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-healthcare-ops-router-agent", "healthcare", "operations", "coordination", "routing", "classification", "orchestration"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Healthcare Operations Router Agent Implementation Guide

@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Agents / Implementation"
 tags: ["tools", "function-calling", "agents", "automation", "implementation-guide", "agents"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Tool Use Implementation Guide
 

@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Inference / Evaluation"
 tags: ["routing", "model-selection", "cost-control", "latency", "evaluation-metrics", "inference"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Model Routing Evaluation Metrics
 

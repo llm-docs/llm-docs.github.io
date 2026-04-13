@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-legal-compliance-orchestrator-agent", "legal", "compliance", "risk", "orchestration", "multi-agent", "coordination"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Legal Compliance Orchestrator Agent Implementation Guide

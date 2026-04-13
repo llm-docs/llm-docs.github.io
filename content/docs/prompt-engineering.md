@@ -5,7 +5,7 @@ date: "2026-04-05"
 updatedAt: "2026-04-10"
 category: "Best Practices"
 tags: ["prompting", "engineering", "techniques", "best-practices", "prompt-design", "reasoning"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Prompt Engineering Guide

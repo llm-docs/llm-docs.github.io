@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Optimization / Economics"
 tags: ["distillation", "compression", "student-models", "optimization", "cost-performance", "optimization"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Knowledge Distillation Cost and Performance
 

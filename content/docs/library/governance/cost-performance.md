@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Governance / Economics"
 tags: ["governance", "policy", "risk", "compliance", "cost-performance", "governance"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # AI Governance Cost and Performance
 

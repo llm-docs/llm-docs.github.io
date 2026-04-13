@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-finance-operations-evaluator-agent", "finance", "operations", "reconciliation", "evaluation", "scoring", "testing"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Finance Operations Evaluator Agent Implementation Guide

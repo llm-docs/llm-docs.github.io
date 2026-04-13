@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Agents / Architecture"
 tags: ["tools", "function-calling", "agents", "automation", "architecture-patterns", "agents"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Tool Use Architecture Patterns
 

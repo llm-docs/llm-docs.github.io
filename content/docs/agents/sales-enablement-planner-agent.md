@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-sales-enablement-planner-agent", "sales", "go-to-market", "pipeline", "planning", "decomposition", "workflow-design"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Sales Enablement Planner Agent Implementation Guide

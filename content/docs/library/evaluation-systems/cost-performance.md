@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Evaluation / Economics"
 tags: ["evaluation", "testing", "quality", "benchmarks", "cost-performance", "evaluation"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Evaluation Systems Cost and Performance
 

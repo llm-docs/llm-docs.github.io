@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-growth-marketing-executor-agent", "marketing", "growth", "campaigns", "execution", "tools", "automation"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Growth Marketing Executor Agent Implementation Guide

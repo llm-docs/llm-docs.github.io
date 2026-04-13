@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export function FeedbackLinks({ context }: { context: string }) {
-  const base = "https://github.com/LLM-Docs/LLM-Docs.github.io/issues/new";
+  const base = "https://github.com/IntuiVortex/IntuiVortex.github.io/issues/new";
   const suggest = `${base}?title=${encodeURIComponent(`Update suggestion: ${context}`)}`;
   const compare = `${base}?title=${encodeURIComponent(`Comparison request: ${context}`)}`;
   const report = `${base}?title=${encodeURIComponent(`Outdated information: ${context}`)}`;

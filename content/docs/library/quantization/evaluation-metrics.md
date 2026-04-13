@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Optimization / Evaluation"
 tags: ["quantization", "optimization", "memory", "serving", "evaluation-metrics", "optimization"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Quantization Evaluation Metrics
 

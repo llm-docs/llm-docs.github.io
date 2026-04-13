@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-security-operations-memory-agent", "security", "soc", "incident-response", "memory", "state", "context-management"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Security Operations Memory Agent Implementation Guide

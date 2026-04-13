@@ -10,7 +10,7 @@ const STATUS_FILE = path.join(AUTOMATION_DIR, "models-status.json");
 const MAX_ITEMS_PER_SOURCE = Number(process.env.MODEL_SYNC_LIMIT ?? "8");
 const USER_AGENT =
   process.env.MODEL_SYNC_USER_AGENT ??
-  "LLM-Docs Model Sync (+https://github.com/LLM-Docs)";
+  "IntuiVortex Model Sync (+https://github.com/IntuiVortex)";
 
 async function main() {
   fs.mkdirSync(AUTO_MODELS_DIR, { recursive: true });

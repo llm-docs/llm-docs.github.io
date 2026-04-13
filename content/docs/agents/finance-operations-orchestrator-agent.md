@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-finance-operations-orchestrator-agent", "finance", "operations", "reconciliation", "orchestration", "multi-agent", "coordination"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Finance Operations Orchestrator Agent Implementation Guide

@@ -1,12 +1,12 @@
 import Link from "next/link";
 
-const CONTACT_EMAIL = "contact@llm-docs.com";
-const BUY_ME_A_COFFEE_URL = "https://buymeacoffee.com/llmdocs";
-const PATREON_URL = "https://patreon.com/llmdocs";
+const CONTACT_EMAIL = "contact@intuivortex.com";
+const BUY_ME_A_COFFEE_URL = "https://buymeacoffee.com/intuivortex";
+const PATREON_URL = "https://patreon.com/intuivortex";
 
 export const metadata = {
   title: "Contact",
-  description: "Business collaboration, attribution requirements, and support links for LLM-Docs.",
+  description: "Business collaboration, attribution requirements, and support links for IntuiVortex.",
 };
 
 export default function ContactPage() {
@@ -37,7 +37,7 @@ export default function ContactPage() {
 
         <div className="surface-card space-y-4">
           <p className="eyebrow">Support</p>
-          <h2 className="text-2xl font-semibold tracking-tight text-slate-50">Support LLM-Docs</h2>
+          <h2 className="text-2xl font-semibold tracking-tight text-slate-50">Support IntuiVortex</h2>
           <p className="text-sm leading-7 text-slate-300">
             If the project saves you time, helps your research, or improves your team&apos;s decision-making, you can support it directly.
           </p>
@@ -66,10 +66,10 @@ export default function ContactPage() {
         <p className="eyebrow">Attribution</p>
         <h2 className="text-2xl font-semibold tracking-tight text-slate-50">Attribution requirements</h2>
         <p>
-          If you reference LLM-Docs in a report, newsletter, course, product page, or public research artifact, attribute the source clearly and link back to the relevant page when possible.
+          If you reference IntuiVortex in a report, newsletter, course, product page, or public research artifact, attribute the source clearly and link back to the relevant page when possible.
         </p>
         <p>
-          Attribution should name <span className="font-semibold text-slate-100">LLM-Docs</span>, preserve any linked original sources, and avoid presenting LLM-Docs summaries as if they were the original publisher&apos;s text.
+          Attribution should name <span className="font-semibold text-slate-100">IntuiVortex</span>, preserve any linked original sources, and avoid presenting IntuiVortex summaries as if they were the original publisher&apos;s text.
         </p>
         <p>
           If you need broader reuse terms, commercial attribution language, or a custom collaboration arrangement, email us before publishing.
@@ -93,15 +93,15 @@ export default function ContactPage() {
         <p>
           GitHub organization:
           {" "}
-          <Link href="https://github.com/LLM-Docs" className="text-sky-300 hover:text-sky-200">
-            github.com/LLM-Docs
+          <Link href="https://github.com/IntuiVortex" className="text-sky-300 hover:text-sky-200">
+            github.com/IntuiVortex
           </Link>
         </p>
         <p>
           Repository:
           {" "}
-          <Link href="https://github.com/LLM-Docs/LLM-Docs.github.io" className="text-sky-300 hover:text-sky-200">
-            LLM-Docs/LLM-Docs.github.io
+          <Link href="https://github.com/IntuiVortex/IntuiVortex.github.io" className="text-sky-300 hover:text-sky-200">
+            IntuiVortex/IntuiVortex.github.io
           </Link>
         </p>
       </section>

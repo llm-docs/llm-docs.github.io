@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Performance / Implementation"
 tags: ["caching", "latency", "cost", "performance", "implementation-guide", "performance"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Semantic Caching Implementation Guide
 

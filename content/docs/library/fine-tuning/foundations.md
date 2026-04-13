@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Training / Foundations"
 tags: ["fine-tuning", "training", "adaptation", "specialization", "foundations", "training"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Fine-Tuning Foundations
 

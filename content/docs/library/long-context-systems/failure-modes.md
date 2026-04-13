@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Context / Reliability"
 tags: ["long-context", "context-window", "retrieval", "optimization", "failure-modes", "context"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Long-Context Systems Failure Modes
 

@@ -12,14 +12,14 @@ export default function Header() {
             <Link href="/" className="flex items-center gap-3">
               <Image
                 src="/logo.png"
-                alt="LLM-Docs logo"
+                alt="IntuiVortex logo"
                 width={40}
                 height={40}
                 className="h-10 w-10 rounded-2xl object-cover ring-1 ring-white/12"
                 priority
               />
               <span className="text-lg font-semibold tracking-tight text-slate-50">
-                LLM-Docs
+                IntuiVortex
               </span>
             </Link>
             <nav className="hidden md:flex items-center gap-5">
@@ -67,7 +67,7 @@ export default function Header() {
               <Search className="h-5 w-5" />
             </Link>
             <a
-              href="https://github.com/LLM-Docs"
+              href="https://github.com/IntuiVortex"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/12 text-slate-300 transition-colors hover:border-white/30 hover:text-white"

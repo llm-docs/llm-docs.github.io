@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-healthcare-ops-monitor-agent", "healthcare", "operations", "coordination", "monitoring", "observability", "alerts"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Healthcare Operations Monitor Agent Implementation Guide

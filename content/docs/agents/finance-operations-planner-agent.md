@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-finance-operations-planner-agent", "finance", "operations", "reconciliation", "planning", "decomposition", "workflow-design"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Finance Operations Planner Agent Implementation Guide

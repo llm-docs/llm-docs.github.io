@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-healthcare-ops-evaluator-agent", "healthcare", "operations", "coordination", "evaluation", "scoring", "testing"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Healthcare Operations Evaluator Agent Implementation Guide

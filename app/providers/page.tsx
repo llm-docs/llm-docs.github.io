@@ -4,7 +4,7 @@ import { getProviderHubs } from "@/lib/content";
 import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
-  title: "Providers | LLM-Docs",
+  title: "Providers | IntuiVortex",
   description: "Provider ecosystem hubs for OpenAI, Anthropic, Google, and other AI model vendors.",
   path: "/providers",
 });

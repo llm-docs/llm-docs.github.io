@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "RAG / Foundations"
 tags: ["rag", "retrieval", "grounding", "knowledge", "foundations", "rag"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Retrieval-Augmented Generation Foundations
 

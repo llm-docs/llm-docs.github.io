@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Evaluation / Reliability"
 tags: ["evaluation", "testing", "quality", "benchmarks", "failure-modes", "evaluation"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Evaluation Systems Failure Modes
 

@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Privacy Policy",
-  description: "Privacy policy for LLM-Docs.",
+  description: "Privacy policy for IntuiVortex.",
 };
 
 export default function PrivacyPage() {
@@ -10,7 +10,7 @@ export default function PrivacyPage() {
         <p className="eyebrow">Privacy</p>
         <h1 className="text-4xl font-semibold tracking-tight text-slate-50">Privacy Policy</h1>
         <p className="max-w-3xl text-lg leading-8 text-slate-300">
-          LLM-Docs aims to minimize data collection and does not require user accounts to browse public content.
+          IntuiVortex aims to minimize data collection and does not require user accounts to browse public content.
         </p>
       </header>
 
@@ -20,12 +20,12 @@ export default function PrivacyPage() {
         <p>
           We encourage open-source projects. The full source code for this website is available on GitHub at{" "}
           <a
-            href="https://github.com/llm-docs/llm-docs.github.io"
+            href="https://github.com/intuivortex/intuivortex.github.io"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sky-300 transition-colors hover:text-sky-200"
           >
-            github.com/llm-docs/llm-docs.github.io
+            github.com/intuivortex/intuivortex.github.io
           </a>
           .
         </p>

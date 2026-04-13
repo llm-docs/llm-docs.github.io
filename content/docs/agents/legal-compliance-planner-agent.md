@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-legal-compliance-planner-agent", "legal", "compliance", "risk", "planning", "decomposition", "workflow-design"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Legal Compliance Planner Agent Implementation Guide

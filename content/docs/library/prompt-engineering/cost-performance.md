@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Prompting / Economics"
 tags: ["prompting", "prompts", "instruction-design", "reliability", "cost-performance", "prompting"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Prompt Engineering Cost and Performance
 

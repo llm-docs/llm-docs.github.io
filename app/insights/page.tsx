@@ -3,7 +3,7 @@ import { getModels, getProviderHubs, getReleaseTimeline } from "@/lib/content";
 import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
-  title: "Insights | LLM-Docs",
+  title: "Insights | IntuiVortex",
   description: "Interactive charts and ecosystem views for model releases, providers, and context windows.",
   path: "/insights",
 });

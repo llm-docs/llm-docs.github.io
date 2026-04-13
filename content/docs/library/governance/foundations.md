@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Governance / Foundations"
 tags: ["governance", "policy", "risk", "compliance", "foundations", "governance"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # AI Governance Foundations
 

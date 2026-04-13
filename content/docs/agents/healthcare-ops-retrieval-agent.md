@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-healthcare-ops-retrieval-agent", "healthcare", "operations", "coordination", "retrieval", "rag", "knowledge"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Healthcare Operations Retrieval Agent Implementation Guide

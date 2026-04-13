@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Context / Economics"
 tags: ["long-context", "context-window", "retrieval", "optimization", "cost-performance", "context"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Long-Context Systems Cost and Performance
 

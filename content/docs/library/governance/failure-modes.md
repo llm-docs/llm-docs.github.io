@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Governance / Reliability"
 tags: ["governance", "policy", "risk", "compliance", "failure-modes", "governance"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # AI Governance Failure Modes
 

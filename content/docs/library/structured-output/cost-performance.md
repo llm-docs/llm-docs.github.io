@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Application Design / Economics"
 tags: ["structured-output", "json", "schema", "tooling", "cost-performance", "application-design"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Structured Output Cost and Performance
 

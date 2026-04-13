@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Evaluation / Architecture"
 tags: ["benchmarks", "evaluation", "comparison", "measurement", "architecture-patterns", "evaluation"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # LLM Benchmarking Architecture Patterns
 

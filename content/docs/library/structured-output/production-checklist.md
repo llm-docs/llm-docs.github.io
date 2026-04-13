@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Application Design / Operations"
 tags: ["structured-output", "json", "schema", "tooling", "production-checklist", "application-design"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Structured Output Production Checklist
 

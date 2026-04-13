@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Operations / Market Intelligence"
 tags: ["observability", "monitoring", "tracing", "operations", "vendor-landscape", "operations"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # LLM Observability Vendor Landscape
 

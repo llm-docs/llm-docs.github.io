@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Safety / Evaluation"
 tags: ["guardrails", "safety", "policy", "compliance", "evaluation-metrics", "safety"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Guardrails Evaluation Metrics
 

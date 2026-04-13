@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Operations / Foundations"
 tags: ["observability", "monitoring", "tracing", "operations", "foundations", "operations"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # LLM Observability Foundations
 

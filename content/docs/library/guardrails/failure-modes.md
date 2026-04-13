@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Safety / Reliability"
 tags: ["guardrails", "safety", "policy", "compliance", "failure-modes", "safety"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Guardrails Failure Modes
 

@@ -4,7 +4,7 @@ import { hardwareProfiles } from "@/data/hardware-profiles";
 import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
-  title: "Deployment Calculator | LLM-Docs",
+  title: "Deployment Calculator | IntuiVortex",
   description: "Estimate VRAM, RAM, KV cache, fit status, and speed for running LLMs on real hardware.",
   path: "/calculator",
 });

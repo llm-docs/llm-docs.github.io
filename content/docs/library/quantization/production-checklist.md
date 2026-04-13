@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Optimization / Operations"
 tags: ["quantization", "optimization", "memory", "serving", "production-checklist", "optimization"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Quantization Production Checklist
 

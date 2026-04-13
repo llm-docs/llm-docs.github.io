@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Economics / Reliability"
 tags: ["cost", "optimization", "efficiency", "budgeting", "failure-modes", "economics"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Cost Optimization Failure Modes
 

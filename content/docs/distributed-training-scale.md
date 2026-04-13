@@ -4,7 +4,7 @@ description: "Engineering systems for training 100B+ parameter models — cluste
 date: "2026-04-18"
 category: "Advanced Technical"
 tags: ["distributed-training", "cluster", "networking", "fault-tolerance", "infrastructure", "engineering"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Distributed Training at Scale

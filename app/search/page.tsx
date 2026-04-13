@@ -4,7 +4,7 @@ import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
   title: "Search",
-  description: "Search documentation, models, agents, and news across LLM-Docs.",
+  description: "Search documentation, models, agents, and news across IntuiVortex.",
   path: "/search",
 });
 

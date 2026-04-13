@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-developer-productivity-monitor-agent", "engineering", "developer-tools", "productivity", "monitoring", "observability", "alerts"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Developer Productivity Monitor Agent Implementation Guide

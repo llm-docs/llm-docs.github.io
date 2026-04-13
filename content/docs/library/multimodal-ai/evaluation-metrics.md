@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Multimodal / Evaluation"
 tags: ["multimodal", "vision", "audio", "documents", "evaluation-metrics", "multimodal"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Multimodal AI Evaluation Metrics
 

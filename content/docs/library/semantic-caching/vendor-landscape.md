@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Performance / Market Intelligence"
 tags: ["caching", "latency", "cost", "performance", "vendor-landscape", "performance"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Semantic Caching Vendor Landscape
 

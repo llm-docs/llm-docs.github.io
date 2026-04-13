@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-support-ops-planner-agent", "support", "customer-service", "triage", "planning", "decomposition", "workflow-design"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Support Operations Planner Agent Implementation Guide

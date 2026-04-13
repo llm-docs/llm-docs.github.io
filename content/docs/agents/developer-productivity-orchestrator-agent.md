@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-developer-productivity-orchestrator-agent", "engineering", "developer-tools", "productivity", "orchestration", "multi-agent", "coordination"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Developer Productivity Orchestrator Agent Implementation Guide

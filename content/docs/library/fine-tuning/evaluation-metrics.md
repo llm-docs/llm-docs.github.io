@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Training / Evaluation"
 tags: ["fine-tuning", "training", "adaptation", "specialization", "evaluation-metrics", "training"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Fine-Tuning Evaluation Metrics
 

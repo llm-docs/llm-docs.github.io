@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Operations / Architecture"
 tags: ["observability", "monitoring", "tracing", "operations", "architecture-patterns", "operations"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # LLM Observability Architecture Patterns
 

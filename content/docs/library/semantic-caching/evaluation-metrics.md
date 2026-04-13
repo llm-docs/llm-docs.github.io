@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Performance / Evaluation"
 tags: ["caching", "latency", "cost", "performance", "evaluation-metrics", "performance"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Semantic Caching Evaluation Metrics
 

@@ -4,7 +4,7 @@ description: "Compare decoder-only, encoder-only, encoder-decoder, and MoE archi
 date: "2026-04-03"
 category: "Fundamentals"
 tags: ["architecture", "llm", "transformers", "moe", "comparison", "design"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # LLM Architectures Overview

@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-finance-operations-retrieval-agent", "finance", "operations", "reconciliation", "retrieval", "rag", "knowledge"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Finance Operations Retrieval Agent Implementation Guide

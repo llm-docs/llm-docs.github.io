@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Applications / Foundations"
 tags: ["workflows", "orchestration", "state-machines", "automation", "foundations", "applications"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Workflow Orchestration Foundations
 

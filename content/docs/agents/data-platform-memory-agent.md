@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-data-platform-memory-agent", "data", "analytics", "pipelines", "memory", "state", "context-management"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Data Platform Memory Agent Implementation Guide

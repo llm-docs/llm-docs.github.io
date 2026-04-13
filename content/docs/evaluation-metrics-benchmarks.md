@@ -4,7 +4,7 @@ description: "How to measure LLM capability — from academic benchmarks (MMLU, 
 date: "2026-04-13"
 category: "Evaluation & Safety"
 tags: ["evaluation", "benchmarks", "metrics", "testing", "quality", "comparison"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Evaluation Metrics and Benchmarks

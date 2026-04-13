@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-sales-enablement-orchestrator-agent", "sales", "go-to-market", "pipeline", "orchestration", "multi-agent", "coordination"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Sales Enablement Orchestrator Agent Implementation Guide

@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Safety / Implementation"
 tags: ["guardrails", "safety", "policy", "compliance", "implementation-guide", "safety"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Guardrails Implementation Guide
 

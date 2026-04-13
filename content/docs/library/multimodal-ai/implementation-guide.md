@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Multimodal / Implementation"
 tags: ["multimodal", "vision", "audio", "documents", "implementation-guide", "multimodal"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Multimodal AI Implementation Guide
 

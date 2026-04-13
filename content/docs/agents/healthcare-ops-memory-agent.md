@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-healthcare-ops-memory-agent", "healthcare", "operations", "coordination", "memory", "state", "context-management"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Healthcare Operations Memory Agent Implementation Guide

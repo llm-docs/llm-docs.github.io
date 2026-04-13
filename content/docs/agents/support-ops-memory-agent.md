@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-support-ops-memory-agent", "support", "customer-service", "triage", "memory", "state", "context-management"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Support Operations Memory Agent Implementation Guide

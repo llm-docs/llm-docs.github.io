@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Terminal Agents"
 tags: ["agents", "terminal", "coding-agent", "opencode", "open-source", "cli"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # OpenCode Guide

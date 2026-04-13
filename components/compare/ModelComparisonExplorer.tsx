@@ -90,7 +90,7 @@ export default function ModelComparisonExplorer({ models }: { models: ModelItem[
         </div>
         <a
           href={`data:text/csv;charset=utf-8,${encodeURIComponent(csv)}`}
-          download="llm-docs-model-comparison.csv"
+          download="intuivortex-model-comparison.csv"
           className="inline-flex items-center rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300 transition hover:border-white/20 hover:text-white"
         >
           Download comparison CSV

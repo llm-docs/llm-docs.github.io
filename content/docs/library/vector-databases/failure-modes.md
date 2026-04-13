@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Retrieval / Reliability"
 tags: ["vector-database", "retrieval", "search", "embeddings", "failure-modes", "retrieval"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Vector Databases Failure Modes
 

@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Context / Operations"
 tags: ["long-context", "context-window", "retrieval", "optimization", "production-checklist", "context"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Long-Context Systems Production Checklist
 

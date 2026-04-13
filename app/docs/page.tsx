@@ -3,7 +3,7 @@ import { getDocs } from "@/lib/content";
 import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
-  title: "Docs | LLM-Docs",
+  title: "Docs | IntuiVortex",
   description: "LLM documentation, implementation guides, and practical references.",
   path: "/docs",
 });

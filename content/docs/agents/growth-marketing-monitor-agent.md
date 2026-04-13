@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-growth-marketing-monitor-agent", "marketing", "growth", "campaigns", "monitoring", "observability", "alerts"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Growth Marketing Monitor Agent Implementation Guide

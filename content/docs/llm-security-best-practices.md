@@ -4,7 +4,7 @@ description: "Securing LLM applications — API key management, prompt injection
 date: "2026-04-15"
 category: "Evaluation & Safety"
 tags: ["security", "privacy", "api-keys", "injection", "compliance", "data-protection"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # LLM Security Best Practices

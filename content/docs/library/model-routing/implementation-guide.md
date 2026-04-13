@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Inference / Implementation"
 tags: ["routing", "model-selection", "cost-control", "latency", "implementation-guide", "inference"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Model Routing Implementation Guide
 

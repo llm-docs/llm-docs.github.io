@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-growth-marketing-evaluator-agent", "marketing", "growth", "campaigns", "evaluation", "scoring", "testing"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Growth Marketing Evaluator Agent Implementation Guide

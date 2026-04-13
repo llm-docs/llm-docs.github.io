@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Strategy / Foundations"
 tags: ["model-selection", "comparison", "procurement", "strategy", "foundations", "strategy"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Model Selection Foundations
 

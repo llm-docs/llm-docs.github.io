@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-sales-enablement-executor-agent", "sales", "go-to-market", "pipeline", "execution", "tools", "automation"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Sales Enablement Executor Agent Implementation Guide

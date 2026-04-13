@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Inference / Operations"
 tags: ["routing", "model-selection", "cost-control", "latency", "production-checklist", "inference"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Model Routing Production Checklist
 

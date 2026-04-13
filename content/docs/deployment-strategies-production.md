@@ -4,7 +4,7 @@ description: "Serving LLMs in production — API design, autoscaling, load balan
 date: "2026-04-11"
 category: "Deployment & Infrastructure"
 tags: ["deployment", "production", "api", "scaling", "monitoring", "reliability"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Deployment Strategies for Production

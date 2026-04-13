@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Strategy / Reliability"
 tags: ["model-selection", "comparison", "procurement", "strategy", "failure-modes", "strategy"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Model Selection Failure Modes
 

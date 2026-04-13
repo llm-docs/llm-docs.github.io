@@ -4,7 +4,7 @@ description: "Tracking LLM behavior in production — logging, tracing, evaluati
 date: "2026-04-12"
 category: "Deployment & Infrastructure"
 tags: ["observability", "monitoring", "logging", "tracing", "evaluation", "drift"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # LLM Observability and Monitoring

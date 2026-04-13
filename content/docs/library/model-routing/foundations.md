@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Inference / Foundations"
 tags: ["routing", "model-selection", "cost-control", "latency", "foundations", "inference"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Model Routing Foundations
 

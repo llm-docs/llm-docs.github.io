@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return buildPageMetadata({
-    title: `${topic.label} | LLM-Docs`,
+    title: `${topic.label} | IntuiVortex`,
     description: `Hub page for ${topic.label} across docs, models, news, and agent references.`,
     path: `/topics/${topic.slug}`,
   });
@@ -55,7 +55,7 @@ export default async function TopicPage({ params }: PageProps) {
         <p className="eyebrow">Topic Hub</p>
         <h1 className="text-4xl font-semibold tracking-tight text-slate-50">{topic.label}</h1>
         <p className="max-w-2xl text-lg leading-8 text-slate-300">
-          {topic.count} linked pages across the LLM-Docs library.
+          {topic.count} linked pages across the IntuiVortex library.
         </p>
       </header>
       <div className="grid gap-4">

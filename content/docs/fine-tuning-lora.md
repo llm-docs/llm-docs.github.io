@@ -4,7 +4,7 @@ description: "Adapting pre-trained LLMs to specific domains — full fine-tuning
 date: "2026-04-06"
 category: "Best Practices"
 tags: ["fine-tuning", "lora", "peft", "qlora", "adaptation", "transfer-learning"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Fine-tuning and LoRA/PEFT

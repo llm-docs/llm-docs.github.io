@@ -4,7 +4,7 @@ description: "Understanding and controlling LLM costs — token pricing, caching
 date: "2026-04-12"
 category: "Deployment & Infrastructure"
 tags: ["cost", "pricing", "optimization", "budget", "caching", "efficiency"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Cost Management and Optimization

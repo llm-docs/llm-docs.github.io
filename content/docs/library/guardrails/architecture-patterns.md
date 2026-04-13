@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Safety / Architecture"
 tags: ["guardrails", "safety", "policy", "compliance", "architecture-patterns", "safety"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Guardrails Architecture Patterns
 

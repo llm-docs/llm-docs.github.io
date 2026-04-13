@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Optimization / Market Intelligence"
 tags: ["quantization", "optimization", "memory", "serving", "vendor-landscape", "optimization"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Quantization Vendor Landscape
 

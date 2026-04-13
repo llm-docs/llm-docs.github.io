@@ -5,7 +5,7 @@ import { rankModels } from "@/lib/model-ranking";
 import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
-  title: "Models | LLM-Docs",
+  title: "Models | IntuiVortex",
   description: "Track language models, releases, context windows, and provider updates.",
   path: "/models",
 });
@@ -32,7 +32,7 @@ export default async function ModelsIndexPage() {
             Traceable Capability Density ranks LLMs by how complete, current, and operationally legible they are.
           </h2>
           <p className="max-w-4xl text-base leading-8 text-slate-200">
-            Instead of chasing one benchmark, LLM-Docs uses a bespoke metric that rewards five things at once:
+            Instead of chasing one benchmark, IntuiVortex uses a bespoke metric that rewards five things at once:
             concrete model identity, specification depth, workload reach, release freshness, and deployment confidence.
             The result is a conference-style grade system built for serious model tracking rather than hype cycles.
           </p>

@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-legal-compliance-executor-agent", "legal", "compliance", "risk", "execution", "tools", "automation"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Legal Compliance Executor Agent Implementation Guide

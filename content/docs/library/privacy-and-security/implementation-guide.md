@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Security / Implementation"
 tags: ["privacy", "security", "prompt-injection", "controls", "implementation-guide", "security"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Privacy and Security Implementation Guide
 

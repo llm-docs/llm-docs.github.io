@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Security / Evaluation"
 tags: ["privacy", "security", "prompt-injection", "controls", "evaluation-metrics", "security"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Privacy and Security Evaluation Metrics
 

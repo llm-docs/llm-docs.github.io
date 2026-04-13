@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Agents / Implementation"
 tags: ["agents", "automation", "planning", "tool-use", "implementation-guide", "agents"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # AI Agents Implementation Guide
 

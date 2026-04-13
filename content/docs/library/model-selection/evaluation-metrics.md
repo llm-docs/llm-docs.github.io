@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Strategy / Evaluation"
 tags: ["model-selection", "comparison", "procurement", "strategy", "evaluation-metrics", "strategy"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Model Selection Evaluation Metrics
 

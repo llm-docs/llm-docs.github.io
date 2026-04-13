@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-data-platform-evaluator-agent", "data", "analytics", "pipelines", "evaluation", "scoring", "testing"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Data Platform Evaluator Agent Implementation Guide

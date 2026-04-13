@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Governance / Implementation"
 tags: ["governance", "policy", "risk", "compliance", "implementation-guide", "governance"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # AI Governance Implementation Guide
 

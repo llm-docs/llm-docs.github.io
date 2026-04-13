@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Multimodal / Architecture"
 tags: ["multimodal", "vision", "audio", "documents", "architecture-patterns", "multimodal"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Multimodal AI Architecture Patterns
 

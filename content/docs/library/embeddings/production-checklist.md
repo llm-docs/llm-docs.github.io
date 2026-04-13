@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Retrieval / Operations"
 tags: ["embeddings", "semantic-search", "ranking", "retrieval", "production-checklist", "retrieval"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Embeddings Production Checklist
 

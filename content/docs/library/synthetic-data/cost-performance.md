@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Data / Economics"
 tags: ["synthetic-data", "data-generation", "training", "evaluation", "cost-performance", "data"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Synthetic Data Cost and Performance
 

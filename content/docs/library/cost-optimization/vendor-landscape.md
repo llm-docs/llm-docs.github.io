@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Economics / Market Intelligence"
 tags: ["cost", "optimization", "efficiency", "budgeting", "vendor-landscape", "economics"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Cost Optimization Vendor Landscape
 

@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-data-platform-reviewer-agent", "data", "analytics", "pipelines", "review", "quality", "governance"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Data Platform Reviewer Agent Implementation Guide

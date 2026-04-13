@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Multimodal / Market Intelligence"
 tags: ["multimodal", "vision", "audio", "documents", "vendor-landscape", "multimodal"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Multimodal AI Vendor Landscape
 

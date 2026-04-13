@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-data-platform-researcher-agent", "data", "analytics", "pipelines", "research", "evidence", "synthesis"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Data Platform Researcher Agent Implementation Guide

@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Evaluation / Implementation"
 tags: ["evaluation", "testing", "quality", "benchmarks", "implementation-guide", "evaluation"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Evaluation Systems Implementation Guide
 

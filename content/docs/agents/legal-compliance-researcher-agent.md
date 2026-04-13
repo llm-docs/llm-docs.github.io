@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-legal-compliance-researcher-agent", "legal", "compliance", "risk", "research", "evidence", "synthesis"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Legal Compliance Researcher Agent Implementation Guide

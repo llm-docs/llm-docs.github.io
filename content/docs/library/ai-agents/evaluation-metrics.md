@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Agents / Evaluation"
 tags: ["agents", "automation", "planning", "tool-use", "evaluation-metrics", "agents"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # AI Agents Evaluation Metrics
 

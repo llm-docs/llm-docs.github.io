@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Agents / Market Intelligence"
 tags: ["tools", "function-calling", "agents", "automation", "vendor-landscape", "agents"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Tool Use Vendor Landscape
 

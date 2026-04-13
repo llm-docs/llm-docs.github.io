@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Prompting / Foundations"
 tags: ["prompting", "prompts", "instruction-design", "reliability", "foundations", "prompting"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Prompt Engineering Foundations
 

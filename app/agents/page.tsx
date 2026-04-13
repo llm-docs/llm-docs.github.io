@@ -3,7 +3,7 @@ import { getAgents } from "@/lib/content";
 import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
-  title: "Agents | LLM-Docs",
+  title: "Agents | IntuiVortex",
   description: "Agent frameworks, orchestration tools, and related implementation references.",
   path: "/agents",
 });

@@ -4,7 +4,7 @@ description: "Connecting LLMs to external tools, APIs, and code execution — fu
 date: "2026-04-07"
 category: "Best Practices"
 tags: ["function-calling", "tool-use", "agents", "api-integration", "code-execution", "automation"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Function Calling and Tool Use

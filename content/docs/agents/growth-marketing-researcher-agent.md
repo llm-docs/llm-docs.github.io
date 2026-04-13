@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-growth-marketing-researcher-agent", "marketing", "growth", "campaigns", "research", "evidence", "synthesis"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Growth Marketing Researcher Agent Implementation Guide

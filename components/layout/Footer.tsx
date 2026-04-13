@@ -11,13 +11,13 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <Image
                 src="/logo.png"
-                alt="LLM-Docs logo"
+                alt="IntuiVortex logo"
                 width={40}
                 height={40}
                 className="h-10 w-10 rounded-2xl object-cover ring-1 ring-white/12"
               />
               <h3 className="text-lg font-semibold tracking-tight text-slate-50">
-                LLM-Docs
+                IntuiVortex
               </h3>
             </div>
           </div>
@@ -53,7 +53,7 @@ export default function Footer() {
 
         <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-white/8 pt-8 text-sm text-slate-500 sm:flex-row">
           <p>
-            © 2026 LLM-Docs.
+            © 2026 IntuiVortex.
           </p>
         </div>
       </div>

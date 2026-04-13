@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Inference / Architecture"
 tags: ["routing", "model-selection", "cost-control", "latency", "architecture-patterns", "inference"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Model Routing Architecture Patterns
 

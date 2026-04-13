@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Retrieval / Market Intelligence"
 tags: ["embeddings", "semantic-search", "ranking", "retrieval", "vendor-landscape", "retrieval"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Embeddings Vendor Landscape
 

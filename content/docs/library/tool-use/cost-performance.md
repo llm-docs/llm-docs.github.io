@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Agents / Economics"
 tags: ["tools", "function-calling", "agents", "automation", "cost-performance", "agents"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Tool Use Cost and Performance
 

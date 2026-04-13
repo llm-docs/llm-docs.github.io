@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Infrastructure / Economics"
 tags: ["inference", "serving", "latency", "gpu", "cost-performance", "infrastructure"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Inference Serving Cost and Performance
 

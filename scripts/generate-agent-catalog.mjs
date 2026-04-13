@@ -5,7 +5,7 @@ const root = process.cwd();
 const agentsDir = path.join(root, "content", "agents");
 const docsDir = path.join(root, "content", "docs", "agents");
 const today = "2026-04-13";
-const author = "LLM Hub Team";
+const author = "IntuiVortex Team";
 
 const domains = [
   {

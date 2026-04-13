@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-developer-productivity-executor-agent", "engineering", "developer-tools", "productivity", "execution", "tools", "automation"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Developer Productivity Executor Agent Implementation Guide

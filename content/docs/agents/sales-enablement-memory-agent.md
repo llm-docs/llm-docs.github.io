@@ -5,7 +5,7 @@ date: "2026-04-13"
 updatedAt: "2026-04-13"
 category: "Agent Blueprints"
 tags: ["agents", "agent-sales-enablement-memory-agent", "sales", "go-to-market", "pipeline", "memory", "state", "context-management"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Sales Enablement Memory Agent Implementation Guide

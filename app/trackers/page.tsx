@@ -3,7 +3,7 @@ import Link from "next/link";
 import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
-  title: "Trackers | LLM-Docs",
+  title: "Trackers | IntuiVortex",
   description: "Track release histories, provider activity, and change timelines across the AI ecosystem.",
   path: "/trackers",
 });

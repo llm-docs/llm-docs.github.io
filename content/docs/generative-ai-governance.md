@@ -4,7 +4,7 @@ description: "Enterprise AI governance frameworks — policy creation, usage gui
 date: "2026-04-22"
 category: "Evaluation & Safety"
 tags: ["governance", "compliance", "responsible-ai", "policy", "risk-management", "enterprise"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Generative AI Governance

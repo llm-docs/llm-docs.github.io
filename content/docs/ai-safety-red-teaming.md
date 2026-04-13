@@ -4,7 +4,7 @@ description: "Understanding and mitigating LLM risks — jailbreaks, prompt inje
 date: "2026-04-14"
 category: "Evaluation & Safety"
 tags: ["safety", "red-teaming", "jailbreak", "guardrails", "bias", "security"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # AI Safety, Red-teaming, and Guardrails

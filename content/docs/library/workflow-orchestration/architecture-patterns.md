@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Applications / Architecture"
 tags: ["workflows", "orchestration", "state-machines", "automation", "architecture-patterns", "applications"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Workflow Orchestration Architecture Patterns
 

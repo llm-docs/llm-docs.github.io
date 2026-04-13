@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Application Design / Reliability"
 tags: ["structured-output", "json", "schema", "tooling", "failure-modes", "application-design"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Structured Output Failure Modes
 

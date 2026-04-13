@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Retrieval / Evaluation"
 tags: ["embeddings", "semantic-search", "ranking", "retrieval", "evaluation-metrics", "retrieval"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Embeddings Evaluation Metrics
 

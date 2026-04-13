@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "Training / Economics"
 tags: ["fine-tuning", "training", "adaptation", "specialization", "cost-performance", "training"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Fine-Tuning Cost and Performance
 

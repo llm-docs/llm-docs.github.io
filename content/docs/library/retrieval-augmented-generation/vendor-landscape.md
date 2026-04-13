@@ -5,7 +5,7 @@ date: "2026-04-10"
 updatedAt: "2026-04-10"
 category: "RAG / Market Intelligence"
 tags: ["rag", "retrieval", "grounding", "knowledge", "vendor-landscape", "rag"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 # Retrieval-Augmented Generation Vendor Landscape
 

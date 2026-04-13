@@ -4,7 +4,7 @@ description: "Understanding how complex behaviors emerge at scale — chain of t
 date: "2026-04-10"
 category: "Architecture & Training"
 tags: ["emergence", "reasoning", "chain-of-thought", "planning", "capabilities", "cognition"]
-author: "LLM Hub Team"
+author: "IntuiVortex Team"
 ---
 
 # Emergent Capabilities and Reasoning
