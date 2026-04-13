@@ -1,7 +1,7 @@
 {
   "kind": "models",
-  "lastRunAt": "2026-04-13T13:06:38.520Z",
-  "totalWritten": 4,
+  "lastRunAt": "2026-04-13T14:50:51.249Z",
+  "totalWritten": 0,
   "sources": [
     {
       "sourceId": "openai-models",
@@ -16,7 +16,7 @@
       "sourceId": "anthropic-models",
       "sourceName": "Anthropic",
       "status": "success",
-      "written": 4,
+      "written": 0,
       "scanned": 5,
       "matched": 4,
       "error": ""

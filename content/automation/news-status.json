@@ -1,7 +1,7 @@
 {
   "kind": "news",
-  "lastRunAt": "2026-04-13T13:06:36.542Z",
-  "totalWritten": 5,
+  "lastRunAt": "2026-04-13T14:50:49.913Z",
+  "totalWritten": 0,
   "sources": [
     {
       "sourceId": "hugging-face",
@@ -23,7 +23,7 @@
       "sourceId": "anthropic",
       "sourceName": "Anthropic",
       "status": "success",
-      "written": 5,
+      "written": 0,
       "scanned": 5,
       "error": ""
     },
