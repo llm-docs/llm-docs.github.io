@@ -1,6 +1,6 @@
 {
   "kind": "models",
-  "lastRunAt": "2026-04-14T20:56:34.908Z",
+  "lastRunAt": "2026-04-14T21:55:19.486Z",
   "totalWritten": 1,
   "sources": [
     {
@@ -9,7 +9,7 @@
       "status": "success",
       "written": 1,
       "scanned": 8,
-      "matched": 8,
+      "matched": 7,
       "error": ""
     },
     {
