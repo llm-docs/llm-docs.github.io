@@ -1,7 +1,7 @@
 {
   "kind": "models",
-  "lastRunAt": "2026-04-15T14:46:29.602Z",
-  "totalWritten": 0,
+  "lastRunAt": "2026-04-15T16:06:30.669Z",
+  "totalWritten": 1,
   "sources": [
     {
       "sourceId": "openai-models",
@@ -25,7 +25,7 @@
       "sourceId": "google-models",
       "sourceName": "Google DeepMind",
       "status": "success",
-      "written": 0,
+      "written": 1,
       "scanned": 8,
       "matched": 4,
       "error": ""
