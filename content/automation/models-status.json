@@ -1,13 +1,13 @@
 {
   "kind": "models",
-  "lastRunAt": "2026-04-16T11:04:48.405Z",
+  "lastRunAt": "2026-04-16T13:48:11.569Z",
   "totalWritten": 1,
   "sources": [
     {
       "sourceId": "openai-models",
       "sourceName": "OpenAI",
       "status": "success",
-      "written": 1,
+      "written": 0,
       "scanned": 8,
       "matched": 8,
       "error": ""
@@ -43,9 +43,9 @@
       "sourceId": "hugging-face-models",
       "sourceName": "Hugging Face",
       "status": "success",
-      "written": 0,
+      "written": 1,
       "scanned": 8,
-      "matched": 1,
+      "matched": 2,
       "error": ""
     }
   ]
