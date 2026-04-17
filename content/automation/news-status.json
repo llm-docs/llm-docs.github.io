@@ -1,13 +1,13 @@
 {
   "kind": "news",
-  "lastRunAt": "2026-04-17T13:49:15.217Z",
-  "totalWritten": 1,
+  "lastRunAt": "2026-04-17T14:57:19.552Z",
+  "totalWritten": 0,
   "sources": [
     {
       "sourceId": "hugging-face",
       "sourceName": "Hugging Face",
       "status": "success",
-      "written": 1,
+      "written": 0,
       "scanned": 6,
       "error": ""
     },
