@@ -1,7 +1,7 @@
 {
   "kind": "models",
-  "lastRunAt": "2026-04-17T17:51:17.171Z",
-  "totalWritten": 1,
+  "lastRunAt": "2026-04-17T19:03:01.965Z",
+  "totalWritten": 0,
   "sources": [
     {
       "sourceId": "openai-models",
@@ -43,7 +43,7 @@
       "sourceId": "hugging-face-models",
       "sourceName": "Hugging Face",
       "status": "success",
-      "written": 1,
+      "written": 0,
       "scanned": 8,
       "matched": 3,
       "error": ""
