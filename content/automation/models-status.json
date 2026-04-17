@@ -1,7 +1,7 @@
 {
   "kind": "models",
-  "lastRunAt": "2026-04-17T14:57:21.398Z",
-  "totalWritten": 0,
+  "lastRunAt": "2026-04-17T16:05:56.822Z",
+  "totalWritten": 2,
   "sources": [
     {
       "sourceId": "openai-models",
@@ -16,7 +16,7 @@
       "sourceId": "anthropic-models",
       "sourceName": "Anthropic",
       "status": "success",
-      "written": 0,
+      "written": 1,
       "scanned": 5,
       "matched": 4,
       "error": ""
@@ -43,9 +43,9 @@
       "sourceId": "hugging-face-models",
       "sourceName": "Hugging Face",
       "status": "success",
-      "written": 0,
+      "written": 1,
       "scanned": 8,
-      "matched": 2,
+      "matched": 3,
       "error": ""
     }
   ]

@@ -1,13 +1,13 @@
 {
   "kind": "news",
-  "lastRunAt": "2026-04-17T14:57:19.552Z",
-  "totalWritten": 0,
+  "lastRunAt": "2026-04-17T16:05:55.499Z",
+  "totalWritten": 2,
   "sources": [
     {
       "sourceId": "hugging-face",
       "sourceName": "Hugging Face",
       "status": "success",
-      "written": 0,
+      "written": 1,
       "scanned": 6,
       "error": ""
     },
@@ -23,7 +23,7 @@
       "sourceId": "anthropic",
       "sourceName": "Anthropic",
       "status": "success",
-      "written": 0,
+      "written": 1,
       "scanned": 5,
       "error": ""
     },
