@@ -363,6 +363,9 @@ export function getAllContentForSearch() {
         type: "doc" as const,
         url: `/docs/${doc.slug}`,
         tags: doc.tags,
+        category: doc.category,
+        date: doc.updatedAt || doc.date,
+        keywords: [doc.category, doc.author].filter((value): value is string => Boolean(value)),
       })),
     ),
     news: news.then((items) =>
@@ -373,6 +376,9 @@ export function getAllContentForSearch() {
         type: "news" as const,
         url: `/news/${item.slug}`,
         tags: item.tags,
+        author: item.author,
+        date: item.updatedAt || item.date,
+        keywords: [item.author, item.source].filter((value): value is string => Boolean(value)),
       })),
     ),
     agents: agents.then((items) =>
@@ -383,6 +389,9 @@ export function getAllContentForSearch() {
         type: "agent" as const,
         url: `/agents/${agent.slug}`,
         tags: agent.tags,
+        category: agent.category,
+        date: agent.updatedAt,
+        keywords: [...(agent.features || []), ...(agent.useCases || []), ...(agent.alternatives || [])],
       })),
     ),
     models: models.then((items) =>
@@ -393,6 +402,16 @@ export function getAllContentForSearch() {
         type: "model" as const,
         url: `/models/${model.slug}`,
         tags: model.tags,
+        provider: model.provider,
+        date: model.updatedAt || model.releaseDate,
+        keywords: [
+          model.provider,
+          model.status,
+          model.contextWindow,
+          model.pricing,
+          ...(model.modalities || []),
+          ...(model.useCases || []),
+        ].filter((value): value is string => Boolean(value)),
       })),
     ),
   };
