@@ -4,6 +4,7 @@ import matter from "gray-matter";
 
 import type {
   AgentMetadata,
+  AutomationReviewReport,
   AutomationStatus,
   DocMetadata,
   ModelComparison,
@@ -136,10 +137,12 @@ export async function getModelBySlug(slug: string): Promise<{ metadata: ModelMet
 export async function getAutomationStatus(): Promise<{
   news: AutomationStatus | null;
   models: AutomationStatus | null;
+  modelReview: AutomationReviewReport | null;
 }> {
   return {
     news: readAutomationStatus("news-status.json"),
     models: readAutomationStatus("models-status.json"),
+    modelReview: readAutomationStatus("model-review-report.json") as AutomationReviewReport | null,
   };
 }
 

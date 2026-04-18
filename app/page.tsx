@@ -91,6 +91,7 @@ export default async function HomePage() {
           newsSources={automation.news?.sources ?? []}
           modelLastRun={automation.models?.lastRunAt ?? ""}
           modelSources={automation.models?.sources ?? []}
+          modelReviewCount={automation.modelReview?.candidateCount ?? 0}
         />
       </section>
 
@@ -237,11 +238,13 @@ function AutomationPanel({
   newsSources,
   modelLastRun,
   modelSources,
+  modelReviewCount,
 }: {
   newsLastRun: string;
   newsSources: { status: string; sourceName: string }[];
   modelLastRun: string;
   modelSources: { status: string; sourceName: string }[];
+  modelReviewCount: number;
 }) {
   const newsHealthy = newsSources.filter((source) => source.status === "success").length;
   const modelsHealthy = modelSources.filter((source) => source.status === "success").length;
@@ -254,11 +257,11 @@ function AutomationPanel({
           The site refreshes itself on GitHub every hour.
         </h2>
         <p className="text-sm leading-6 text-slate-300">
-          News and model announcement feeds are imported automatically, committed by GitHub Actions,
-          and deployed back to the site after each successful sync.
+          News and model announcement sources are checked automatically, committed by GitHub Actions,
+          and deployed back to the site after each successful sync. The default path is free and uses official provider sources.
         </p>
       </div>
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-4 sm:grid-cols-3">
         <div className="rounded-[1.25rem] border border-white/8 bg-[rgba(15,23,42,0.65)] p-4">
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-slate-400">News Sync</p>
           <p className="mt-2 text-lg font-semibold text-slate-50">{newsHealthy}/{newsSources.length || 0} sources healthy</p>
@@ -269,6 +272,11 @@ function AutomationPanel({
           <p className="mt-2 text-lg font-semibold text-slate-50">{modelsHealthy}/{modelSources.length || 0} sources healthy</p>
           <p className="mt-2 text-sm text-slate-300">Last run: {modelLastRun ? formatDateTime(modelLastRun) : "Not yet recorded"}</p>
         </div>
+        <Link href="/trackers/automation" className="rounded-[1.25rem] border border-white/8 bg-[rgba(15,23,42,0.65)] p-4 transition hover:border-white/16">
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-slate-400">Review Queue</p>
+          <p className="mt-2 text-lg font-semibold text-slate-50">{modelReviewCount} possible misses</p>
+          <p className="mt-2 text-sm text-slate-300">Open the automation tracker to inspect free automatic review candidates.</p>
+        </Link>
       </div>
     </div>
   );

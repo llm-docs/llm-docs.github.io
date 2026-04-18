@@ -75,6 +75,23 @@ export interface AutomationStatus {
   sources: AutomationSourceStatus[]
 }
 
+export interface AutomationReviewCandidate {
+  sourceId: string
+  sourceName: string
+  reason: string
+  title: string
+  link: string
+  date?: string
+  description?: string
+}
+
+export interface AutomationReviewReport {
+  kind: string
+  lastRunAt: string
+  candidateCount: number
+  candidates: AutomationReviewCandidate[]
+}
+
 export type QuantizationId = "fp16" | "bf16" | "int8" | "q8" | "q6" | "q5" | "q4"
 
 export type BackendId = "ollama" | "llama.cpp" | "vllm" | "mlx" | "lm-studio" | "exllama"
