@@ -1,13 +1,13 @@
 {
   "kind": "news",
-  "lastRunAt": "2026-04-18T13:05:22.452Z",
-  "totalWritten": 26,
+  "lastRunAt": "2026-04-18T14:40:44.568Z",
+  "totalWritten": 0,
   "sources": [
     {
       "sourceId": "hugging-face",
       "sourceName": "Hugging Face",
       "status": "success",
-      "written": 9,
+      "written": 0,
       "scanned": 20,
       "error": ""
     },
@@ -15,7 +15,7 @@
       "sourceId": "openai",
       "sourceName": "OpenAI",
       "status": "success",
-      "written": 1,
+      "written": 0,
       "scanned": 20,
       "error": ""
     },
@@ -31,7 +31,7 @@
       "sourceId": "google-deepmind",
       "sourceName": "Google DeepMind",
       "status": "success",
-      "written": 12,
+      "written": 0,
       "scanned": 20,
       "error": ""
     },
@@ -39,7 +39,7 @@
       "sourceId": "meta-ai",
       "sourceName": "Meta AI",
       "status": "success",
-      "written": 4,
+      "written": 0,
       "scanned": 10,
       "error": ""
     }

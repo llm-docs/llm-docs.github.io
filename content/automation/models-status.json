@@ -1,7 +1,7 @@
 {
   "kind": "models",
-  "lastRunAt": "2026-04-18T13:05:24.142Z",
-  "totalWritten": 10,
+  "lastRunAt": "2026-04-18T14:40:49.443Z",
+  "totalWritten": 0,
   "sources": [
     {
       "sourceId": "openai-models",
@@ -25,7 +25,7 @@
       "sourceId": "google-models",
       "sourceName": "Google DeepMind",
       "status": "success",
-      "written": 8,
+      "written": 0,
       "scanned": 24,
       "matched": 14,
       "error": ""
@@ -43,7 +43,7 @@
       "sourceId": "hugging-face-models",
       "sourceName": "Hugging Face",
       "status": "success",
-      "written": 2,
+      "written": 0,
       "scanned": 24,
       "matched": 5,
       "error": ""
