@@ -76,7 +76,7 @@ const pageTypes = [
     summaryLead: (domain) =>
       `Most painful ${domain.name.toLowerCase()} incidents are predictable once teams classify the failure modes and instrument the system at the right boundaries.`,
     sectionLabel: "Failure analysis",
-    sectionIntro: (domain) =>
+    sectionIntro: () =>
       `Failure analysis works best when teams map symptoms to likely causes across prompts, retrieval, tools, model routing, data freshness, and serving constraints.`,
   },
   {
@@ -88,7 +88,7 @@ const pageTypes = [
     summaryLead: (domain) =>
       `Every ${domain.name.toLowerCase()} system sits on a quality-speed-cost frontier. The practical goal is not perfection, but an operating point your team can afford and defend.`,
     sectionLabel: "Optimization lens",
-    sectionIntro: (domain) =>
+    sectionIntro: () =>
       `Cost and performance tuning starts by identifying which part of the path dominates spend: tokens, retrieval, tool calls, context size, GPU memory, or human review.`,
   },
   {
@@ -100,7 +100,7 @@ const pageTypes = [
     summaryLead: (domain) =>
       `Vendor selection around ${domain.name.toLowerCase()} is usually a question of constraints: compliance, deployment model, model quality, observability, and switching cost.`,
     sectionLabel: "Market map",
-    sectionIntro: (domain) =>
+    sectionIntro: () =>
       `A useful vendor map separates model providers, infrastructure layers, developer tooling, and evaluation products so teams do not confuse adjacent categories.`,
   },
 ];
