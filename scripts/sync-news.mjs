@@ -7,7 +7,7 @@ import { fetchFeed, parseFeed, sanitizeQuotes, slugify, summarizeText } from "./
 const AUTO_NEWS_DIR = path.join(process.cwd(), "content", "news", "auto");
 const AUTOMATION_DIR = path.join(process.cwd(), "content", "automation");
 const STATUS_FILE = path.join(AUTOMATION_DIR, "news-status.json");
-const MAX_ITEMS_PER_SOURCE = Number(process.env.NEWS_SYNC_LIMIT ?? "6");
+const MAX_ITEMS_PER_SOURCE = Number(process.env.NEWS_SYNC_LIMIT ?? "20");
 const USER_AGENT =
   process.env.NEWS_SYNC_USER_AGENT ??
   "LLM-Docs News Sync (+https://github.com/LLM-Docs)";

@@ -25,14 +25,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Validate content
-        run: npm run lint:content
-
       - name: Sync latest news
         run: npm run sync:news
 
       - name: Sync latest model signals
         run: npm run sync:models
+
+      - name: Validate content
+        run: npm run lint:content
 
       - name: Commit changes
         run: |

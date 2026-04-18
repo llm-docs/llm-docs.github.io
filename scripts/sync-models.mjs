@@ -7,7 +7,7 @@ import { fetchFeed, parseFeed, sanitizeQuotes, slugify, summarizeText } from "./
 const AUTO_MODELS_DIR = path.join(process.cwd(), "content", "models", "auto");
 const AUTOMATION_DIR = path.join(process.cwd(), "content", "automation");
 const STATUS_FILE = path.join(AUTOMATION_DIR, "models-status.json");
-const MAX_ITEMS_PER_SOURCE = Number(process.env.MODEL_SYNC_LIMIT ?? "8");
+const MAX_ITEMS_PER_SOURCE = Number(process.env.MODEL_SYNC_LIMIT ?? "24");
 const USER_AGENT =
   process.env.MODEL_SYNC_USER_AGENT ??
   "LLM-Docs Model Sync (+https://github.com/LLM-Docs)";
