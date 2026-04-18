@@ -7,8 +7,10 @@ import { collectSourceItems, sanitizeQuotes, slugify, summarizeText } from "./fe
 const AUTO_MODELS_DIR = path.join(process.cwd(), "content", "models", "auto");
 const AUTOMATION_DIR = path.join(process.cwd(), "content", "automation");
 const STATUS_FILE = path.join(AUTOMATION_DIR, "models-status.json");
+const REVIEW_FILE = path.join(AUTOMATION_DIR, "model-review-report.json");
 const MAX_ITEMS_PER_SOURCE = Number(process.env.MODEL_SYNC_LIMIT ?? "24");
 const DISCOVERY_MULTIPLIER = Number(process.env.MODEL_DISCOVERY_MULTIPLIER ?? "4");
+const REVIEW_CANDIDATE_LIMIT = Number(process.env.MODEL_REVIEW_LIMIT ?? "30");
 const USER_AGENT =
   process.env.MODEL_SYNC_USER_AGENT ??
   "LLM-Docs Model Sync (+https://github.com/LLM-Docs)";
@@ -25,6 +27,7 @@ async function main() {
   );
 
   const results = [];
+  const reviewCandidates = [];
   let totalWritten = 0;
 
   for (const source of MODEL_SOURCES) {
@@ -50,7 +53,24 @@ async function main() {
       result.discovered = items.length;
 
       for (const item of items) {
-        if (!item.title || !item.link || !matchesKeywords(item, source.keywords)) {
+        if (!item.title || !item.link) {
+          continue;
+        }
+
+        const matches = matchesKeywords(item, source.keywords);
+        if (!matches && isLikelyLaunchCandidate(item)) {
+          reviewCandidates.push({
+            sourceId: source.id,
+            sourceName: source.name,
+            reason: "possible_keyword_miss",
+            title: item.title,
+            link: item.link,
+            date: item.date,
+            description: item.description,
+          });
+        }
+
+        if (!matches) {
           continue;
         }
 
@@ -75,6 +95,21 @@ async function main() {
 
     results.push(result);
   }
+
+  fs.writeFileSync(
+    REVIEW_FILE,
+    JSON.stringify(
+      {
+        kind: "model-review-report",
+        lastRunAt: new Date().toISOString(),
+        candidateCount: reviewCandidates.length,
+        candidates: dedupeReviewCandidates(reviewCandidates).slice(0, REVIEW_CANDIDATE_LIMIT),
+      },
+      null,
+      2,
+    ),
+    "utf8",
+  );
 
   fs.writeFileSync(
     STATUS_FILE,
@@ -105,6 +140,41 @@ async function main() {
 function matchesKeywords(item, keywords) {
   const haystack = `${item.title} ${item.description}`.toLowerCase();
   return keywords.some((keyword) => haystack.includes(keyword.toLowerCase()));
+}
+
+function isLikelyLaunchCandidate(item) {
+  const haystack = `${item.title} ${item.description}`.toLowerCase();
+  return [
+    /\bintroducing\b/,
+    /\bannouncing\b/,
+    /\blaunch(?:ed|es)?\b/,
+    /\breleasing?\b/,
+    /\bnow available\b/,
+    /\bnew model\b/,
+    /\bfrontier\b/,
+    /\bgpt[-\s]?\d/,
+    /\bclaude\b/,
+    /\bgemini\b/,
+    /\bllama\b/,
+    /\bveo\b/,
+    /\bimagen\b/,
+    /\bgemma\b/,
+    /\bcodex\b/,
+  ].some((pattern) => pattern.test(haystack));
+}
+
+function dedupeReviewCandidates(candidates) {
+  const seen = new Set();
+
+  return candidates.filter((candidate) => {
+    const key = `${candidate.sourceId}:${candidate.link}`;
+    if (seen.has(key)) {
+      return false;
+    }
+
+    seen.add(key);
+    return true;
+  });
 }
 
 function toMarkdown(source, item) {

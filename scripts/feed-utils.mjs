@@ -25,16 +25,29 @@ export async function fetchFeed(feedUrl, userAgent) {
 
 export async function collectSourceItems(source, userAgent, maxItems, discoveryMultiplier = 3) {
   const items = [];
+  const feedUrls = source.feedUrls?.length ? source.feedUrls : source.feedUrl ? [source.feedUrl] : [];
+  const discoveryUrls = source.discoveryUrls?.length
+    ? source.discoveryUrls
+    : source.discoveryUrl || source.homepage
+      ? [source.discoveryUrl || source.homepage]
+      : [];
 
-  if (source.feedUrl) {
-    const feedText = await fetchFeed(source.feedUrl, userAgent);
-    items.push(...parseFeed(feedText, source.format));
+  for (const feedUrl of feedUrls) {
+    try {
+      const feedText = await fetchFeed(feedUrl, userAgent);
+      items.push(...parseFeed(feedText, source.format));
+    } catch (error) {
+      console.error(
+        `[feed] ${source.name}:`,
+        error instanceof Error ? error.message : String(error),
+      );
+    }
   }
 
-  if (source.discoveryUrl || source.homepage) {
+  for (const discoveryUrl of discoveryUrls) {
     try {
       const discovered = await discoverRecentArticles(
-        source.discoveryUrl || source.homepage,
+        discoveryUrl,
         userAgent,
         source.articlePathPrefixes || [],
         Math.max(maxItems * discoveryMultiplier, maxItems),
@@ -48,9 +61,34 @@ export async function collectSourceItems(source, userAgent, maxItems, discoveryM
     }
   }
 
+  items.push(...(await collectSearchItems(source, userAgent, maxItems)));
+
   return dedupeItems(items)
     .sort((left, right) => compareDates(right.date, left.date))
     .slice(0, maxItems);
+}
+
+export async function collectSearchItems(source, userAgent, maxItems) {
+  const queries = source.searchQueries || [];
+
+  if (!queries.length) {
+    return [];
+  }
+
+  const provider = (process.env.SEARCH_API_PROVIDER || "").toLowerCase().trim();
+  if (!provider) {
+    return [];
+  }
+
+  if (provider === "serper" && process.env.SERPER_API_KEY) {
+    return collectSerperItems(source, queries, userAgent, maxItems);
+  }
+
+  if (provider === "tavily" && process.env.TAVILY_API_KEY) {
+    return collectTavilyItems(source, queries, userAgent, maxItems);
+  }
+
+  return [];
 }
 
 export function parseFeed(xml, format = "xml") {
@@ -213,6 +251,87 @@ async function discoverRecentArticles(listingUrl, userAgent, articlePathPrefixes
       }
     } catch (error) {
       console.error(`[discovery] ${url}:`, error instanceof Error ? error.message : String(error));
+    }
+  }
+
+  return items;
+}
+
+async function collectSerperItems(source, queries, userAgent, maxItems) {
+  const items = [];
+
+  for (const query of queries) {
+    const response = await fetch("https://google.serper.dev/search", {
+      method: "POST",
+      signal: AbortSignal.timeout(Number(process.env.SOURCE_FETCH_TIMEOUT_MS ?? "15000")),
+      headers: {
+        "content-type": "application/json",
+        "x-api-key": process.env.SERPER_API_KEY,
+        "user-agent": userAgent,
+      },
+      body: JSON.stringify({
+        q: buildDomainScopedQuery(query, source.searchDomains || []),
+        num: Math.max(4, Math.min(maxItems, 10)),
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Serper request failed: ${response.status} ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    for (const result of data.organic || []) {
+      if (!isAllowedSearchResult(result.link, source.searchDomains || [])) {
+        continue;
+      }
+
+      items.push({
+        title: result.title || "",
+        link: result.link || "",
+        description: result.snippet || "",
+        date: normalizeDate(result.date || ""),
+      });
+    }
+  }
+
+  return items;
+}
+
+async function collectTavilyItems(source, queries, userAgent, maxItems) {
+  const items = [];
+
+  for (const query of queries) {
+    const response = await fetch("https://api.tavily.com/search", {
+      method: "POST",
+      signal: AbortSignal.timeout(Number(process.env.SOURCE_FETCH_TIMEOUT_MS ?? "15000")),
+      headers: {
+        "content-type": "application/json",
+        "user-agent": userAgent,
+      },
+      body: JSON.stringify({
+        api_key: process.env.TAVILY_API_KEY,
+        query,
+        max_results: Math.max(4, Math.min(maxItems, 10)),
+        include_domains: source.searchDomains || [],
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Tavily request failed: ${response.status} ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    for (const result of data.results || []) {
+      if (!isAllowedSearchResult(result.url, source.searchDomains || [])) {
+        continue;
+      }
+
+      items.push({
+        title: result.title || "",
+        link: result.url || "",
+        description: result.content || "",
+        date: normalizeDate(result.published_date || ""),
+      });
     }
   }
 
@@ -396,6 +515,31 @@ function dedupeItems(items) {
   }
 
   return [...byLink.values()];
+}
+
+function buildDomainScopedQuery(query, domains) {
+  if (!domains.length) {
+    return query;
+  }
+
+  return `${query} ${domains.map((domain) => `site:${domain}`).join(" OR ")}`;
+}
+
+function isAllowedSearchResult(link, domains) {
+  if (!link) {
+    return false;
+  }
+
+  if (!domains.length) {
+    return true;
+  }
+
+  try {
+    const hostname = new URL(link).hostname;
+    return domains.some((domain) => hostname === domain || hostname.endsWith(`.${domain}`));
+  } catch {
+    return false;
+  }
 }
 
 function normalizeItemKey(link, title) {

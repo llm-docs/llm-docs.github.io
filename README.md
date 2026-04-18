@@ -54,8 +54,15 @@ Open `http://localhost:3000`.
 - `npm run generate:docs-library` regenerates the docs library pages under `content/docs/library`.
 - `npm run sync:news` imports the latest feed items into `content/news/auto` and updates `content/automation/news-status.json`.
 - `npm run sync:models` imports model-related feed items into `content/models/auto` and updates `content/automation/models-status.json`.
+- `npm run sync:models` also writes `content/automation/model-review-report.json` with likely launch candidates that did not match the current keyword filter.
 - `npm run sync:content` runs both sync jobs in sequence.
-- `.github/workflows/sync-news.yml` runs hourly, validates content, syncs feeds, commits generated changes, and pushes them back to `main`.
+- `.github/workflows/sync-news.yml` runs hourly, validates content, syncs feeds and discovery sources, commits generated changes, and pushes them back to `main`.
+
+Optional search discovery:
+
+- Set `SEARCH_API_PROVIDER=serper` with `SERPER_API_KEY` to enable domain-scoped web search discovery.
+- Set `SEARCH_API_PROVIDER=tavily` with `TAVILY_API_KEY` to enable the same flow through Tavily.
+- If no search API key is present, the sync falls back to feeds plus official listing-page discovery only.
 
 ## Notes
 

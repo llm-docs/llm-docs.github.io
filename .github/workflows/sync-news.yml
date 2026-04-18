@@ -11,6 +11,11 @@ permissions:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    env:
+      SOURCE_FETCH_TIMEOUT_MS: "15000"
+      SEARCH_API_PROVIDER: ${{ secrets.SEARCH_API_PROVIDER }}
+      SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
+      TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
 
     steps:
       - name: Checkout
