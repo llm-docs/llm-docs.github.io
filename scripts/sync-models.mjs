@@ -2,12 +2,13 @@ import fs from "fs";
 import path from "path";
 
 import { MODEL_SOURCES } from "../config/model-sources.mjs";
-import { fetchFeed, parseFeed, sanitizeQuotes, slugify, summarizeText } from "./feed-utils.mjs";
+import { collectSourceItems, sanitizeQuotes, slugify, summarizeText } from "./feed-utils.mjs";
 
 const AUTO_MODELS_DIR = path.join(process.cwd(), "content", "models", "auto");
 const AUTOMATION_DIR = path.join(process.cwd(), "content", "automation");
 const STATUS_FILE = path.join(AUTOMATION_DIR, "models-status.json");
 const MAX_ITEMS_PER_SOURCE = Number(process.env.MODEL_SYNC_LIMIT ?? "24");
+const DISCOVERY_MULTIPLIER = Number(process.env.MODEL_DISCOVERY_MULTIPLIER ?? "4");
 const USER_AGENT =
   process.env.MODEL_SYNC_USER_AGENT ??
   "LLM-Docs Model Sync (+https://github.com/LLM-Docs)";
@@ -34,13 +35,19 @@ async function main() {
       written: 0,
       scanned: 0,
       matched: 0,
+      discovered: 0,
       error: "",
     };
 
     try {
-      const xml = await fetchFeed(source.feedUrl, USER_AGENT);
-      const items = parseFeed(xml, source.format).slice(0, MAX_ITEMS_PER_SOURCE);
+      const items = await collectSourceItems(
+        source,
+        USER_AGENT,
+        MAX_ITEMS_PER_SOURCE,
+        DISCOVERY_MULTIPLIER,
+      );
       result.scanned = items.length;
+      result.discovered = items.length;
 
       for (const item of items) {
         if (!item.title || !item.link || !matchesKeywords(item, source.keywords)) {
@@ -89,7 +96,7 @@ async function main() {
       .map((result) =>
         result.status === "failed"
           ? `${result.sourceName}: failed`
-          : `${result.sourceName}: +${result.written} (${result.matched} matched)`
+          : `${result.sourceName}: +${result.written} (${result.matched}/${result.discovered} matched)`
       )
       .join("\n"),
   );

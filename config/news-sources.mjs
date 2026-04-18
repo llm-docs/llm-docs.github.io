@@ -4,6 +4,8 @@ export const NEWS_SOURCES = [
     name: "Hugging Face",
     homepage: "https://huggingface.co/blog",
     feedUrl: "https://huggingface.co/blog/feed.xml",
+    discoveryUrl: "https://huggingface.co/blog",
+    articlePathPrefixes: ["/blog/"],
     tags: ["hugging-face", "models", "open-source"],
   },
   {
@@ -11,6 +13,8 @@ export const NEWS_SOURCES = [
     name: "OpenAI",
     homepage: "https://openai.com/news",
     feedUrl: "https://openai.com/news/rss.xml",
+    discoveryUrl: "https://openai.com/news",
+    articlePathPrefixes: ["/news/"],
     tags: ["openai", "models", "api"],
   },
   {
@@ -18,7 +22,9 @@ export const NEWS_SOURCES = [
     name: "Anthropic",
     homepage: "https://www.anthropic.com/news",
     feedUrl: "https://www.anthropic.com/news",
+    discoveryUrl: "https://www.anthropic.com/news",
     format: "anthropic-newsroom",
+    articlePathPrefixes: ["/news/"],
     tags: ["anthropic", "claude", "api"],
   },
   {
@@ -26,6 +32,8 @@ export const NEWS_SOURCES = [
     name: "Google DeepMind",
     homepage: "https://deepmind.google/blog",
     feedUrl: "https://deepmind.google/blog/rss.xml",
+    discoveryUrl: "https://deepmind.google/blog",
+    articlePathPrefixes: ["/blog/"],
     tags: ["google", "deepmind", "gemini"],
   },
   {
@@ -33,6 +41,8 @@ export const NEWS_SOURCES = [
     name: "Meta AI",
     homepage: "https://about.fb.com/news/tag/ai/",
     feedUrl: "https://about.fb.com/news/tag/ai/feed/",
+    discoveryUrl: "https://about.fb.com/news/tag/ai/",
+    articlePathPrefixes: ["/news/"],
     tags: ["meta", "llama", "ai"],
   },
 ];

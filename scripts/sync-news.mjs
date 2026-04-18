@@ -2,12 +2,13 @@ import fs from "fs";
 import path from "path";
 
 import { NEWS_SOURCES } from "../config/news-sources.mjs";
-import { fetchFeed, parseFeed, sanitizeQuotes, slugify, summarizeText } from "./feed-utils.mjs";
+import { collectSourceItems, sanitizeQuotes, slugify, summarizeText } from "./feed-utils.mjs";
 
 const AUTO_NEWS_DIR = path.join(process.cwd(), "content", "news", "auto");
 const AUTOMATION_DIR = path.join(process.cwd(), "content", "automation");
 const STATUS_FILE = path.join(AUTOMATION_DIR, "news-status.json");
 const MAX_ITEMS_PER_SOURCE = Number(process.env.NEWS_SYNC_LIMIT ?? "20");
+const DISCOVERY_MULTIPLIER = Number(process.env.NEWS_DISCOVERY_MULTIPLIER ?? "4");
 const USER_AGENT =
   process.env.NEWS_SYNC_USER_AGENT ??
   "LLM-Docs News Sync (+https://github.com/LLM-Docs)";
@@ -33,13 +34,19 @@ async function main() {
       status: "success",
       written: 0,
       scanned: 0,
+      discovered: 0,
       error: "",
     };
 
     try {
-      const xml = await fetchFeed(source.feedUrl, USER_AGENT);
-      const items = parseFeed(xml, source.format).slice(0, MAX_ITEMS_PER_SOURCE);
+      const items = await collectSourceItems(
+        source,
+        USER_AGENT,
+        MAX_ITEMS_PER_SOURCE,
+        DISCOVERY_MULTIPLIER,
+      );
       result.scanned = items.length;
+      result.discovered = items.length;
 
       for (const item of items) {
         if (!item.title || !item.link) {
@@ -85,7 +92,9 @@ async function main() {
   console.log(
     results
       .map((result) =>
-        result.status === "failed" ? `${result.sourceName}: failed` : `${result.sourceName}: +${result.written}`
+        result.status === "failed"
+          ? `${result.sourceName}: failed`
+          : `${result.sourceName}: +${result.written} (${result.discovered} discovered)`
       )
       .join("\n"),
   );
